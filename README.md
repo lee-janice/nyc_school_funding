@@ -1,1 +1,1 @@
-# nyc_school_funding
+# NYC Public Schools Funding Analysis
