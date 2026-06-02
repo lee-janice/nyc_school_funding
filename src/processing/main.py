@@ -1,7 +1,17 @@
-from src.processing.load import write_to_db
-from src.processing.transform import *
-from src.processing.validate import *
-from extract import read_data
+from load import write_to_csv
+from extract import read_pta
+from extract import read_fsf
+from extract import read_dem
+from transform import transform_data
+from transform import define_sample
+from transform import merge_data
+from transform import clean_column_names
+from transform import add_quintiles
+from transform import add_pta_derivatives
+from validate import flag_balances_xy
+from validate import flag_transactions_wy
+from validate import flag_and_correct_balances_wy
+from load import write_to_db
 import textwrap
 import pandas as pd
 import sys
@@ -15,38 +25,16 @@ def run_pipeline():
 
         # Read in Demographic Snapshot data (2019-2025)
         print("\tReading in demographic data...")
-        dem_data = dict() 
-        # (2019-2020)
-        dem_1620 = read_data("./data/raw/demographics/2019-20_Demographic_Snapshot_-_School.xlsx", sheet_name="Data")
-        for yr in range(19, 21): 
-            dem_data[f"20{yr}"] = dem_1620.query(f"Year == '20{yr-1}-{yr}'")
-        # (2021-2025)
-        dem_2125 = read_data("./data/raw/demographics/demographic-snapshot-2020-21-to-2024-25-public.xlsx", sheet_name="School")
-        for yr in range(21, 26): 
-            dem_data[f"20{yr}"] = dem_2125.query(f"Year == '20{yr-1}-{yr}'")
-
+        dem_data = read_dem()
+        
         # Read in Fair Student Funding data (2019-2025)
         print("\tReading in Fair Student Funding data...")
-        fsf_data = dict()
-        fsf_sheet_names = ["LL16 Report", "Data", "FY21 LL16", "FY22 LL16", "FY 23 LL 16_Full Rpt", "FY 24 LL 16_Full Rpt", "LL16"]
-        for i, sheet_name in enumerate(fsf_sheet_names): 
-            yr = i + 19
-            # conditionally pass in arguments for diff years
-            match yr: 
-                case 19: 
-                    kwargs = {"skiprows": 3}
-                case 25: 
-                    kwargs = {"skiprows": 1}
-                case _: 
-                    kwargs = {}
-            fsf_data[f"20{yr}"] = read_data(f"./data/raw/fsf/fy{yr}-local-law-16-final-report.xlsx", sheet_name = sheet_name, **kwargs)
-                
+        fsf_data = read_fsf()
+
         # Read in PTA fundraising data (2019-2025)
         print("\tReading in PTA fundraising data...")
-        pta_data = dict()
-        for yr in range(19, 26): 
-            pta_data[f"20{yr}"] = read_data(f"./data/raw/pta/20{yr-1}-{yr}-pta-financial-reporting.xlsx", sheet_name = "School")
-
+        pta_data = read_pta()
+  
         
         # -----> TRANSFORM
         print("\nTransforming data...")
@@ -103,9 +91,6 @@ def run_pipeline():
         print("\nCross-year end->start balance discrepancies:")
         print(textwrap.indent(funding_2019_2025["balance_xy_diff_cat"].value_counts().to_string(), prefix="\t"))
 
-        # get schools with repeated discrepancies
-        # print("\nSchools with repeated large or extreme discrepancies:")
-        # print(textwrap.indent(outliers["school_name_x"].value_counts().head(15).to_string(), prefix="\t"))
 
         # flag anomalous transactions using z-score on log-transformed values
         # creates *_transaction_flag if z-score > 2
@@ -121,23 +106,25 @@ def run_pipeline():
     
         # -----> Calculate variables
         print("\nCalculating derivative and quintile variables...")
-        funding_2019_2025 = add_pta_derivatives(funding_2019_2025)
+        funding_2019_2025 = add_pta_derivatives(funding_2019_2025)  # noqa: F821
         funding_2019_2025 = add_quintiles(funding_2019_2025)
+
 
         # -----> Load data 
         print("\nLoading data...")
-        funding_2019_2025.to_csv("./data/processed/funding_2019_2025.csv")
-        write_to_db(funding_2019_2025, "school_funding.db", "funding")
+        write_to_csv(funding_2019_2025, "./data/processed/funding_2019_2025.csv")
+        write_to_db(funding_2019_2025, "./data/processed/school_funding.db", "funding")
 
         flagged = (
             funding_2019_2025
             .query("balance_wy_diff_flag or balance_xy_diff_flag or any_transaction_flag")
             .filter(regex='school_name_x|year|^pta.*balance$|^pta.*income$|^pta.*expenditure$|lag_pta*|end_to_start*|.*flag')
         )
-        flagged.to_csv("./data/processed/flagged.csv")
-        write_to_db(flagged, "school_funding.db", "flagged")
+        write_to_csv(flagged, "./data/processed/flagged.csv")
+        write_to_db(flagged, "./data/processed/school_funding.db", "flagged")
 
         print("\nPipeline execution complete!")
+
         
     except Exception as e:
         print(f"Pipeline failed: {str(e)}")

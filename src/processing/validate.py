@@ -2,8 +2,9 @@ import pandas as pd
 import numpy as np
 from scipy import stats
 
-LOG_SHIFT = 1
-
+# =============================================================================
+#  Define functions for validating data
+# =============================================================================
 # -----> Fix and flag within-year discrepancies in start balance, income, expenditure, and end balance 
 def flag_and_correct_balances_wy(funding_data, tolerance = 1000):
 
@@ -107,12 +108,12 @@ def flag_balances_xy(funding_data):
 
 # -----> Flag within-year, cross-school anomalies 
 def flag_transactions_wy(funding_data, transaction_vars, std_threshold = 3): 
-
     # cross-sectional z-score on log-transformed values, within each year
     funding_data = (
         funding_data
         .assign(**{
-            f"{var}_log": lambda df, v=var: np.log1p(df[v]+LOG_SHIFT)
+            # f"{var}_log": lambda df, v=var: np.log1p(df[v]+LOG_SHIFT)
+            f"{var}_log": lambda df, v=var: np.log(df[v] - np.min(df[v]) + 1)
             for var in transaction_vars
         })
         .assign(**{
@@ -140,33 +141,3 @@ def flag_transactions_wy(funding_data, transaction_vars, std_threshold = 3):
 
     return funding_data
 
-
-
-# funding_2019_2025 = pd.read_csv("data/processed/funding_2019_2025.csv")
-
-# funding_2019_2025 = flag_and_correct_balances_wy(funding_2019_2025, tolerance=1000)
-
-# funding_2019_2025 = flag_balances_xy(funding_2019_2025)
-# funding_2019_2025["end_to_start_balance_diff"].describe().round(2)
-# funding_2019_2025["balance_xy_diff_cat"].value_counts()
-# funding_2019_2025["balance_xy_diff_flag"].value_counts(normalize=True)
-
-# outliers = (
-#     funding_2019_2025
-#     .query("balance_xy_diff_flag")
-#     .sort_values("end_to_start_balance_diff", ascending=False)
-#     .filter(items=["school_name_x", "dbn", "year", "pta_start_balance", "pta_end_balance", "lag_pta_end_balance", "end_to_start_balance_diff"])
-# )
-
-# # get number of anomalous observations per school
-# outlier_sch_count = outliers["school_name_x"].value_counts()
-# print(outlier_sch_count.head(15))
-
-
-# anomaly detection based on z-score
-# transaction_vars = ["pta_start_balance", "pta_income", "pta_expenditure", "pta_end_balance"]
-
-# funding_2019_2025 = flag_transactions_wy(funding_2019_2025, transaction_vars)
-
-
-# Summary by flag type and variable

@@ -3,9 +3,6 @@ import pandas as pd
 import numpy as np
 import janitor
 
-# define constants
-LOG_SHIFT = 0.1 
-
 # =============================================================================
 #  Define functions for merging and transforming
 # =============================================================================
@@ -162,7 +159,7 @@ def add_pta_derivatives(funding_data):
 
         # log transform PTA variables
         log_pp_pta_end_balance = lambda x: np.log(x['pp_pta_end_balance'] + \
-            np.abs(np.min(x["pp_pta_end_balance"])) + LOG_SHIFT),
+            np.abs(np.min(x["pp_pta_end_balance"])) + 1),
 
         # add PTA expenditure as a percent of FSF allocations and total budget allocation
         pta_expenditure_as_p_of_fsf = lambda x: x['pta_expenditure'] / x['total_fsf_allocations'] * 100,
@@ -221,13 +218,6 @@ def add_quintiles(funding_data):
         ))
         .reset_index(level=0, drop=True)
     )
-
-    # funding_data["pp_pta_income_quintile"] = pd.qcut(
-    #     funding_data["pp_pta_income"].where(funding_data["pta_category"] == "Active"),
-    #     q=5,
-    #     duplicates="drop",
-    #     labels=["Q2", "Q3", "Q4", "Q5"] if funding_data["year"] == 2021 else ["Q1", "Q2", "Q3", "Q4", "Q5"]
-    # )
 
     return funding_data
 
