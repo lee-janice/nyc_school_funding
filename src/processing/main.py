@@ -1,3 +1,4 @@
+from validate import flag_transactions_ws
 from load import write_to_csv
 from extract import read_pta
 from extract import read_fsf
@@ -67,7 +68,7 @@ def run_pipeline():
 
         # correct and flag within-year discrepancies in balances/incomes/expenditures
         # creates a flag: balance_wy_diff_flag if unresolvable
-        funding_2019_2025 = flag_and_correct_balances_wy(funding_2019_2025, tolerance=1000)
+        funding_2019_2025 = flag_and_correct_balances_wy(funding_2019_2025, tolerance=10000)
 
         print("Within-year balance correction summary:")
         print(textwrap.indent(funding_2019_2025["correction_applied"].value_counts().to_string(), prefix="\t"))
@@ -86,34 +87,73 @@ def run_pipeline():
 
         # flag cross-year discrepancies in end-> start balances
         # creates a flag: balance_xy_diff_flag if discrepancy > 100,000
-        funding_2019_2025 = flag_balances_xy(funding_2019_2025)
+        funding_2019_2025 = flag_balances_xy(funding_2019_2025, tolerance = 50_000)
 
         print("\nCross-year end->start balance discrepancies:")
         print(textwrap.indent(funding_2019_2025["balance_xy_diff_cat"].value_counts().to_string(), prefix="\t"))
 
 
-        # flag anomalous transactions using z-score on log-transformed values
-        # creates *_transaction_flag if z-score > 2
+        # flag within-year, cross-school anomalous transactions using z-score on log-transformed values
+        # creates *_transaction_flag if z-score > 3
         transaction_vars = ["pta_start_balance", "pta_income", "pta_expenditure", "pta_end_balance"]
-        funding_2019_2025 = flag_transactions_wy(funding_2019_2025, transaction_vars, std_threshold=2)
+        funding_2019_2025 = flag_transactions_wy(funding_2019_2025, transaction_vars, std_threshold=3)
 
+        # flag cross-year, within-school anomalous transactions
+        # make z-score threshold a little lower, 0 obs were flagged at threshold of 3
+        funding_2019_2025 = flag_transactions_ws(funding_2019_2025, transaction_vars, std_threshold=2.6)
+
+        wy_transaction_flags  = [f"{v}_wy_transaction_flag" for v in transaction_vars]
+        ws_transaction_flags  = [f"{v}_ws_transaction_flag" for v in transaction_vars]
+
+        # flag if any transaction flag
+        funding_2019_2025 = (
+            funding_2019_2025
+            .assign(
+                any_wy_transaction_flag=lambda df: df[wy_transaction_flags].any(axis=1),
+                any_ws_transaction_flag=lambda df: df[ws_transaction_flags].any(axis=1),
+                any_transaction_flag=lambda df: df[wy_transaction_flags+ws_transaction_flags].any(axis=1),
+            )
+        )
+        
         print("\nTransaction discrepancies:")
         for t in transaction_vars:
-            print(textwrap.indent(funding_2019_2025[f"{t}_transaction_flag"].value_counts(normalize=True).mul(100).round(1).to_string(), prefix="\t"))
+            print(textwrap.indent(funding_2019_2025[f"{t}_wy_transaction_flag"].value_counts(normalize=True).mul(100).round(1).to_string(), prefix="\t"))
+            print(textwrap.indent(funding_2019_2025[f"{t}_ws_transaction_flag"].value_counts(normalize=True).mul(100).round(1).to_string(), prefix="\t"))
             print()
+        print(textwrap.indent(funding_2019_2025["any_wy_transaction_flag"].value_counts(normalize=True).mul(100).round(1).to_string(), prefix="\t"))
+        print(textwrap.indent(funding_2019_2025["any_ws_transaction_flag"].value_counts(normalize=True).mul(100).round(1).to_string(), prefix="\t"))
         print(textwrap.indent(funding_2019_2025["any_transaction_flag"].value_counts(normalize=True).mul(100).round(1).to_string(), prefix="\t"))
 
-    
+        # mark if observation has any flag 
+        funding_2019_2025 = (
+            funding_2019_2025
+            .assign(anomaly_flag = lambda x: x["balance_wy_diff_flag"] | x["balance_xy_diff_flag"] | x["any_transaction_flag"])
+        )
+
+        # about 6% of data is flagged as anomalous
+        print("\nPercent of anomalous observations:")
+        print(
+            textwrap
+            .indent(
+                funding_2019_2025["anomaly_flag"]
+                .value_counts(normalize=True)
+                .mul(100).round(1).to_string(), 
+                prefix="\t"
+            )
+        )
+
+        # mark most common 
+
         # -----> Calculate variables
         print("\nCalculating derivative and quintile variables...")
-        funding_2019_2025 = add_pta_derivatives(funding_2019_2025)  # noqa: F821
+        funding_2019_2025 = add_pta_derivatives(funding_2019_2025) 
         funding_2019_2025 = add_quintiles(funding_2019_2025)
 
 
         # -----> Load data 
         print("\nLoading data...")
         write_to_csv(funding_2019_2025, "./data/processed/funding_2019_2025.csv")
-        write_to_db(funding_2019_2025, "./data/processed/school_funding.db", "funding")
+        write_to_db(funding_2019_2025, "./data/processed/school_funding.db", "funding", drop=True)
 
         flagged = (
             funding_2019_2025
@@ -121,7 +161,6 @@ def run_pipeline():
             .filter(regex='school_name_x|year|^pta.*balance$|^pta.*income$|^pta.*expenditure$|lag_pta*|end_to_start*|.*flag')
         )
         write_to_csv(flagged, "./data/processed/flagged.csv")
-        write_to_db(flagged, "./data/processed/school_funding.db", "flagged")
 
         print("\nPipeline execution complete!")
 

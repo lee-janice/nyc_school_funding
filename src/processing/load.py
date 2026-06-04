@@ -1,23 +1,22 @@
-import sqlite3
+import duckdb
 
 # =============================================================================
 #  Define functions for loading data 
 # =============================================================================
-def write_to_db(df, db, name): 
-    conn = sqlite3.connect(db)
-    cursor = conn.cursor()
+def write_to_db(df, db, table_name, drop=False): 
 
-    # write to db
-    df.to_sql(name=name, con=conn, if_exists="replace", index=False)
+    with duckdb.connect(db) as conn:
 
-    # get number of obs
-    cursor = conn.cursor()
-    cursor.execute(f"SELECT COUNT(*) FROM {name}")
-    result = cursor.fetchone()
+        if drop: 
+            conn.execute(f"DROP TABLE IF EXISTS {table_name}")
 
-    print(f"\t{result[0]} rows successfully written to {db} at table {name}.")
+        # write the dataframe to the database file
+        conn.execute(f"CREATE TABLE IF NOT EXISTS {table_name} AS SELECT * FROM df;")
+        
+        # print number of rows written
+        result = conn.execute(f"SELECT COUNT(*) FROM {table_name}").fetchone()
+        print(f"\t{result[0]} rows successfully written to {db} at table {table_name}.")
 
-    conn.close()
 
 def write_to_csv(df, path): 
     df.to_csv(path)

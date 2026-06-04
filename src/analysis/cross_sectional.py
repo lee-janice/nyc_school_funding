@@ -1,22 +1,19 @@
 from src.analysis.descriptives_helpers import *
 import pandas as pd
-import numpy as np
 import textwrap
 import contextlib
 
 # =============================================================================
 #  Cross-sectional (year) analysis
 # =============================================================================
-def pta_cross_sectional_analysis(year, output_path): 
+def pta_cross_sectional_analysis(funding_data, year, output_path): 
 
     with open(output_path, "w") as f:
         # forces all floats in dataframes to show 2 decimal places
         pd.set_option('display.float_format', '{:.2f}'.format)
 
         with contextlib.redirect_stdout(f):
-            print("\nLoading in data...") 
-            funding_2019_2025 = pd.read_csv("data/processed/funding_2019_2025.csv")
-            funding_xsect = funding_2019_2025.query(f"year == {year}")
+            funding_xsect = funding_data.query(f"year == {year}")
 
             print("\n-------------------------------------------------------------------------------")
             print(  "  PTA Activity                                                                 ")

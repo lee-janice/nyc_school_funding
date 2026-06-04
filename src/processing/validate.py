@@ -85,7 +85,7 @@ def flag_and_correct_balances_wy(funding_data, tolerance = 1000):
 
 
 # -----> Flag cross-year discrepancies in Y0 end balance -> Y1 start balance
-def flag_balances_xy(funding_data): 
+def flag_balances_xy(funding_data, tolerance = 50_000): 
 
     funding_data = funding_data.assign(
         # create lag variable to compare end->start balance 
@@ -95,12 +95,12 @@ def flag_balances_xy(funding_data):
         # flag differences
         balance_xy_diff_cat = lambda x: pd.cut(
             x["end_to_start_balance_diff"],
-            bins=[-np.inf, 0, 500, 5000, 100_000, np.inf],
+            bins=[-np.inf, 0, 500, 5000, tolerance, np.inf],
             labels=["exact_match", "small_diff", "moderate_diff", "large_diff", "extreme_outlier"],
             right=True
         ),
 
-        balance_xy_diff_flag = lambda x: x["balance_xy_diff_cat"].isin(["large_diff", "extreme_outlier"])
+        balance_xy_diff_flag = lambda x: x["end_to_start_balance_diff"] > tolerance
     )
 
     return funding_data
@@ -123,21 +123,36 @@ def flag_transactions_wy(funding_data, transaction_vars, std_threshold = 3):
             )
             for var in transaction_vars
         })
-        # flag if greater than threshold
+        # flag if greater than threshold (only in positive direction to capture values that are far too high)
         .assign(**{
-            f"{var}_transaction_flag": lambda df, v=var: df[f"{v}_zscore"].abs() > std_threshold
+            f"{var}_wy_transaction_flag": lambda df, v=var: df[f"{v}_zscore"] > std_threshold
             for var in transaction_vars
         })
-    )
-    transaction_flags  = [f"{v}_transaction_flag" for v in transaction_vars]
-
-    # flag if any transaction flag
-    funding_data = (
-        funding_data
-        .assign(
-            any_transaction_flag=lambda df: df[transaction_flags].any(axis=1),
-        )
     )
 
     return funding_data
 
+
+# -----> Flag cross-year, within-school anomalies 
+def flag_transactions_ws(funding_data, transaction_vars, std_threshold = 3):
+    
+    # deviation from school's own median
+    funding_data = (
+        funding_data
+        .assign(**{
+            f"{var}_school_median": lambda df, v=var: (
+                df.groupby("dbn")[v]
+                .transform("median")
+            )
+            for var in transaction_vars
+        })
+        # flag if greater than threshold (only in positive direction, to capture values that are far too high)
+        .assign(**{
+            f"{var}_ws_transaction_flag": lambda df, v=var: (
+                (df[v] - df[f"{v}_school_median"]) > std_threshold * df.groupby("dbn")[v].transform("std")
+            )
+            for var in transaction_vars
+        })
+    )
+
+    return funding_data

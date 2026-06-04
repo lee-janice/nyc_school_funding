@@ -1,20 +1,20 @@
-from src.analysis.descriptives_helpers import *
+from src.analysis.descriptives_helpers import median_by_category
+from src.analysis.descriptives_helpers import mean_by_category
+from src.analysis.descriptives_helpers import category_counts
 import pandas as pd
-import numpy as np
 import textwrap
 import contextlib
-
 
 # =============================================================================
 #  Trends-over-time analysis
 # =============================================================================
-def pta_trends_analysis(output_path): 
+def pta_trends_analysis(funding_data, output_path): 
 
     with open(output_path, "w") as f:
-        with contextlib.redirect_stdout(f):
-            print("\nLoading in data...") 
-            funding_2019_2025 = pd.read_csv("data/processed/funding_2019_2025.csv")
+        # forces all floats in dataframes to show 2 decimal places
+        pd.set_option('display.float_format', '{:.2f}'.format)
 
+        with contextlib.redirect_stdout(f):
 
             print("\n-------------------------------------------------------------------------------")
             print(  "  PTA Activity Trends                                                          ")
@@ -22,7 +22,7 @@ def pta_trends_analysis(output_path):
             # -----> PTA activity categories 
             print("\nFrequencies of PTA activity categories over time:")
             pta_activity_counts = (
-                category_counts(funding_2019_2025, category_col="pta_category")
+                category_counts(funding_data, category_col="pta_category")
                 .reindex(columns=["Active", "Inactive", "Missing"], fill_value=0)
                 .assign(Total = lambda x: x.sum(axis=1))
             )
@@ -35,7 +35,7 @@ def pta_trends_analysis(output_path):
             print("\nMean ENI of within PTA activity category over time:")
             print(textwrap.indent(
                 mean_by_category(
-                    funding_2019_2025, 
+                    funding_data, 
                     category_cols=["year", "pta_category"], 
                     value_cols="eni_n")
                 .to_string(), 
@@ -45,13 +45,13 @@ def pta_trends_analysis(output_path):
             # -----> ENI quintiles (within year) 
             print("\nENI quintiles, by year:")
             print(textwrap.indent(
-                funding_2019_2025.groupby("year")["eni_n"].quantile([0.2, 0.4, 0.6, 0.8]).unstack(level=1).to_string(), 
+                funding_data.groupby("year")["eni_n"].quantile([0.2, 0.4, 0.6, 0.8]).unstack(level=1).to_string(), 
                 prefix="\t")
             )
 
             print("\nShare of schools with active PTAs by ENI quintile over time:")
             active_ptas_by_eni_quintile = (
-                funding_2019_2025
+                funding_data
                 .groupby(["year", "eni_quintile"])
                 .apply(lambda g: (g["pta_category"] == "Active").mean())
                 .round(2)
@@ -63,11 +63,11 @@ def pta_trends_analysis(output_path):
             )
 
             # separate out schools with active PTAs
-            active_2019_2025 = funding_2019_2025.query("pta_category == 'Active'")
+            active_2019_2025 = funding_data.query("pta_category == 'Active'")
 
             print("\nMedian per-pupil PTA income by ENI quintile (active PTAs only):")
             print(textwrap.indent(
-                median_by_category(
+                median_by_category(  # noqa: F821
                     active_2019_2025, 
                     category_cols=["year", "eni_quintile"],
                     value_cols="pp_pta_income")
