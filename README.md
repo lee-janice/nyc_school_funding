@@ -11,46 +11,55 @@ create funding gaps that closely mirror socioeconomic and racial segregation.
 
 ### Severe financial inequities
 
-* As expected, PTA funding is hyper-concentrated in wealthiest schools. For example, in 2024-25,
-  the median PTA per-pupil expenditure was $19. However, the 95th percentile school spent $471 per-pupil,
-  the 99th spent $1,293, and the highest spending school spent $2,738 for each enrolled student.
-* In the wealthiest schools, this expenditure acted almost as a "shadow budget" - schools like
-  P.S. 029 John M. Harrigan and P.S. 158 Bayard Taylor spent private PTA funds worth 25% and 23% of their
-  entire public FSF allocation, respectively.
+As expected, PTA funding is hyper-concentrated. 
 
-## Socioeconomic and demographic stratification
-
-* There is a clear negative linear relationship (OLS slope = -6.81) between students' economic need (measured by the
-  NYCPS-created Economic Need Index, or ENI).
-* Schools in the highest PTA expenditure quantile have a drastically higher share of White and Asian students
-  compared to the lowest quantile, which is predominantly composed of Hispanic and Black students.
-
-### Data anomalies
-
-* The publicly available PTA fundraising data had a substantial number of accounting anomalies, like
-    * cross-year discrepancies between ending balances in Y0 and starting balances in Y1
-    * within-year discrepancies between the implied ending balance (`starting balance + income - expenditures`), and the reported ending balance
-    * accounting errors like values expressed in cents rather than dollars
-* In particular, the cross-year balance discrepancies - where the previous year's ending balance differed from the starting balance by over $50,000 - were highly concentrated in the schools with the wealthiest PTAs.
-
-
-## Cross-sectional 2024-25 profile 
-<img src="output/figures/fig7_top_schools_annotated.png" width="600">
+In 2024-25, the median PTA per-pupil expenditure was just $19. However, the 95th percentile school spent $471 per-pupil,
+the 99th jumped to $1,293, and the highest spending school spent $2,738 for each enrolled student.
 
 <img src="output/figures/fig4_expenditure_percentiles.png" width="600">
 
+<img src="output/figures/fig7_top_schools_annotated.png" width="600">
+
+In the wealthiest schools, this expenditure acted almost as like a "shadow budget." For example, schools like P.S. 029 John M. Harrigan and P.S. 158 Bayard Taylor spent private PTA funds worth 25% and 23% of their entire public FSF allocation, respectively.
+
+### Socioeconomic and demographic stratification
+
+As expected, schools serving students with more economic need tend to have PTAs that spend less.
+
+There is a clear negative linear relationship (OLS slope = -6.81) between students' economic need
+(measured by the NYCPS-created Economic Need Index, or ENI) and PTA funding:
+
 <img src="output/figures/fig6_eni_vs_expenditure.png" width="600">
+  
+Schools in the highest PTA expenditure quantile have a drastically higher share of White and Asian students compared to the lowest quantile, which is predominantly composed of Hispanic and Black students.
 
 <img src="output/figures/fig5_racial_comp_by_pta.png" width="600">
 
-## Trends between 2018-19 and 2024-25 
+### Data anomalies
 
-<img src="output/figures/fig3_quintile_trends.png" width="600">
+The publicly available PTA fundraising data had a substantial number of accounting anomalies, like
 
-## Anomaly analysis
+* Cross-year discrepancies between ending balances in Y0 and starting balances in Y1.
+* Within-year discrepancies between the implied ending balance (`starting balance + income - expenditures`), and the reported ending balance.
+* Accounting errors like values expressed in cents rather than dollars.
+
+In particular, the cross-year balance discrepancies - where the previous year's ending balance differed from the starting balance by over $50,000 - were highly concentrated in the schools with the wealthiest PTAs. This may warrant further investigation to see if these errors are happening systematically or intentionally.
+
 
 <img src="output/figures/fig1c_balance_flag_vs_expenditure_hist.png" width="600">
 <img src="output/figures/fig2c_transaction_flag_vs_expenditure_hist.png" width="600">
 
+### Trends between 2018-19 and 2024-25
+
+<img src="output/figures/fig3_quintile_trends.png" width="600">
+
+## AI Use Disclaimer
+
+This project was developed with assistance from Claude. Particularly, 
+
+* Initial conversations with Claude helped shape the research question, data architecture, and analytical approach, including the identification of methodological considerations like the treatment of missing vs. inactive PTA records.
+* Claude also flagged several data quality issues during exploratory analysis, including an anomalous expenditure value that prompted a broader audit of balance sheet consistency. The systematic diagnosis and correction of scaling errors in PTA financials was developed collaboratively.
+* Claude helped me scaffold analytical code, especially for the data visualization module. All generated code was reviewed, tested, and modified by myself before use.
+* Finally, Claude provided feedback on descriptive outputs and figures during the exploratory analysis phase, helping prioritize which findings to foreground.
 
 
