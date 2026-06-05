@@ -43,7 +43,8 @@ The publicly available PTA fundraising data had a substantial number of accounti
 * Within-year discrepancies between the implied ending balance (`starting balance + income - expenditures`), and the reported ending balance.
 * Accounting errors like values expressed in cents rather than dollars.
 
-In particular, the cross-year balance discrepancies - where the previous year's ending balance differed from the starting balance by over $50,000 - were highly concentrated in the schools with the wealthiest PTAs. This may warrant further investigation to see if these errors are happening systematically or intentionally.
+In particular, the cross-year balance discrepancies - where the previous year's ending balance differed from the starting balance by over $50,000* - were highly concentrated in the schools with the wealthiest PTAs. This may warrant further investigation to see if these errors are happening systematically or intentionally.
+*TODO: make this a dynamic threshold- where the flag is based on the percent discrepancy from the end or start balance
 
 
 <img src="output/figures/fig1c_balance_flag_vs_expenditure_hist.png" width="600">
