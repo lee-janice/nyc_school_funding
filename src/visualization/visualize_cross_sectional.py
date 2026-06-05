@@ -51,7 +51,9 @@ def plot_pta_expenditure_percentiles(
     save_path=None,
 ):
     # -----> filter data 
-    active = df[df[category_col] == "Active"].copy()
+    active = df[
+        (df[category_col] == "Active") 
+    ].copy()
 
     if years is not None:
         active = active[active[year_col].isin(years)]
@@ -326,8 +328,7 @@ def plot_top_schools_annotated(
 ):
     active = df[
         (df["year"] == year) &
-        (df[category_col] == "Active") &
-        (df[expenditure_col] > 0)
+        (df[category_col] == "Active") 
     ].copy()
 
     #  -----> identify top N schools by pp expenditure
@@ -357,7 +358,6 @@ def plot_top_schools_annotated(
     for _, row in top.iterrows():
         ax.scatter(
             row[eni_col], row[expenditure_col],
-            # color=row["dot_color"],
             color="steelblue",
             alpha=0.85,
             edgecolors="white", linewidth=0.8,
@@ -395,20 +395,6 @@ def plot_top_schools_annotated(
         ha="right", va="bottom"
     )
 
-    # -----> legend for color encoding
-    # legend_elements = [
-    #     plt.scatter([], [], color="#d6604d", s=80,
-    #                 label="≥ 15% of FSF (top schools)"),
-    #     plt.scatter([], [], color="#2166ac", s=80,
-    #                     label="< 15% of FSF (top schools)"),
-    #         plt.scatter([], [], color="#cccccc", s=30,
-    #                 label="All other active PTAs"),
-    # ]
-    # ax.legend(
-    #     handles=legend_elements,
-    #     frameon=False, fontsize=9,
-    #     loc="upper left"
-    # )
 
     #  -----> formatting 
     ax.set_xlabel("Economic Need Index", fontsize=11)
