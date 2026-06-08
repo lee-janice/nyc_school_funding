@@ -27,13 +27,22 @@ In the wealthiest schools, this expenditure acted almost as like a "shadow budge
 As expected, schools serving students with more economic need tend to have PTAs that spend less.
 
 There is a clear negative linear relationship (OLS slope = -6.81) between students' economic need
-(measured by the NYCPS-created Economic Need Index, or ENI) and PTA funding:
+(measured by the NYCPS-created Economic Need Index, or ENI) and (the log of) PTA funding:
 
 <img src="output/figures/fig6_eni_vs_expenditure.png" width="600">
   
 Schools in the highest PTA expenditure quantile have a drastically higher share of White and Asian students compared to the lowest quantile, which is predominantly composed of Hispanic and Black students.
 
 <img src="output/figures/fig5_racial_comp_by_pta.png" width="600">
+
+### Increasing inequity over time
+
+As demonstrated below, the gap between the top 20% of schools and the bottom 80% is stark and is widening. 
+And although PTA incomes and expenditures for the top quartile of schools dipped sharply during the pandemic, 
+their _ending balances_—i.e., the money that the PTA carries over year-to-year—continued to steadily increase. 
+
+<img src="output/figures/fig3_quintile_trends.png" width="900">
+
 
 ### Data anomalies
 
@@ -49,10 +58,6 @@ In particular, the cross-year balance discrepancies - where the previous year's 
 
 <img src="output/figures/fig1c_balance_flag_vs_expenditure_hist.png" width="600">
 <img src="output/figures/fig2c_transaction_flag_vs_expenditure_hist.png" width="600">
-
-### Trends between 2018-19 and 2024-25
-
-<img src="output/figures/fig3_quintile_trends.png" width="600">
 
 ## AI Use Disclaimer
 
