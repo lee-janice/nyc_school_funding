@@ -38,7 +38,7 @@ Schools in the highest PTA expenditure quantile have a drastically higher share 
 ### Increasing inequity over time
 
 As demonstrated below, the gap between the top 20% of schools and the bottom 80% is stark and is widening. 
-And although PTA incomes and expenditures for the top quartile of schools dipped sharply during the pandemic, 
+And although PTA incomes and expenditures for the top quintile of schools dipped sharply during the pandemic, 
 their _ending balances_—i.e., the money that the PTA carries over year-to-year—continued to steadily increase. 
 
 <img src="output/figures/fig3_quintile_trends.png" width="900">
