@@ -30,28 +30,30 @@ QUINTILE_LEGEND_LABELS = {
 #  PTA financials by ENI quintile over time
 # =============================================================================
 def plot_quintile_trends(
-    funding_data,
+    df,
+    title="",
+    subtitle="",
     save_path=None,
 ):
-    active = funding_data.query("pta_category == 'Active'")
+    # active = funding_data.query("pta_category == 'Active'")
 
     quintile_pp_income = (
         median_by_category(
-            active, 
+            df, 
             category_cols=["year", "eni_quintile"],
             value_cols="pp_pta_income"
         )
     )
     quintile_pp_expenditure = (
         median_by_category(
-            active, 
+            df, 
             category_cols=["year", "eni_quintile"],
             value_cols="pp_pta_expenditure"
         )
     )
     quintile_pp_end_balance = (
         median_by_category(
-            active, 
+            df, 
             category_cols=["year", "eni_quintile"],
             value_cols="pp_pta_end_balance"
         )
@@ -83,7 +85,7 @@ def plot_quintile_trends(
         (axes[2], balance,     "Median per-pupil ending balance ($)", "(c) Ending balance"),
     ]
 
-    for ax, data, ylabel, subtitle in panels:
+    for ax, data, ylabel, sub in panels:
 
         # -----> plot one line per quintile 
         for col in data.columns:
@@ -103,7 +105,7 @@ def plot_quintile_trends(
         ax.set_xticklabels(x_labels, rotation=30, ha="right")
         ax.set_xlabel("School year", fontsize=11)
         ax.set_ylabel(ylabel, fontsize=11)
-        ax.set_title(subtitle)
+        ax.set_title(sub)
         ax.set_ylim(bottom=0)
 
     # -----> shared legend below both panels 
@@ -119,9 +121,13 @@ def plot_quintile_trends(
         title_fontsize=10,
     )
 
+    y0 = np.min(df["year"]) 
+    y1 = np.max(df["year"]) 
+
     fig.suptitle(
-        "Median per-pupil PTA finances by Economic Need Index quintile\n"
-        "Active PTAs only — NYC Public Schools, Districts 1–32",
+        f"{title}"
+        f"{subtitle} "
+        f"({y0}-{y1})",
         fontsize=13, fontweight="bold", y=1.02
     )
 

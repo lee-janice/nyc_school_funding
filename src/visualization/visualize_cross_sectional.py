@@ -12,7 +12,7 @@ RACE_COLS = {
     "p_other_race": "Other Race",
 }
 
-RACE_COLS_ORDERED = ["White", "Black", "Hispanic", "Asian", "Other Race"]
+RACE_COLS_ORDERED = ["White", "Asian", "Black", "Hispanic", "Other Race"]
 
 RACE_COLORS = {
     "Black":       "#2166ac",
@@ -41,26 +41,25 @@ QUINTILE_LEGEND_LABELS = {
 # =============================================================================
 #  PTA expenditure percentile plot
 # =============================================================================
+# TODO: make sure to update pipeline to handle any dataset, not restricted to just Active PTA 
 def plot_pta_expenditure_percentiles(
     df,
     expenditure_col="pp_pta_expenditure",
     category_col="pta_category",
     year_col="year",
     years=None,          
+    title="", 
+    subtitle="", 
     highlight_pcts=None, # percentiles to annotate, e.g. [75, 90, 95, 99]
     save_path=None,
 ):
     # -----> filter data 
-    active = df[
-        (df[category_col] == "Active") 
-    ].copy()
-
     if years is not None:
-        active = active[active[year_col].isin(years)]
+        df = df[df[year_col].isin(years)]
 
     # -----> compute percentile profile 
     pcts = np.arange(1, 100)  # 1st through 99th percentile
-    values = np.percentile(active[expenditure_col].dropna(), pcts)
+    values = np.percentile(df[expenditure_col].dropna(), pcts)
 
     # ------> build figure 
     fig, ax = plt.subplots(
@@ -82,7 +81,7 @@ def plot_pta_expenditure_percentiles(
         highlight_pcts = [75, 90, 95, 99]
 
     for p in highlight_pcts:
-        v = np.percentile(active[expenditure_col].dropna(), p)
+        v = np.percentile(df[expenditure_col].dropna(), p)
         ax.axvline(
             p, color="#d6604d", linewidth=1.2,
             linestyle="--", alpha=0.7, zorder=4
@@ -107,11 +106,11 @@ def plot_pta_expenditure_percentiles(
         "pooled 2019–2025" if years is None
         else "–".join(str(y) for y in sorted(years))
     )
-    n = len(active)
+    n = len(df)
 
     fig.suptitle(
-        f"Per-pupil PTA expenditure by percentile rank\n"
-        f"Active PTAs only — NYC Public Schools, Districts 1–32 "
+        f"{title}\n"
+        f"{subtitle} "
         f"({year_str}, N={n:,})",
         fontsize=13, fontweight="bold"
     )
@@ -132,17 +131,19 @@ def plot_racial_comp_by_pta_quantile(
     category_col = "pta_category",
     year_col="year",
     years=None,          
+    title="", 
+    subtitle="", 
     save_path = None,
 ):
     # -----> aggregate and filter data 
-    active = df[df[category_col] == "Active"].copy()
+    # active = df[df[category_col] == "Active"].copy()
 
     if years is not None:
-        active = active[active[year_col].isin(years)]
+        df = df[df[year_col].isin(years)]
  
     plot_data = (
         mean_by_category(
-            active,
+            df,
             category_cols=[year_col, quantile_col],
             value_cols=["p_white", "p_black", "p_hispanic", "p_asian", "p_other_race"])
         .multiply(100)
@@ -193,7 +194,7 @@ def plot_racial_comp_by_pta_quantile(
     # ----- formatting 
     ax.set_xticks(x_pos)
     ax.set_xticklabels(x_labels, rotation=30, ha="right")
-    ax.set_xlabel("PTA income quantile", fontsize=11)
+    ax.set_xlabel("PTA funding quantile", fontsize=11)
     ax.set_ylabel("Mean share of school enrollment (%)", fontsize=11)
 
     # -----> add N and year info to suptitle 
@@ -201,11 +202,11 @@ def plot_racial_comp_by_pta_quantile(
         "pooled 2019–2025" if years is None
         else "–".join(str(y) for y in sorted(years))
     )
-    n = len(active)
+    n = len(df)
 
     fig.suptitle(
-        f"Mean school racial composition by PTA income quantile\n"
-        f"Active PTAs only — NYC Public Schools, Districts 1-32 "
+        f"{title}"
+        f"{subtitle} "
         f"({year_str}, N={n:,})",
         fontsize=13, fontweight="bold"
     )
@@ -240,12 +241,14 @@ def plot_eni_vs_expenditure_scatter(
     expenditure_col = "pp_pta_expenditure",
     quintile_col = "eni_quintile",
     category_col = "pta_category",
+    title="",
+    subtitle="",
     save_path = None,
 ):
     active = df[
         (df["year"] == year) &
-        (df[category_col] == "Active") &
-        (df[expenditure_col] > 0)
+        (df[category_col] == "Active") 
+        & (df[expenditure_col] > 0)
     ].copy()
 
     active["log_expenditure"] = np.log(active[expenditure_col])
@@ -296,8 +299,9 @@ def plot_eni_vs_expenditure_scatter(
     ax2.set_ylabel("Per-pupil expenditure ($)", fontsize=9, color="#555555")
 
     ax.set_title(
-        f"Economic need vs. PTA expenditure per pupil — {year}\n"
-        f"Active PTAs with non-zero expenditures only — NYC Public Schools, Districts 1–32 (N={len(active):,})",
+        f"Economic need vs. PTA expenditure per pupil\n"
+        f"{subtitle} "
+        f"({year}, N={len(active):,})\n",
     )
     ax2.spines["top"].set_visible(False)
 
@@ -323,17 +327,16 @@ def plot_top_schools_annotated(
     expenditure_col = "pp_pta_expenditure",
     pct_fsf_col = "pta_expenditure_as_p_of_fsf",
     category_col = "pta_category",
+    title = "",
+    subtitle = "", 
     top_n = 15,
     save_path = None,
 ):
-    active = df[
-        (df["year"] == year) &
-        (df[category_col] == "Active") 
-    ].copy()
+    df = df[(df["year"] == year)].copy()
 
     #  -----> identify top N schools by pp expenditure
-    top = active.nlargest(top_n, expenditure_col)
-    rest = active[~active.index.isin(top.index)]
+    top = df.nlargest(top_n, expenditure_col)
+    rest = df[~df.index.isin(top.index)]
 
     # -----> color: above 15% FSF = dark red, below = dark blue
     # top["dot_color"] = top[pct_fsf_col].apply(
@@ -351,7 +354,7 @@ def plot_top_schools_annotated(
         rest[eni_col], rest[expenditure_col],
         color="#cccccc", alpha=0.3, s=15,
         edgecolors="none", zorder=2,
-        label="All other active PTAs"
+        # label="All other active PTAs"
     )
 
     #  -----> top N schools
@@ -382,7 +385,7 @@ def plot_top_schools_annotated(
     )
 
     #  -----> reference line at median expenditure
-    median_exp = active[expenditure_col].median()
+    median_exp = df[expenditure_col].median()
     ax.axhline(
         median_exp, color="#555555", linewidth=1.0,
         linestyle=":", alpha=0.6, zorder=1
@@ -403,9 +406,11 @@ def plot_top_schools_annotated(
         mtick.FuncFormatter(lambda x, _: f"${x:,.0f}")
     )
 
+    n = len(df)
     ax.set_title(
-        f"Top {top_n} schools by per-pupil PTA expenditure — {year}\n"
-        f"Active PTAs only — NYC Public Schools, Districts 1–32"
+        f"Top {top_n} schools by per-pupil PTA expenditure\n"
+        f"{subtitle} "
+        f"({year}, N={n:,})\n"
     )
 
     plt.tight_layout()
