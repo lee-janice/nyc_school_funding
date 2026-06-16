@@ -1,11 +1,12 @@
+from src.visualization.visualize_cross_sectional import plot_eni_vs_finance_scatter
+from src.visualization.visualize_trends import plot_pta_quintile_trends
+from src.visualization.visualize_trends import plot_eni_quintile_trends
 from src.visualization.visualize_anomalies import plot_flag_vs_funding_boxplot
 from src.visualization.visualize_anomalies import plot_flag_vs_funding_scatter
 from src.visualization.visualize_anomalies import plot_flag_vs_funding_hist
 from src.visualization.visualize_cross_sectional import plot_pta_expenditure_percentiles
 from src.visualization.visualize_cross_sectional import plot_top_schools_annotated
-from src.visualization.visualize_cross_sectional import plot_eni_vs_expenditure_scatter
 from src.visualization.visualize_cross_sectional import plot_racial_comp_by_pta_quantile
-from src.visualization.visualize_trends import plot_quintile_trends
 import pandas as pd
 import matplotlib.pyplot as plt
 import sys
@@ -135,8 +136,9 @@ def create_fig4(funding_df, active_df):
 
 def create_fig5(active_df): 
     try: 
-        plot_eni_vs_expenditure_scatter(
+        plot_eni_vs_finance_scatter(
             active_df, year=2025,
+            finance_col="pp_pta_expenditure",
             title="Economic need vs. per-pupil PTA expenditure per pupil\n",
             subtitle="Active PTAs with non-zero expenditures only — NYC Public Schools, Districts 1–32",
             save_path="output/figures/fig5_eni_vs_expenditure.png"
@@ -165,22 +167,43 @@ def create_fig6(active_df):
 
 def create_fig7(funding_df, active_df): 
     try: 
-        plot_quintile_trends(
+        plot_eni_quintile_trends(
             funding_df,
             title="Median per-pupil PTA finances by Economic Need Index quintile",
             subtitle="All schools — NYC Public Schools, Districts 1–32",
-            save_path="output/figures/fig7_quintile_trends.png"
+            save_path="output/figures/fig7_eni_quintile_trends.png"
         )
-        plot_quintile_trends(
+        plot_eni_quintile_trends(
             active_df,
             title="Median per-pupil PTA finances by Economic Need Index quintile",
             subtitle="Active PTAs only — NYC Public Schools, Districts 1–32",
-            save_path="output/figures/fig7_quintile_trends_active.png"
+            save_path="output/figures/fig7_eni_quintile_trends_active.png"
         )
 
     except Exception as e:
         print(f"Create figure 7 failed: {str(e)}")
         sys.exit(1)
+
+
+def create_fig8(funding_df, active_df): 
+    try: 
+        plot_pta_quintile_trends(
+            funding_df,
+            title="Per-pupil PTA financial quintiles over time",
+            subtitle="All schools — NYC Public Schools, Districts 1–32",
+            save_path="output/figures/fig8_pta_quintile_trends.png"
+        )
+        plot_pta_quintile_trends(
+            active_df,
+            title="Per-pupil PTA financial quintiles over time",
+            subtitle="Active PTAs only — NYC Public Schools, Districts 1–32",
+            save_path="output/figures/fig8_pta_quintile_trends_active.png"
+        )
+
+    except Exception as e:
+        print(f"Create figure 8 failed: {str(e)}")
+        sys.exit(1)
+
 
 
 
@@ -219,25 +242,36 @@ if __name__ == "__main__":
     active = funding_wout_flagged.query("pta_category == 'Active'")
 
 
-    # -----> Balance anomalies
-    create_fig1(funding_2019_2025)
+    # # -----> Balance anomalies
+    # create_fig1(funding_2019_2025)
 
-    # -----> Transaction anomalies
-    create_fig2(funding_2019_2025)
+    # # -----> Transaction anomalies
+    # create_fig2(funding_2019_2025)
 
-    # -----> Percentile rank by expendtiures
-    create_fig3(funding_df=funding_wout_flagged, active_df=active)
+    # # -----> Percentile rank by expendtiures
+    # create_fig3(funding_df=funding_wout_flagged, active_df=active)
 
-    # ------> Top schools annotated
-    create_fig4(funding_df=funding_wout_flagged, active_df=active)
+    # # ------> Top schools annotated
+    # create_fig4(funding_df=funding_wout_flagged, active_df=active)
 
-    # ------> ENI vs. PTA expenditure
-    create_fig5(active_df=active)
+    # # ------> ENI vs. PTA expenditure
+    # create_fig5(active_df=active)
 
-    # ------> Racial composition by PTA expenditures
-    create_fig6(active_df=active)
+    # # ------> Racial composition by PTA expenditures
+    # create_fig6(active_df=active)
 
-    # -----> Quintile trends over time
-    create_fig7(funding_df=funding_wout_flagged, active_df=active)
+    # # -----> ENI quintile trends over time
+    # create_fig7(funding_df=funding_wout_flagged, active_df=active)
 
+    # # -----> PTA quintile trends over time
+    # create_fig8(funding_df=funding_wout_flagged, active_df=active)
+
+    plot_eni_vs_finance_scatter(
+        funding_wout_flagged, year=2025,
+        finance_col="pp_fsf",
+        title="Economic need vs. Fair Student Funding (FSF) allocations\n",
+        subtitle="All schools — NYC Public Schools, Districts 1–32",
+        legend_loc="upper left",
+        save_path="output/figures/fig9_eni_vs_fsf.png"
+    )
 

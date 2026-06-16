@@ -46,7 +46,7 @@ def run_descriptives(funding_data):
         
 
         # SENSITIVITY ANALYSIS 3
-        # run with excluding within-year balance discrepancies  
+        # run with excluding within-year balance discrepancies (implied end balance != reported end balance) 
         funding_sensitivity = funding_2019_2025.query(
             "not balance_wy_diff_flag"
         )

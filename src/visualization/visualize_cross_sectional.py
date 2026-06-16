@@ -232,25 +232,26 @@ def plot_racial_comp_by_pta_quantile(
 
 
 # =============================================================================
-#  ENI vs. log(pp_pta_expenditure)
+#  ENI vs. finance column
 # =============================================================================
-def plot_eni_vs_expenditure_scatter(
+def plot_eni_vs_finance_scatter(
     df,
     year,
     eni_col = "eni_n",
-    expenditure_col = "pp_pta_expenditure",
+    finance_col = "pp_pta_expenditure",
     quintile_col = "eni_quintile",
     category_col = "pta_category",
     title="",
     subtitle="",
+    legend_loc="lower left",
     save_path = None,
 ):
     active_nonzero = df[
         (df["year"] == year) &
-        (df[expenditure_col] > 0)
+        (df[finance_col] > 0)
     ].copy()
 
-    active_nonzero["log_expenditure"] = np.log(active_nonzero[expenditure_col])
+    active_nonzero["log_expenditure"] = np.log(active_nonzero[finance_col])
 
     fig, ax = plt.subplots(figsize=(10, 6))
 
@@ -304,7 +305,7 @@ def plot_eni_vs_expenditure_scatter(
     )
     ax2.spines["top"].set_visible(False)
 
-    ax.legend(frameon=False, fontsize=9, loc="lower left")
+    ax.legend(frameon=False, fontsize=9, loc=legend_loc)
 
     plt.tight_layout()
 
