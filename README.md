@@ -1,9 +1,9 @@
----
+<!-- ---
 format:
     pdf:
         geometry:
             - margin=1in
----
+--- -->
 
 # NYC PTA Funding Analysis
 
@@ -25,8 +25,8 @@ the 99th jumped to $1,293, and the highest spending school spent $2,738 for each
 
 <!-- for GitHub README -->
 
-<img src="output/figures/fig4_expenditure_percentiles.png" width="600"> -->
-<img src="output/figures/fig7_top_schools_annotated.png" width="600">
+<img src="output/figures/fig3_expenditure_percentiles.png" width="600"> -->
+<img src="output/figures/fig4_top_schools_annotated.png" width="600">
 
 <!-- for PDF rendering with Quarto -->
 
@@ -44,13 +44,13 @@ As expected, schools serving students with more economic need tend to have PTAs 
 There is a clear negative linear relationship (OLS slope = -6.81) between students' economic need
 (measured by the NYCPS-created Economic Need Index, or ENI) and (the log of) PTA funding:
 
-<img src="output/figures/fig6_eni_vs_expenditure.png" width="600">
+<img src="output/figures/fig5_eni_vs_expenditure.png" width="600">
 
 <!-- ![](output/figures/fig5_eni_vs_expenditure.png){width=80% fig-pos="H"} -->
 
 Schools in the highest PTA expenditure quantile have a drastically higher share of White and Asian students compared to the lowest quantile, which is predominantly composed of Hispanic and Black students.
 
-<img src="output/figures/fig5_racial_comp_by_pta.png" width="600">
+<img src="output/figures/fig6_racial_comp_by_pta_active.png" width="600">
 
 <!-- ![](output/figures/fig6_racial_comp_by_pta_active.png){width=80% fig-pos="H"} -->
 
@@ -60,7 +60,7 @@ As demonstrated below, the gap between the top 20% of schools and the bottom 80%
 And although PTA incomes and expenditures for the top quintile of schools dipped sharply during the pandemic,
 their _ending balances_—i.e., the money that the PTA carries over year-to-year—continued to steadily increase.
 
-<img src="output/figures/fig3_quintile_trends.png" width="900">
+<img src="output/figures/fig7_quintile_trends.png" width="900">
 
 <!-- ![](output/figures/fig7_quintile_trends.png){fig-pos="H"} -->
 
