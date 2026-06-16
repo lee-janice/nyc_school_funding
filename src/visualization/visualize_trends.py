@@ -77,15 +77,6 @@ def plot_quintile_trends(
         layout="constrained",
     )
 
-    # fig.get_layout_engine().set(
-    #     w_pad=0.02, 
-    #     h_pad=0.02, 
-    #     rect=(0.01, 0.01, 0.99, 0.99)
-    # )
-
-    # add more space above the subplots
-    # fig.set_constrained_layout_pads(w_pad=0.1, h_pad=0.01) 
-
     panels = [
         (axes[0], income,      "Median per-pupil income ($)",         "(a) Annual income"),
         (axes[1], expenditure, "Median per-pupil expenditure ($)",    "(b) Annual expenditure"),

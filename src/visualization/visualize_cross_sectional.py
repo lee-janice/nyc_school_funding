@@ -245,19 +245,18 @@ def plot_eni_vs_expenditure_scatter(
     subtitle="",
     save_path = None,
 ):
-    active = df[
+    active_nonzero = df[
         (df["year"] == year) &
-        (df[category_col] == "Active") 
-        & (df[expenditure_col] > 0)
+        (df[expenditure_col] > 0)
     ].copy()
 
-    active["log_expenditure"] = np.log(active[expenditure_col])
+    active_nonzero["log_expenditure"] = np.log(active_nonzero[expenditure_col])
 
     fig, ax = plt.subplots(figsize=(10, 6))
 
     # -----> plot points by quintile 
     for quintile, color in QUINTILE_COLORS.items():
-        subset = active[active[quintile_col] == quintile]
+        subset = active_nonzero[active_nonzero[quintile_col] == quintile]
         ax.scatter(
             subset[eni_col],
             subset["log_expenditure"],
@@ -270,8 +269,8 @@ def plot_eni_vs_expenditure_scatter(
         )
 
     # -----> OLS trend line 
-    x = active[eni_col].values
-    y = active["log_expenditure"].values
+    x = active_nonzero[eni_col].values
+    y = active_nonzero["log_expenditure"].values
     m, b = np.polyfit(x, y, deg=1)
     x_line = np.linspace(x.min(), x.max(), 200)
     ax.plot(
@@ -301,7 +300,7 @@ def plot_eni_vs_expenditure_scatter(
     ax.set_title(
         f"{title}"
         f"{subtitle} "
-        f"({year}, N={len(active):,})\n",
+        f"({year}, N={len(active_nonzero):,})\n",
     )
     ax2.spines["top"].set_visible(False)
 
