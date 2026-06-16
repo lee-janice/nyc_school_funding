@@ -171,13 +171,13 @@ def create_figures():
         # -----> Quintile trends over time
         fig = plot_quintile_trends(
             funding_wout_flagged,
-            title="Median per-pupil PTA finances by Economic Need Index quintile\n",
+            title="Median per-pupil PTA finances by Economic Need Index quintile",
             subtitle="All schools — NYC Public Schools, Districts 1–32",
             save_path="output/figures/fig7_quintile_trends.png"
         )
         fig = plot_quintile_trends(
             active,
-            title="Median per-pupil PTA finances by Economic Need Index quintile\n",
+            title="Median per-pupil PTA finances by Economic Need Index quintile",
             subtitle="Active PTAs only — NYC Public Schools, Districts 1–32",
             save_path="output/figures/fig7_quintile_trends_active.png"
         )

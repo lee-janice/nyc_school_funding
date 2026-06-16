@@ -71,13 +71,20 @@ def plot_quintile_trends(
     # -----> figure layout 
     fig, axes = plt.subplots(
         1, 3, 
-        figsize=(24, 5.5),
+        figsize=(14, 4.5),
+        dpi=100,              
         sharey=False,   
-        constrained_layout=True,
+        layout="constrained",
     )
 
+    # fig.get_layout_engine().set(
+    #     w_pad=0.02, 
+    #     h_pad=0.02, 
+    #     rect=(0.01, 0.01, 0.99, 0.99)
+    # )
+
     # add more space above the subplots
-    fig.set_constrained_layout_pads(w_pad=0.1, h_pad=0.5) 
+    # fig.set_constrained_layout_pads(w_pad=0.1, h_pad=0.01) 
 
     panels = [
         (axes[0], income,      "Median per-pupil income ($)",         "(a) Annual income"),
@@ -112,11 +119,10 @@ def plot_quintile_trends(
     handles, labels = axes[0].get_legend_handles_labels()
     fig.legend(
         handles, labels,
-        loc="lower center",
+        loc="outside lower center", 
         ncol=5,
         frameon=False,
         fontsize=10,
-        bbox_to_anchor=(0.5, -0.12),
         title="ENI quintile",
         title_fontsize=10,
     )
@@ -125,14 +131,19 @@ def plot_quintile_trends(
     y1 = np.max(df["year"]) 
 
     fig.suptitle(
-        f"{title}"
-        f"{subtitle} "
-        f"({y0}-{y1})",
-        fontsize=13, fontweight="bold", y=1.02
+        f"\n{title}\n{subtitle} ({y0}-{y1})\n", 
+        fontsize=13, fontweight="bold"
     )
 
     if save_path:
-        fig.savefig(save_path, dpi=150, bbox_inches="tight")
+        # enforce dimensions onto the saving canvas object
+        fig.set_size_inches(10, 5)
+        
+        fig.savefig(
+            save_path, 
+            dpi=150,           
+            bbox_inches=None   
+        )
         print(f"Saved to {save_path}")
 
     return fig

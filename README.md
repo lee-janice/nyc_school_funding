@@ -25,7 +25,7 @@ the 99th jumped to $1,293, and the highest spending school spent $2,738 for each
 
 <!-- for GitHub README -->
 
-<img src="output/figures/fig3_expenditure_percentiles.png" width="600"> -->
+<img src="output/figures/fig3_expenditure_percentiles.png" width="600"> 
 <img src="output/figures/fig4_top_schools_annotated.png" width="600">
 
 <!-- for PDF rendering with Quarto -->
