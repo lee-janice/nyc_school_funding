@@ -23,7 +23,7 @@ def plot_flag_vs_funding_boxplot(
             mean_funding       = (funding_col, "mean"),
             n_obs              = ("year", "count"),
             wy_b_flag_rate     = ("balance_wy_diff_flag", "mean"),
-            xy_b_flag_rate     = ("balance_xy_diff_flag", "mean"),
+            xy_b_flag_rate     = ("ets_balance_diff_flag", "mean"),
             wy_t_flag_rate     = ("any_wy_transaction_flag", "mean"),
             ws_t_flag_rate     = ("any_ws_transaction_flag", "mean"),
             any_flag_rate      = ("anomaly_flag", "mean"),
@@ -79,7 +79,7 @@ def plot_flag_vs_funding_scatter(
             mean_funding     = (funding_col, "mean"),
             log_mean_funding = (funding_col, lambda x: np.log1p(x.mean())),
             n_wy_b_flags     = ("balance_wy_diff_flag", "sum"),
-            n_xy_b_flags     = ("balance_xy_diff_flag", "sum"),
+            n_xy_b_flags     = ("ets_balance_diff_flag", "sum"),
             n_wy_t_flags     = ("any_wy_transaction_flag", "sum"),
             n_ws_t_flags     = ("any_ws_transaction_flag", "sum"),
             n_obs            = ("year", "count"),
@@ -137,7 +137,7 @@ def plot_flag_vs_funding_hist(
             mean_funding       = (funding_col, "mean"),
             n_obs              = ("year", "count"),
             wy_b_flag_rate     = ("balance_wy_diff_flag", "mean"),
-            xy_b_flag_rate     = ("balance_xy_diff_flag", "mean"),
+            xy_b_flag_rate     = ("ets_balance_diff_flag", "mean"),
             wy_t_flag_rate     = ("any_wy_transaction_flag", "mean"),
             ws_t_flag_rate     = ("any_ws_transaction_flag", "mean"),
             any_flag_rate      = ("anomaly_flag", "mean"),
@@ -158,7 +158,7 @@ def plot_flag_vs_funding_hist(
     for ax, flag, title in zip(
         axes,
         flags,
-        flag_labels
+        flag_labels,
         # ["ever_wy_flagged", "ever_xy_flagged"],
         # ["Within-year balance flag", "Cross-year balance flag"]
     ):

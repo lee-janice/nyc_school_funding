@@ -17,11 +17,12 @@ def run_descriptives(funding_data):
 
         # sensitivity analysis: run descriptives without flagged transactions/anomalies 
 
+        # SENSITIVITY ANALYSIS 1
         # but don't exclude within-year, cross-school anomalies- 
         # these are mostly schools in the long right tail 
         # that have valid but very large PTA values (compared to other schools) 
         funding_sensitivity = funding_2019_2025.query(
-            "not balance_wy_diff_flag and not balance_xy_diff_flag and not any_ws_transaction_flag"
+            "not balance_wy_diff_flag and not ets_balance_diff_flag and not any_ws_transaction_flag"
         )
 
         print("\nRunning trends-over-time analysis without anomalies...")
@@ -31,6 +32,7 @@ def run_descriptives(funding_data):
         pta_cross_sectional_analysis(funding_sensitivity, 2025, "./output/cross_sectional_2025_SA1.txt")
 
 
+        # SENSITIVITY ANALYSIS 2
         # also run with not excluding balance flags - which are also mostly high-income schools
         funding_sensitivity = funding_2019_2025.query(
             "not any_ws_transaction_flag"
@@ -41,6 +43,20 @@ def run_descriptives(funding_data):
 
         print("\nRunning cross-sectional analysis excluding only cross-year, within-school anomalies...")
         pta_cross_sectional_analysis(funding_sensitivity, 2025, "./output/cross_sectional_2025_SA2.txt")
+        
+
+        # SENSITIVITY ANALYSIS 3
+        # run with excluding within-year balance discrepancies  
+        funding_sensitivity = funding_2019_2025.query(
+            "not balance_wy_diff_flag"
+        )
+
+        print("\nRunning trends-over-time analysis excluding within-year balance discrepancies...")
+        pta_trends_analysis(funding_sensitivity, "./output/trends_SA3.txt")
+
+        print("\nRunning cross-sectional analysis excluding only within-year balance discrepancies...")
+        pta_cross_sectional_analysis(funding_sensitivity, 2025, "./output/cross_sectional_2025_SA3.txt")
+        
 
 
     except Exception as e:

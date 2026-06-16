@@ -14,7 +14,7 @@ def model_anomalies(df):
             mean_end_balance   = ("pta_end_balance", "mean"),
             n_obs              = ("year", "count"),
             wy_flag_rate       = ("balance_wy_diff_flag", "mean"),
-            xy_flag_rate       = ("balance_xy_diff_flag", "mean"),
+            xy_flag_rate       = ("ets_balance_diff_flag", "mean"),
             any_flag_rate      = ("anomaly_flag", "mean"),
             mean_eni           = ("eni_n", "mean")
         )

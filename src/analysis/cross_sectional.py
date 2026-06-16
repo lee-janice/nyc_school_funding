@@ -90,7 +90,7 @@ def pta_cross_sectional_analysis(funding_data, year, output_path):
             print("\n-------------------------------------------------------------------------------")
             print(  "  Racial Composition by PTA Financials                                         ")
             print(  "-------------------------------------------------------------------------------")
-            print(f"\nRacial composition by PTA income quintiles ({year}, active PTAs only):")
+            print(f"\nRacial composition by per-pupil PTA income quintiles ({year}, active PTAs only):")
             print(textwrap.indent(
                 mean_by_category(
                     active_xsect,
@@ -103,7 +103,7 @@ def pta_cross_sectional_analysis(funding_data, year, output_path):
                 prefix="\t")
             )
 
-            print(f"\nRacial composition by PTA expenditure quintiles ({year}, active PTAs only):")
+            print(f"\nRacial composition by per-pupil PTA expenditure quintiles ({year}, active PTAs only):")
             print(textwrap.indent(
                 mean_by_category(
                     active_xsect,
@@ -116,7 +116,7 @@ def pta_cross_sectional_analysis(funding_data, year, output_path):
                 prefix="\t")
             )
 
-            print(f"\nRacial composition by PTA end balance quintiles ({year}, active PTAs only):")
+            print(f"\nRacial composition by per-pupil PTA end balance quintiles ({year}, active PTAs only):")
             print(textwrap.indent(
                 mean_by_category(
                     active_xsect,

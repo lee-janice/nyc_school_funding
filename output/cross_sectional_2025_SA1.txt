@@ -5,7 +5,7 @@
 
 PTA activity categories in 2025
 	pta_category
-	Active      747
+	Active      758
 	Missing     322
 	Inactive    300
 
@@ -101,37 +101,37 @@ Means of top 15
 
 Median per-pupil PTA financials by ENI quintile (2025, active PTAs only):
 	eni_quintile             Q1    Q2    Q3   Q4   Q5
-	pp_pta_income        143.58 27.67 11.22 9.77 4.70
-	pp_pta_expenditure   118.67 20.63  6.98 7.63 3.49
-	pp_pta_start_balance  41.29  4.96  3.24 2.59 2.10
-	pp_pta_end_balance    58.29 10.13  5.04 3.28 2.25
+	pp_pta_income        143.58 27.77 11.22 9.67 4.18
+	pp_pta_expenditure   124.12 20.63  6.88 7.63 3.05
+	pp_pta_start_balance  40.25  0.62  0.09 0.12 0.10
+	pp_pta_end_balance    58.19  9.67  5.04 3.41 2.28
 
 -------------------------------------------------------------------------------
   Racial Composition by PTA Financials                                         
 -------------------------------------------------------------------------------
 
-Racial composition by PTA income quintiles (2025, active PTAs only):
+Racial composition by per-pupil PTA income quintiles (2025, active PTAs only):
 	pp_pta_income_quintile    Q1    Q2    Q3    Q4    Q5
 	year                                                
-	2025 p_white            5.00  8.00  9.00 20.00 37.00
-	     p_black           30.00 26.00 20.00 15.00 10.00
-	     p_hispanic        51.00 49.00 48.00 36.00 28.00
-	     p_asian           10.00 15.00 19.00 26.00 19.00
+	2025 p_white            5.00  8.00 10.00 20.00 37.00
+	     p_black           30.00 26.00 20.00 14.00 10.00
+	     p_hispanic        51.00 49.00 47.00 36.00 28.00
+	     p_asian           10.00 15.00 19.00 26.00 18.00
 
-Racial composition by PTA expenditure quintiles (2025, active PTAs only):
+Racial composition by per-pupil PTA expenditure quintiles (2025, active PTAs only):
 	pp_pta_expenditure_quintile    Q1    Q2    Q3    Q4    Q5
 	year                                                     
-	2025 p_white                 6.00  8.00 10.00 18.00 36.00
-	     p_black                31.00 25.00 19.00 16.00 11.00
-	     p_hispanic             51.00 50.00 47.00 37.00 26.00
-	     p_asian                 9.00 15.00 20.00 25.00 21.00
+	2025 p_white                 6.00  8.00 10.00 19.00 36.00
+	     p_black                31.00 25.00 19.00 16.00 10.00
+	     p_hispanic             51.00 49.00 47.00 37.00 26.00
+	     p_asian                 9.00 15.00 21.00 24.00 21.00
 
-Racial composition by PTA end balance quintiles (2025, active PTAs only):
+Racial composition by per-pupil PTA end balance quintiles (2025, active PTAs only):
 	pp_pta_end_balance_quintile    Q1    Q2    Q3    Q4    Q5
 	year                                                     
-	2025 p_white                 5.00  9.00 10.00 21.00 33.00
-	     p_black                30.00 25.00 21.00 13.00 11.00
-	     p_hispanic             51.00 49.00 47.00 35.00 29.00
+	2025 p_white                 5.00  9.00 10.00 22.00 33.00
+	     p_black                30.00 26.00 21.00 13.00 11.00
+	     p_hispanic             52.00 48.00 47.00 35.00 30.00
 	     p_asian                10.00 14.00 19.00 26.00 20.00
 
 -------------------------------------------------------------------------------
@@ -141,5 +141,5 @@ Racial composition by PTA end balance quintiles (2025, active PTAs only):
 Median PTA expenditure as a percent of FSF allocations and total budget by ENI quintile (active PTAs only):
 	eni_quintile                          Q1   Q2   Q3   Q4   Q5
 	year                                                        
-	2025 pta_expenditure_as_p_of_fsf    0.90 0.20 0.00 0.00 0.00
+	2025 pta_expenditure_as_p_of_fsf    0.90 0.10 0.00 0.00 0.00
 	     pta_expenditure_as_p_of_budget 0.60 0.10 0.00 0.00 0.00

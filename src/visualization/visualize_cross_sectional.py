@@ -299,7 +299,7 @@ def plot_eni_vs_expenditure_scatter(
     ax2.set_ylabel("Per-pupil expenditure ($)", fontsize=9, color="#555555")
 
     ax.set_title(
-        f"Economic need vs. PTA expenditure per pupil\n"
+        f"{title}"
         f"{subtitle} "
         f"({year}, N={len(active):,})\n",
     )

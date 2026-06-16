@@ -92,9 +92,20 @@ def create_figures():
         )
 
         # based on anomaly and sensitivity analysis,
-        # exclude observations which are flagged for cross-year, within-school anomalies
-        funding_wout_flagged = funding_2019_2025.query("not any_ws_transaction_flag")
-        # active PTAs only 
+        # exclude observations which are flagged for 
+        # within-year balance discrepancies
+        funding_wout_flagged = funding_2019_2025.query(
+            "not balance_wy_diff_flag"
+            # "not any_ws_transaction_flag and not balance_wy_diff_flag"
+            # "not balance_wy_diff_flag and not ets_balance_diff_flag" # too many schools are flagged
+        )
+
+        # pull out the omitted observations
+        flagged = funding_2019_2025.query("balance_wy_diff_flag")
+        print(f"\nNumber of excluded observations: {flagged["year"].value_counts().sort_index().to_string()}\n")
+        flagged.to_csv("./data/processed/omitted_from_analysis.csv")
+
+        # isolate active PTAs only 
         active = funding_wout_flagged.query("pta_category == 'Active'")
 
 
@@ -105,7 +116,7 @@ def create_figures():
             highlight_pcts=[50, 75, 90, 95, 99],
             title="Per-pupil PTA expenditure by percentile rank", 
             subtitle="All schools — NYC Public Schools, Districts 1–32",
-            save_path="output/figures/fig4_expenditure_percentiles.png",
+            save_path="output/figures/fig3_expenditure_percentiles.png",
         )
 
         fig, pcts, values = plot_pta_expenditure_percentiles(
@@ -114,7 +125,7 @@ def create_figures():
             highlight_pcts=[50, 75, 90, 95, 99],
             title="Per-pupil PTA expenditure by percentile rank", 
             subtitle="Active PTAs only — NYC Public Schools, Districts 1–32 ",
-            save_path="output/figures/fig4_expenditure_percentiles_active.png",
+            save_path="output/figures/fig3_expenditure_percentiles_active.png",
         )
 
 
@@ -124,33 +135,14 @@ def create_figures():
             school_name_col="school_name_x",
             top_n=15,
             subtitle="All schools — NYC Public Schools, Districts 1–32",
-            save_path="output/figures/fig7_top_schools_annotated.png"
+            save_path="output/figures/fig4_top_schools_annotated.png"
         )
         fig = plot_top_schools_annotated(
             active, year=2025,
             school_name_col="school_name_x",
             top_n=15,
             subtitle="Active PTAs only — NYC Public Schools, Districts 1–32",
-            save_path="output/figures/fig7_top_schools_annotated_active.png"
-        )
-
-
-        # ------> Racial composition by PTA expenditures
-        fig = plot_racial_comp_by_pta_quantile(
-            funding_wout_flagged, 
-            years=[2025],
-            quantile_col="pp_pta_expenditure_quintile",
-            title="Mean school racial composition by PTA expenditure quantile\n",
-            subtitle="All schools — NYC Public Schools, Districts 1-32 ",
-            save_path="output/figures/fig5_racial_comp_by_pta.png"
-        )
-        fig = plot_racial_comp_by_pta_quantile(
-            active, 
-            years=[2025],
-            quantile_col="pp_pta_expenditure_quintile",
-            title="Mean school racial composition by PTA expenditure quantile\n",
-            subtitle="Active PTAs only — NYC Public Schools, Districts 1-32 ",
-            save_path="output/figures/fig5_racial_comp_by_pta_active.png"
+            save_path="output/figures/fig4_top_schools_annotated_active.png"
         )
 
 
@@ -158,8 +150,21 @@ def create_figures():
         # ------> ENI vs. PTA expenditure
         fig = plot_eni_vs_expenditure_scatter(
             funding_wout_flagged, year=2025,
+            title="Economic need vs. per-pupil PTA expenditure per pupil\n",
             subtitle="Active PTAs with non-zero expenditures only — NYC Public Schools, Districts 1–32",
-            save_path="output/figures/fig6_eni_vs_expenditure.png"
+            save_path="output/figures/fig5_eni_vs_expenditure.png"
+        )
+
+
+
+        # ------> Racial composition by PTA expenditures
+        fig = plot_racial_comp_by_pta_quantile(
+            active, 
+            years=[2025],
+            quantile_col="pp_pta_expenditure_quintile",
+            title="Mean school racial composition by per=pupil PTA expenditure quantile\n",
+            subtitle="Active PTAs only — NYC Public Schools, Districts 1-32 ",
+            save_path="output/figures/fig6_racial_comp_by_pta_active.png"
         )
 
 
@@ -168,13 +173,13 @@ def create_figures():
             funding_wout_flagged,
             title="Median per-pupil PTA finances by Economic Need Index quintile\n",
             subtitle="All schools — NYC Public Schools, Districts 1–32",
-            save_path="output/figures/fig3_quintile_trends.png"
+            save_path="output/figures/fig7_quintile_trends.png"
         )
         fig = plot_quintile_trends(
             active,
             title="Median per-pupil PTA finances by Economic Need Index quintile\n",
             subtitle="Active PTAs only — NYC Public Schools, Districts 1–32",
-            save_path="output/figures/fig3_quintile_trends_active.png"
+            save_path="output/figures/fig7_quintile_trends_active.png"
         )
 
 

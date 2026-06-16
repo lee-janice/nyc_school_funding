@@ -100,14 +100,14 @@ def pta_trends_analysis(funding_data, output_path):
             print(  "  PTA Income Trends                                                            ")
             print(  "-------------------------------------------------------------------------------")
             # -----> PTA income quintiles (active PTAs, within year)
-            print("\nPTA income quintiles for active PTAs, by year:")
+            print("\nPer-pupil PTA income quintiles for active PTAs, by year:")
             print(textwrap.indent(
                 active_2019_2025.groupby("year")["pp_pta_income"].quantile([0.2, 0.4, 0.6, 0.8]).unstack(level=1).to_string(), 
                 prefix="\t")
             )
 
             # -----> Racial composition by PTA income quintiles
-            print("\nRacial composition by PTA income quintiles (active PTAs only):")
+            print("\nRacial composition by per-pupil PTA income quintiles (active PTAs only):")
             print(textwrap.indent(
                 mean_by_category(
                     active_2019_2025,
@@ -124,14 +124,14 @@ def pta_trends_analysis(funding_data, output_path):
             print(  "  PTA Expenditure Trends                                                       ")
             print(  "-------------------------------------------------------------------------------")
             # -----> PTA expenditure quintiles (active PTAs, within year)
-            print("\nPTA expenditure quintiles for active PTAs, by year:")
+            print("\nPer-pupil PTA expenditure quintiles for active PTAs, by year:")
             print(textwrap.indent(
                 active_2019_2025.groupby("year")["pp_pta_expenditure"].quantile([0.2, 0.4, 0.6, 0.8]).unstack(level=1).to_string(), 
                 prefix="\t")
             )
 
             # -----> Racial composition by PTA expenditure quintiles
-            print("\nRacial composition by PTA expenditure quintiles (active PTAs only):")
+            print("\nRacial composition by per-pupil PTA expenditure quintiles (active PTAs only):")
             print(textwrap.indent(
                 mean_by_category(
                     active_2019_2025,
@@ -148,14 +148,14 @@ def pta_trends_analysis(funding_data, output_path):
             print(  "  PTA End Balance Trends                                                       ")
             print(  "-------------------------------------------------------------------------------")
             # -----> PTA end balance quintiles (active PTAs, within year)
-            print("\nPTA end balance quintiles for active PTAs, by year:")
+            print("\nPer-pupil PTA end balance quintiles for active PTAs, by year:")
             print(textwrap.indent(
                 active_2019_2025.groupby("year")["pp_pta_end_balance"].quantile([0.2, 0.4, 0.6, 0.8]).unstack(level=1).to_string(), 
                 prefix="\t")
             )
 
             # -----> Racial composition by PTA end balance quintiles
-            print("\nRacial composition by PTA end balance quintiles (active PTAs only):")
+            print("\nRacial composition by per-pupil PTA end balance quintiles (active PTAs only):")
             print(textwrap.indent(
                 mean_by_category(
                     active_2019_2025,

@@ -1,0 +1,20 @@
+# Sample definition
+
+* Limited to schools in Districts 1-32
+* Limited to schools that are present in all three of the PTA fundraising, FSF, and Demographic Snapshot datasets in a given year.
+
+# Data imputation 
+
+* 
+
+# Sensitivity analysis 
+
+* Identified anomalies in the data
+* Ran same analyses on 3 different sets of schools: 
+    (a) full sample 
+    (b) sample excluding schools which were flagged as having any of their transactions 
+        (across all years) be 
+
+
+        # based on anomaly and sensitivity analysis,
+        # exclude observations which are flagged for cross-year, within-school anomalies

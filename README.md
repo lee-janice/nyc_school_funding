@@ -23,15 +23,17 @@ As expected, PTA funding is hyper-concentrated.
 In 2024-25, the median PTA per-pupil expenditure was just $19. However, the 95th percentile school spent $471 per-pupil,
 the 99th jumped to $1,293, and the highest spending school spent $2,738 for each enrolled student.
 
+<!-- for GitHub README -->
+
 <!-- <img src="output/figures/fig4_expenditure_percentiles.png" width="600"> -->
 <!-- <img src="output/figures/fig7_top_schools_annotated.png" width="600"> -->
 
 <!-- for PDF rendering with Quarto -->
 
-![](output/figures/fig4_expenditure_percentiles.png){width=80%}
+![](output/figures/fig3_expenditure_percentiles.png){width=80%}
 \newline
 \par
-![](output/figures/fig7_top_schools_annotated.png){width=80%}
+![](output/figures/fig4_top_schools_annotated.png){width=80%}
 
 In the wealthiest schools, this expenditure acted almost as like a "shadow budget." For example, schools like P.S. 029 John M. Harrigan and P.S. 158 Bayard Taylor spent private PTA funds worth 25% and 23% of their entire public FSF allocation, respectively.
 
@@ -44,13 +46,13 @@ There is a clear negative linear relationship (OLS slope = -6.81) between studen
 
 <!-- <img src="output/figures/fig6_eni_vs_expenditure.png" width="600"> -->
 
-![](output/figures/fig6_eni_vs_expenditure.png){width=80% fig-pos="H"}
+![](output/figures/fig5_eni_vs_expenditure.png){width=80% fig-pos="H"}
 
 Schools in the highest PTA expenditure quantile have a drastically higher share of White and Asian students compared to the lowest quantile, which is predominantly composed of Hispanic and Black students.
 
 <!-- <img src="output/figures/fig5_racial_comp_by_pta.png" width="600"> -->
 
-![](output/figures/fig5_racial_comp_by_pta.png){width=80% fig-pos="H"}
+![](output/figures/fig6_racial_comp_by_pta_active.png){width=80% fig-pos="H"}
 
 ### Increasing inequity over time
 
@@ -60,7 +62,7 @@ their _ending balances_—i.e., the money that the PTA carries over year-to-year
 
 <!-- <img src="output/figures/fig3_quintile_trends.png" width="900"> -->
 
-![](output/figures/fig3_quintile_trends.png){fig-pos="H"}
+![](output/figures/fig7_quintile_trends.png){fig-pos="H"}
 
 ### Data anomalies
 
