@@ -20,8 +20,9 @@ create funding gaps that closely mirror socioeconomic and racial segregation.
 
 As expected, PTA funding is hyper-concentrated.
 
-In 2024-25, the median PTA per-pupil expenditure was just $19. However, the 95th percentile school spent $471 per-pupil,
-the 99th jumped to $1,293, and the highest spending school spent $2,738 for each enrolled student.
+In 2024-25, the median PTA per-pupil expenditure among all schools was just $6. 
+(Among schools with active PTAs, the median expenditure was $18 per student.)
+The 95th percentile school spent $439 per-pupil,the 99th jumped to $1,280, and the highest spending school spent $2,738 for each enrolled student.
 
 <!-- for GitHub README -->
 
