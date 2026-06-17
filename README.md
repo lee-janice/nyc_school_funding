@@ -12,15 +12,38 @@ across New York City Public Schools (NYCPS), which were made available by the tr
 mandates of Local Law 171 of 2018. While public schools are primarily funded through the
 city’s equity- and needs-based Fair Student Funding (FSF) formula, private PTA contributions remain
 largely opaque and in some cases, incredibly unequal. These stark inequities
-create funding gaps that closely mirror socioeconomic and racial segregation.
+create funding gaps that mirror socioeconomic and racial segregation.
 
 ## Key results
+
+### Missingness in PTA reporting
+
+In the reported NYCPS PTA financial data, we identify three distinct categories of schools for the 2024-25 school year (N=1,454):
+
+- Active PTAs (n=831): Schools reporting non-zero values for start balance, income, expenditure, or end balance.
+- Inactive PTAs (n=301): Schools reporting consistent zero values across all financial fields.
+- Missing Data (n=322): Schools with null entries across all financial fields.
+
+Analysis of the Economic Need Index (ENI) reveals systematic differences between these groups, suggesting that "missing" data is not equivalent to "zero" funding. Specifically:
+
+- the mean ENI for schools with active PTAs is 0.74,
+- the mean ENI for schools with inactive PTAs is 0.90, and
+- the mean ENI for schools with missing PTA data is 0.81.
+
+Because schools with missing data fall between active and inactive schools in terms of student demographics, we conclude that imputing missing values as zero would introduce significant bias. Consequently, all analyses for SY 2024-25 exclude the 322 schools with missing data.
+
+Additionally, we exclude observations where the calculated end balance (start balance + income – expenditures) deviates from the reported end balance by both:
+
+- More than 5% relative difference; AND
+- An absolute dollar value exceeding $50,000.
+
+See the section on Data anomalies below for additional analyses.
 
 ### Severe financial inequities
 
 As expected, PTA funding is hyper-concentrated.
 
-In 2024-25, the median PTA per-pupil expenditure among all schools was just $6.
+In 2024-25, the median PTA per-pupil expenditure among all schools (with non-missing PTA data) was just $6.
 (Among only schools with active PTAs, the median expenditure was $18 per student.)
 Yet the 95th percentile school spent $439 per-pupil, the 99th spent $1,280, and the highest spending school spent $2,738 for each enrolled student—translating to nearly $2 million in total expenditures.
 
@@ -37,6 +60,21 @@ Yet the 95th percentile school spent $439 per-pupil, the 99th spent $1,280, and 
 ![](output/figures/fig4_top_schools_annotated.png){width=80%} -->
 
 In the wealthiest schools, this expenditure acted almost as like a "shadow budget." For example, schools like P.S. 029 John M. Harrigan and P.S. 158 Bayard Taylor spent private PTA funds worth 25% and 23% of their entire public FSF allocation, respectively.
+
+#### Comparison with total funding amounts
+
+An important caveat to note is that generally, schools with greater need (serving students with more economic need, in greater need of special education services, etc.) receive _more_ in public funding (both in Fair Student Funding allocations and non-FSF allocations):
+
+<img src="output/figures/fig9a_eni_vs_fsf.png" width="600"> 
+<img src="output/figures/fig9b_eni_vs_non_fsf.png" width="600">
+
+Additionally, even including PTA expenditures, schools in the lowest economic need quintile (Q1) receive less in total funding (FSF allocations + non-FSF allocations + PTA expenditures) compared to those in the higher quintiles:
+
+<img src="output/figures/fig12_total_funding_dotplot.png" width="600">
+
+However, among the top schools with respect to PTA expenditures, PTA dollars can comprise a significant share of total funding amounts.
+
+<img src="output/figures/fig11a_eni_vs_pta_as_share_of_total.png" width="600">
 
 ### Socioeconomic and demographic stratification
 

@@ -1,3 +1,5 @@
+from src.visualization.visualize_cross_sectional import plot_total_funding_dotplot
+from src.visualization.visualize_cross_sectional import plot_funding_stacked
 from src.visualization.visualize_cross_sectional import plot_eni_vs_finance_scatter
 from src.visualization.visualize_trends import plot_pta_quintile_trends
 from src.visualization.visualize_trends import plot_eni_quintile_trends
@@ -93,7 +95,7 @@ def create_fig3(funding_df, active_df):
             years=[2025],
             highlight_pcts=[50, 75, 90, 95, 99],
             title="Per-pupil PTA expenditure by percentile rank", 
-            subtitle="All schools — NYC Public Schools, Districts 1–32",
+            subtitle="All schools with non-missing PTA data — NYC Public Schools, Districts 1–32",
             save_path="output/figures/fig3_expenditure_percentiles.png",
         )
 
@@ -117,7 +119,7 @@ def create_fig4(funding_df, active_df):
             funding_df, year=2025,
             school_name_col="school_name_x",
             top_n=15,
-            subtitle="All schools — NYC Public Schools, Districts 1–32",
+            subtitle="All schools with non-missing PTA data — NYC Public Schools, Districts 1–32",
             save_path="output/figures/fig4_top_schools_annotated.png"
         )
 
@@ -137,8 +139,9 @@ def create_fig4(funding_df, active_df):
 def create_fig5(active_df): 
     try: 
         plot_eni_vs_finance_scatter(
-            active_df, year=2025,
+            active_df.query("pp_pta_expenditure > 0"), year=2025,
             finance_col="pp_pta_expenditure",
+            ylabel="Log per-pupil PTA expenditure",
             title="Economic need vs. per-pupil PTA expenditure per pupil\n",
             subtitle="Active PTAs with non-zero expenditures only — NYC Public Schools, Districts 1–32",
             save_path="output/figures/fig5_eni_vs_expenditure.png"
@@ -170,7 +173,7 @@ def create_fig7(funding_df, active_df):
         plot_eni_quintile_trends(
             funding_df,
             title="Median per-pupil PTA finances by Economic Need Index quintile",
-            subtitle="All schools — NYC Public Schools, Districts 1–32",
+            subtitle="All schools with non-missing PTA data — NYC Public Schools, Districts 1–32",
             save_path="output/figures/fig7_eni_quintile_trends.png"
         )
         plot_eni_quintile_trends(
@@ -190,7 +193,7 @@ def create_fig8(funding_df, active_df):
         plot_pta_quintile_trends(
             funding_df,
             title="Per-pupil PTA financial quintiles over time",
-            subtitle="All schools — NYC Public Schools, Districts 1–32",
+            subtitle="All schools with non-missing PTA data — NYC Public Schools, Districts 1–32",
             save_path="output/figures/fig8_pta_quintile_trends.png"
         )
         plot_pta_quintile_trends(
@@ -227,51 +230,114 @@ if __name__ == "__main__":
     # based on anomaly and sensitivity analysis,
     # exclude observations which are flagged for 
     # within-year balance discrepancies
-    funding_wout_flagged = funding_2019_2025.query(
-        "not balance_wy_diff_flag"
+    # also, remove PTAs with missing records
+    funding_final = funding_2019_2025.query(
+        "not balance_wy_diff_flag and pta_category != 'Missing'"
         # "not any_ws_transaction_flag and not balance_wy_diff_flag"
         # "not balance_wy_diff_flag and not ets_balance_diff_flag" # too many schools are flagged
     )
 
+    # pull out missing PTAs 
+    missing = funding_2019_2025.query("pta_category == 'Missing'")
+    print(f"\nNumber of schools missing PTA information: {missing["year"].value_counts().sort_index().to_string()}\n")
+    missing.to_csv("./data/processed/omitted_because_missing.csv")
+
     # pull out the omitted observations
     flagged = funding_2019_2025.query("balance_wy_diff_flag")
     print(f"\nNumber of excluded observations: {flagged["year"].value_counts().sort_index().to_string()}\n")
-    flagged.to_csv("./data/processed/omitted_from_analysis.csv")
+    flagged.to_csv("./data/processed/omitted_because_flagged.csv")
 
     # isolate active PTAs only 
-    active = funding_wout_flagged.query("pta_category == 'Active'")
+    active = funding_final.query("pta_category == 'Active'")
 
 
-    # # -----> Balance anomalies
-    # create_fig1(funding_2019_2025)
+    # -----> Balance anomalies
+    create_fig1(funding_2019_2025)
 
-    # # -----> Transaction anomalies
-    # create_fig2(funding_2019_2025)
+    # -----> Transaction anomalies
+    create_fig2(funding_2019_2025)
 
-    # # -----> Percentile rank by expendtiures
-    # create_fig3(funding_df=funding_wout_flagged, active_df=active)
+    # -----> Percentile rank by expendtiures
+    create_fig3(funding_df=funding_final, active_df=active)
 
-    # # ------> Top schools annotated
-    # create_fig4(funding_df=funding_wout_flagged, active_df=active)
+    # ------> Top schools annotated
+    create_fig4(funding_df=funding_final, active_df=active)
 
-    # # ------> ENI vs. PTA expenditure
-    # create_fig5(active_df=active)
+    # ------> ENI vs. PTA expenditure
+    create_fig5(active_df=active)
 
-    # # ------> Racial composition by PTA expenditures
-    # create_fig6(active_df=active)
+    # ------> Racial composition by PTA expenditures
+    create_fig6(active_df=active)
 
-    # # -----> ENI quintile trends over time
-    # create_fig7(funding_df=funding_wout_flagged, active_df=active)
+    # -----> ENI quintile trends over time
+    create_fig7(funding_df=funding_final, active_df=active)
 
-    # # -----> PTA quintile trends over time
-    # create_fig8(funding_df=funding_wout_flagged, active_df=active)
+    # -----> PTA quintile trends over time
+    create_fig8(funding_df=funding_final, active_df=active)
 
     plot_eni_vs_finance_scatter(
-        funding_wout_flagged, year=2025,
+        funding_final.query("pp_fsf > 0"), year=2025,
         finance_col="pp_fsf",
+        ylabel="Log per-pupil Fair Student Funding allocation",
         title="Economic need vs. Fair Student Funding (FSF) allocations\n",
-        subtitle="All schools — NYC Public Schools, Districts 1–32",
+        subtitle="All schools with non-missing PTA data — NYC Public Schools, Districts 1–32",
         legend_loc="upper left",
-        save_path="output/figures/fig9_eni_vs_fsf.png"
+        save_path="output/figures/fig9a_eni_vs_fsf.png"
     )
 
+    plot_eni_vs_finance_scatter(
+        funding_final.query("pp_non_fsf > 0"), year=2025,
+        finance_col="pp_non_fsf",
+        ylabel="Log per-pupil non-Fair Student Funding allocation",
+        title="Economic need vs. non-Fair Student Funding (FSF) allocations\n",
+        subtitle="All schools with non-missing FSF data — NYC Public Schools, Districts 1–32",
+        legend_loc="upper left",
+        save_path="output/figures/fig9b_eni_vs_non_fsf.png"
+    )
+
+    plot_funding_stacked(
+        funding_final,
+        year=2025,          
+        funding_cols=["pp_fsf", "pp_non_fsf", "pp_pta_expenditure"],
+        quantile_col="eni_quintile",
+        title="Total school funding by ENI quintile\n", 
+        subtitle="All schools with non-missing PTA data — NYC Public Schools, Districts 1–32",
+        save_path = "output/figures/fig10_funding_by_eni_quintile.png",
+    )
+
+
+    plot_eni_vs_finance_scatter(
+        funding_final, year=2025,
+        finance_col="pta_expenditure_as_p_of_total",
+        ylog=False,
+        ylabel="PTA expenditure as share of total funding (%)",
+        show_ols=False,
+        title="Economic need vs. PTA expenditure as share of total funding\n",
+        subtitle="All schools with non-missing PTA data — NYC Public Schools, Districts 1–32",
+        legend_loc="upper right",
+        save_path="output/figures/fig11a_eni_vs_pta_as_share_of_total.png"
+    )
+
+
+    plot_eni_vs_finance_scatter(
+        funding_final, year=2025,
+        finance_col="pta_expenditure_as_p_of_fsf",
+        ylog=False,
+        ylabel="PTA expenditure as share of FSF (%)",
+        show_ols=False,
+        title="Economic need vs. PTA expenditure as share of FSF allocations\n",
+        subtitle="All schools with non-missing PTA data — NYC Public Schools, Districts 1–32",
+        legend_loc="upper right",
+        save_path="output/figures/fig11b_eni_vs_pta_as_share_of_fsf.png"
+    )
+
+    plot_total_funding_dotplot(
+        funding_final, year=2025,
+        total_funding_col="pp_total_funding", 
+        public_funding_col="pp_total_public",  
+        pta_share_col="pta_expenditure_as_p_of_total", 
+        quantile_col="eni_quintile",
+        title="PTA expenditures relative to total funding by ENI quintile",
+        subtitle="All schools with non-missing PTA data — NYC Public Schools, Districts 1–32",
+        save_path="output/figures/fig12_total_funding_dotplot"
+    )

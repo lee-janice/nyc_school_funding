@@ -100,7 +100,7 @@ def transform_data(funding_data, year):
                 x["pta_start_balance"].isnull() & x["pta_income"].isnull() & x["pta_expenditure"].isnull() & x["pta_end_balance"].isnull(), 
 
                 # if has non-zero values anywhere, mark PTA as Active
-                (x["pta_start_balance"] > 0) | (x["pta_income"] > 0) | (x["pta_start_balance"] > 0) | (x["pta_expenditure"] > 0), 
+                (x["pta_start_balance"] > 0) | (x["pta_income"] > 0) | (x["pta_expenditure"] > 0)  | (x["pta_end_balance"] > 0), 
             ],
             choicelist=[
                 "Missing",
@@ -150,7 +150,7 @@ def add_pta_derivatives(funding_data):
         # create per-pupil values 
         pp_fsf = lambda x: x['total_fsf_allocations'] / x['total_enrollment'],
         pp_non_fsf = lambda x: x['non_fsf_budget_allocations'] / x['total_enrollment'],
-        pp_total_allocations = lambda x: x['total_budget_allocation'] / x['total_enrollment'],
+        pp_total_public = lambda x: x['total_budget_allocation'] / x['total_enrollment'],
 
         pp_pta_income = lambda x: x['pta_income'] / x['total_enrollment'],
         pp_pta_expenditure = lambda x: x['pta_expenditure'] / x['total_enrollment'],
@@ -158,12 +158,16 @@ def add_pta_derivatives(funding_data):
         pp_pta_end_balance = lambda x: x['pta_end_balance'] / x['total_enrollment'],
 
         # log transform PTA variables
-        log_pp_pta_end_balance = lambda x: np.log(x['pp_pta_end_balance'] + \
-            np.abs(np.min(x["pp_pta_end_balance"])) + 1),
+        # log_pp_pta_end_balance = lambda x: np.log(x['pp_pta_end_balance'] + \
+        #     np.abs(np.min(x["pp_pta_end_balance"])) + 1),
+
+        # add total pp funding
+        pp_total_funding = lambda x: x['pp_fsf'] + x['pp_non_fsf'] + x['pp_pta_expenditure'],
 
         # add PTA expenditure as a percent of FSF allocations and total budget allocation
         pta_expenditure_as_p_of_fsf = lambda x: x['pta_expenditure'] / x['total_fsf_allocations'] * 100,
-        pta_expenditure_as_p_of_budget = lambda x: x['pta_expenditure'] / x['total_budget_allocation'] * 100,
+        pta_expenditure_as_p_of_public = lambda x: x['pta_expenditure'] / x['total_budget_allocation'] * 100,
+        pta_expenditure_as_p_of_total = lambda x: x['pta_expenditure'] / (x['total_budget_allocation'] + x['pta_expenditure']) * 100,
     )
 
 

@@ -138,8 +138,9 @@ Racial composition by per-pupil PTA end balance quintiles (2025, active PTAs onl
   Median PTA Expenditure as Percent of FSF and Total Budget by ENI Q.          
 -------------------------------------------------------------------------------
 
-Median PTA expenditure as a percent of FSF allocations and total budget by ENI quintile (active PTAs only):
+Median PTA expenditure as a percent of FSF allocations, total public allocations, and total funding by ENI quintile (active PTAs only):
 	eni_quintile                          Q1   Q2   Q3   Q4   Q5
 	year                                                        
 	2025 pta_expenditure_as_p_of_fsf    0.90 0.10 0.00 0.00 0.00
-	     pta_expenditure_as_p_of_budget 0.60 0.10 0.00 0.00 0.00
+	     pta_expenditure_as_p_of_public 0.60 0.10 0.00 0.00 0.00
+	     pta_expenditure_as_p_of_total  0.60 0.10 0.00 0.00 0.00

@@ -2,27 +2,27 @@
 0  2019                 78                      32.00                        0.00                    30.00                    22.00
 1  2020                101                      19.00                       60.00                    22.00                    12.00
 2  2021                 72                      16.00                       52.00                     3.00                     7.00
-3  2022                 86                      24.00                       49.00                    13.00                    11.00
+3  2022                 87                      25.00                       49.00                    13.00                    11.00
 4  2023                 78                      14.00                       54.00                     6.00                     8.00
 5  2024                 94                      22.00                       62.00                    15.00                     7.00
 6  2025                104                      26.00                       65.00                    10.00                    19.00
-7  <NA>                304                     153.00                      342.00                    99.00                    86.00
+7  <NA>                304                     154.00                      342.00                    99.00                    86.00
 
        dbn                                      school_name_x  AVG_PTA_INCOME  AVG_PTA_EXPENDITURE  AVG_PTA_END_BALANCE  N_ANOMALIES  N_BALANCE_WY_DIFF_FLAG  N_ETS_BALANCE_DIFF_FLAG  N_WY_TRANSACTION_FLAG  N_WS_TRANSACTION_FLAG
 0   03M334                                The Anderson School       788592.70            770900.00           2020301.40        14.00                    0.00                     0.00                  14.00                   0.00
-1   01M539  New Explorations into Science, Technology and ...      1345226.80           1139006.30            827190.00        11.00                    0.00                     6.00                   5.00                   0.00
-2   02M006                           P.S. 006 Lillie D. Blake       710399.20            656364.10           1057007.10        11.00                    0.00                     4.00                   7.00                   0.00
+1   02M006                           P.S. 006 Lillie D. Blake       710399.20            656364.10           1057007.10        11.00                    0.00                     4.00                   7.00                   0.00
+2   01M539  New Explorations into Science, Technology and ...      1345226.80           1139006.30            827190.00        11.00                    0.00                     6.00                   5.00                   0.00
 3   15K010  Magnet School of Math, Science and Design Tech...       446239.70            432339.40            224748.10         9.00                    2.00                     6.00                   1.00                   0.00
 4   15K146                  The Brooklyn New School, P.S. 146       204583.10            183633.00            143761.60         9.00                    6.00                     3.00                   0.00                   0.00
-5   03M087                           P.S. 087 William Sherman       963524.90            647001.60            982607.00         8.00                    1.00                     3.00                   4.00                   0.00
-6   02M276                           Battery Park City School       613797.00            540449.10            669197.10         8.00                    0.00                     5.00                   3.00                   0.00
+5   02M276                           Battery Park City School       613797.00            540449.10            669197.10         8.00                    0.00                     5.00                   3.00                   0.00
+6   03M087                           P.S. 087 William Sherman       963524.90            647001.60            982607.00         8.00                    1.00                     3.00                   4.00                   0.00
 7   03M485  Fiorello H. LaGuardia High School of Music & A...       381762.00            410953.10            692474.50         8.00                    1.00                     4.00                   3.00                   0.00
-8   10X445                   The Bronx High School of Science       866604.50            313230.50            571144.50         7.00                    1.00                     4.00                   2.00                   0.00
-9   02M290                      P.S. 290 Manhattan New School       500690.50            393199.20            769837.10         7.00                    1.00                     1.00                   5.00                   0.00
+8   02M290                      P.S. 290 Manhattan New School       500690.50            393199.20            769837.10         7.00                    1.00                     1.00                   5.00                   0.00
+9   02M151                         Yorkville Community School       206275.60            536990.60            191166.70         7.00                    2.00                     4.00                   1.00                   0.00
 10  03M009                            P.S. 009 Sarah Anderson       939240.60            679309.90            749718.90         7.00                    1.00                     4.00                   2.00                   0.00
-11  02M267                East Side Elementary School, PS 267       318214.00            274387.80            209820.60         7.00                    0.00                     5.00                   2.00                   0.00
-12  02M151                         Yorkville Community School       206275.60            536990.60            191166.70         7.00                    2.00                     4.00                   1.00                   0.00
-13  03M075                           P.S. 075 Emily Dickinson       138259.20            111769.00            229295.20         6.00                    1.00                     4.00                   1.00                   0.00
+11  10X445                   The Bronx High School of Science       866604.50            313230.50            571144.50         7.00                    1.00                     4.00                   2.00                   0.00
+12  02M267                East Side Elementary School, PS 267       318214.00            274387.80            209820.60         7.00                    0.00                     5.00                   2.00                   0.00
+13  15K154                         The Windsor Terrace School       228504.80            213527.10            287336.00         6.00                    2.00                     3.00                   1.00                   0.00
 14  02M212                              P.S. 212 Midtown West       125284.50            106261.50            342059.10         6.00                    2.00                     3.00                   1.00                   0.00
 
                        school_name_x  year  pta_start_balance  pta_income  pta_expenditure  pta_end_balance  balance_wy_diff_flag  ets_balance_diff_flag  pta_start_balance_wy_transaction_flag  pta_income_wy_transaction_flag  pta_expenditure_wy_transaction_flag  pta_end_balance_wy_transaction_flag  pta_start_balance_ws_transaction_flag  pta_income_ws_transaction_flag  pta_expenditure_ws_transaction_flag  pta_end_balance_ws_transaction_flag  any_wy_transaction_flag  any_ws_transaction_flag  any_transaction_flag  anomaly_flag

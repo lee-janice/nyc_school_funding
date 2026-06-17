@@ -132,12 +132,12 @@ def pta_cross_sectional_analysis(funding_data, year, output_path):
             print("\n-------------------------------------------------------------------------------")
             print(  "  Median PTA Expenditure as Percent of FSF and Total Budget by ENI Q.          ")
             print(  "-------------------------------------------------------------------------------")
-            print("\nMedian PTA expenditure as a percent of FSF allocations and total budget by ENI quintile (active PTAs only):")
+            print("\nMedian PTA expenditure as a percent of FSF allocations, total public allocations, and total funding by ENI quintile (active PTAs only):")
             print(textwrap.indent(
                 median_by_category(
                     active_xsect,
                     category_cols=["year", "eni_quintile"],
-                    value_cols=["pta_expenditure_as_p_of_fsf", "pta_expenditure_as_p_of_budget"])
+                    value_cols=["pta_expenditure_as_p_of_fsf", "pta_expenditure_as_p_of_public", "pta_expenditure_as_p_of_total"])
                 .round(1)
                 .stack(level=0)
                 .to_string(), 
