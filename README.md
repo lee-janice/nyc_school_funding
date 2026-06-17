@@ -5,7 +5,7 @@ format:
             - margin=1in
 --- -->
 
-# NYC PTA Funding Analysis
+# Private Money, Public Inequality: PTA Funding in NYC Schools
 
 In this project, I analyzed Parent Teacher Association (PTA) fundraising and expenditure data
 across New York City Public Schools (NYCPS), which were made available by the transparency
@@ -30,12 +30,12 @@ may exacerbate funding gaps that mirror socioeconomic and racial segregation.
 
 ## Key findings
 
-- **Missingness in PTA reporting.** There is a substantial amount of missingness in the PTA fundraising data, which warrants further investigation.
-- **Severe financial inequities.** PTA expenditure is extremely unequal and hyper-concentrated towards the top spenders.
-- **Socioeconomic stratification.** Higher-need schools spend less in PTA funds. (Caveat: they also receive more in public funds.)
-- **Demographic stratification.** PTA expenditure is strongly stratified by race.
-- **Increasing inequities.** Inequality is increasing over time.
-- **Data anomalies.** There are a substantial number of anomalies in the PTA fundraising data that warrant further investigation.
+- **Missingness in PTA reporting.** There is a substantial amount of missingness in the PTA fundraising data, and the missingness is not random. This underreporting of PTA data warrants further investigation.
+- **Severe financial inequities.** PTA expenditure is extremely unequal and hyper-concentrated. While median per-pupil spending is low, the top schools spend orders of magnitude more.
+- **Socioeconomic stratification.** Schools serving higher-need students receive and spend substantially less in PTA funds, reinforcing disparities in discretionary resources. (Caveat: higher-need schools receive more public funding.)
+- **Demographic stratification.** PTA expenditure is strongly stratified by race, with higher-spending schools serving disproportionately more White and Asian students.
+- **Increasing inequities.** The PTA expenditure gap between high- and low-economic need has widened over time, indicating growing inequality in private fundraising capacity.
+- **Data anomalies.** PTA financial records contain notable inconsistencies (e.g., balance mismatches), particularly among higher-spending schools, raising concerns about data quality.
 
 ## Background
 
@@ -156,7 +156,7 @@ The publicly available PTA fundraising data had a substantial number of accounti
 - Within-year discrepancies between the implied ending balance (`starting balance + income - expenditures`), and the reported ending balance.
 - Accounting errors like values expressed in cents rather than dollars.
 
-In particular, the cross-year balance discrepancies - where the previous year's ending balance differed from the starting balance by over both 5% of the starting balance, and a raw amount of $50,000\* - were highly concentrated in the schools with the wealthiest PTAs. A possible cause could be that heavily funded PTAs handle more complex balance sheets (and larger rollover amounts) than less funded PTAs, meaning they are structurally more susceptible to bookkeeping variances than a school handling a few hundred dollars. Regardless, this may warrant more investigation to further characterize the nature of these discrepancies.
+In particular, the cross-year balance discrepancies - where the previous year's ending balance differed from the starting balance by over 5% of the starting balance, AND the difference exceeds $10,000 - were highly concentrated in the schools with the wealthiest PTAs. A possible cause could be that heavily funded PTAs handle more complex balance sheets (and larger rollover amounts) than less funded PTAs, meaning they are structurally more susceptible to bookkeeping variances than a school handling a few hundred dollars. Regardless, this may warrant more investigation to further characterize the nature of these discrepancies.
 
 <img src="output/figures/fig1c_balance_flag_vs_expenditure_hist.png" width="600">
 <img src="output/figures/fig2c_transaction_flag_vs_expenditure_hist.png" width="600">
