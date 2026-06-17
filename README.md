@@ -16,12 +16,34 @@ create funding gaps that mirror socioeconomic and racial segregation.
 
 ## Key findings
 
-- **There is a substantial amount of missingness in the PTA fundraising data.** This missingness affects ~20% of schools in Districts 1-32. These schools appear to systematically differ from schools with inactive PTAs with respect to economic need. Further investigation is needed to determine potential causes of missingness, and to rule out intentional underreporting of PTA data.
-- **PTA expenditures are hyper-concentrated.** In 2024-25, the median PTA per-pupil expenditure among all schools (with non-missing PTA data) was just $6, but the 95th percentile school spent $439 per-pupil, the 99th spent $1,280, and the highest spending school spent $2,738 for each enrolled student—translating to nearly $2 million in total expenditures.
-- **Schools serving students with more economic need tend to have PTAs that spend less.**
-    - **Caveat: schools with greater need receive more in public funding.** Schools in the lowest-need quintile still receive less in total funding than higher-need quintiles even after PTA expenditures are included. However, among the schools with the highest PTA expenditures, PTA dollars can comprise a significant share of total funding amounts—which may work against the equity logic that public dollars are designed to enforce.
-- **Schools with PTAs that spend more have a drastically higher share of White and Asian students compared to those that spend less.** Among schools in the highest quintile (by per-pupil PTA expenditure), 60% of students were White or Asian and 33% were Black or Hispanic. Among schools in the lowest quintile, just 15% were White or Asian, and 82% were Black or Hispanic.
-- **The gap between the lowest- and highest-need schools is widening over time.** The gap between the top 20% of schools by per-pupil PTA expenditure and the bottom 80% is steadily increasing, suggesting widening inequalities in PTA funding.
+### There is a substantial amount of missingness in the PTA fundraising data.
+
+This missingness affects ~20% of schools in Districts 1-32. These schools appear to systematically differ from schools with inactive PTAs with respect to economic need. Further investigation is needed to determine potential causes of missingness, and to rule out systematic non-reporting of PTA data.
+
+### PTA expenditures are hyper-concentrated.
+
+In 2024-25, the median PTA per-pupil expenditure among all schools was just $6, but the 95th percentile school spent $439 per-pupil, the 99th spent $1,280, and the highest spending school spent $2,738 for each enrolled student—translating to nearly $2 million in total expenditures.
+
+### Schools serving students with more economic need tend to have PTAs that spend less.
+
+**Caveat: schools with greater need receive more in public funding.** Schools in the lowest-need quintile still receive less in total funding than higher-need quintiles even after PTA expenditures are included. However, among the schools with the highest PTA expenditures, PTA dollars can comprise a significant share of total funding amounts—which may work against the equity logic that public dollars are designed to enforce.
+
+### Schools with PTAs that spend more have a drastically higher share of White and Asian students compared to those that spend less.
+
+Among schools in the highest quintile (by per-pupil PTA expenditure), 60% of students were White or Asian and 33% were Black or Hispanic. Among schools in the lowest quintile, just 15% were White or Asian, and 82% were Black or Hispanic.
+
+### The gap between the lowest- and highest-need schools is widening over time.
+
+The gap between the top 20% of schools by per-pupil PTA expenditure and the bottom 80% is steadily increasing, suggesting increasing inequalities in PTA funding.
+
+### There is a substantial number of anomalies in the PTA fundraising data.
+
+Two categories of anomalies are especially important to note:
+
+- Observations where the implied PTA end balance (start balance + income - expenditures) differs from the reported end balance, and
+- Observations where the previous year's end balance differs from the current year's start balance.
+
+More investigation is needed to determine potential causes and to further characterize the nature of anomalous observations.
 
 ## Background
 
