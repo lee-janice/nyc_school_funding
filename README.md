@@ -14,6 +14,27 @@ city’s equity- and needs-based Fair Student Funding (FSF) formula, private PTA
 largely opaque and in some cases, incredibly unequal. These stark inequities
 create funding gaps that mirror socioeconomic and racial segregation.
 
+## Background
+
+### Landscape of school funding in NYC
+
+NYC public schools draw on several district funding streams:
+
+- The primary source of public funding is the Fair Student Funding (FSF) formula, an equity- and needs-based allocation system that provides schools with discretionary dollars for foundational and instructional costs (e.g., staffing, educational programming, supplies and technology, and general costs).
+- Schools also receive non-FSF allocations, which fall into three categories:
+    - federal and state caegorical funds restricted to specific student populations (e.g., Title I for low-income students, Title III for English Language Learners),
+    - city programmatic funding for targeted grants and city-mandated initiatives like pre-K expansion, and
+    - central and ancillary costs for system-wide services like transportation, custodial maintenance, and school safety.
+- Finally, schools can raise and spend private dollars through their Parent Teacher Associations (PTAs). PTA financial data — including starting balances, annual income, expenditures, and ending balances — was made available through the transparency mandates of Local Law 171 of 2018, covering school years 2018-19 through 2024-25.
+
+Since PTA fundraising has historically been an opaque funding source, this analysis uses this publicly available data to examine whether private contributions compound the inequities that public funding is designed to address.
+
+### Analytical sample
+
+- The analysis is restricted to schools in Districts 1–32, the general education community school districts, and excludes District 75 (specialized schools for students with disabilities) and District 79 (alternative programs).
+- Additionally, to ensure complete covariate coverage, the sample is further limited to schools appearing in all three source datasets in a given year: the NYCPS Demographic Snapshot, the Fair Student Funding allocations file, and the PTA fundraising data.
+- Lastly, schools with missing PTA records and schools where the implied ending balance (starting balance + income − expenditures) substantially deviates from the reported ending balance are also excluded; these decisions are discussed in detail in the **Missingness in PTA reporting** and **Data anomalies** sections below.
+
 ## Key findings
 
 ### There is a substantial amount of missingness in the PTA fundraising data.
@@ -26,11 +47,11 @@ In 2024-25, the median PTA per-pupil expenditure among all schools was just $6, 
 
 ### Schools serving students with more economic need tend to have PTAs that spend less.
 
-**Caveat: schools with greater need receive more in public funding.** Schools in the lowest-need quintile still receive less in total funding than higher-need quintiles even after PTA expenditures are included. However, among the schools with the highest PTA expenditures, PTA dollars can comprise a significant share of total funding amounts—which may work against the equity logic that public dollars are designed to enforce.
+**Caveat: schools with greater need receive more in public funding.** Schools in the lowest-need quintile still receive less in total funding than higher-need quintiles even after PTA expenditures are included. However, among the schools with the highest PTA expenditures, PTA dollars can comprise a significant share of total funding amounts—which may work against the equity imperative that public dollars are intended to enforce.
 
 ### Schools with PTAs that spend more have a drastically higher share of White and Asian students compared to those that spend less.
 
-Among schools in the highest quintile (by per-pupil PTA expenditure), 60% of students were White or Asian and 33% were Black or Hispanic. Among schools in the lowest quintile, just 15% were White or Asian, and 82% were Black or Hispanic.
+Among schools in the highest quintile (by per-pupil PTA expenditure), 60% of students were White or Asian and 33% were Black or Hispanic. However, among schools in the lowest quintile, just 15% were White or Asian, and 82% were Black or Hispanic.
 
 ### The gap between the lowest- and highest-need schools is widening over time.
 
@@ -44,8 +65,6 @@ Two categories of anomalies are especially important to note:
 - Observations where the previous year's end balance differs from the current year's start balance.
 
 More investigation is needed to determine potential causes and to further characterize the nature of anomalous observations.
-
-## Background
 
 ## Results
 
@@ -65,12 +84,12 @@ Analysis of the Economic Need Index (ENI) reveals systematic differences between
 
 Because schools with missing data fall between active and inactive schools in terms of ENI, we conclude that imputing missing values as zero would introduce significant bias. Consequently, all analyses for SY 2024-25 exclude the 322 schools with missing data.
 
-Additionally, we exclude observations where the calculated end balance (start balance + income – expenditures) deviates from the reported end balance by both:
+Additionally, we exclude observations where the implied end balance (start balance + income – expenditures) deviates from the reported end balance by both:
 
 - More than 5% relative difference; AND
 - An absolute dollar value exceeding $50,000.
 
-See the section on Data anomalies below for additional analyses on anomolous transactions.
+See the section on **Data anomalies** below for additional analyses on anomolous transactions.
 
 ### Severe financial inequities
 
@@ -109,6 +128,8 @@ Schools in the highest PTA expenditure quantile have a drastically higher share 
 
 <img src="output/figures/fig6_racial_comp_by_pta_active.png" width="600">
 
+Among schools in the highest quintile (by per-pupil PTA expenditure), 60% of students were White or Asian and 33% were Black or Hispanic. However, among schools in the lowest quintile, just 15% were White or Asian, and 82% were Black or Hispanic.
+
 <!-- ![](output/figures/fig6_racial_comp_by_pta_active.png){width=80% fig-pos="H"} -->
 
 #### Caveat: comparison with total funding amounts
@@ -122,7 +143,7 @@ Additionally, even including PTA expenditures, schools in the lowest economic ne
 
 <img src="output/figures/fig12_total_funding_dotplot.png" width="600">
 
-This indicates that PTA expenditures do not fully offset the redistributive design of public school funding: schools in the lowest-need quintile (Q1) still receive less in total funding than higher-need quintiles even after PTA dollars are included. In other words, the FSF formula is working as-intended. However, as alluded to above, among the schools with the highest PTA expenditures, PTA dollars can comprise a significant share of total funding amounts—which may work against the equity logic that public dollars are designed to enforce.
+This indicates that PTA expenditures do not fully offset the redistributive design of public school funding: schools in the lowest-need quintile (Q1) still receive less in total funding than higher-need quintiles even after PTA dollars are included. In other words, the FSF formula is working as-intended. However, as alluded to above, among the schools with the highest PTA expenditures, PTA dollars can comprise a significant share of total funding amounts—which may work against the equity imperative that public dollars are intended to enforce.
 
 <img src="output/figures/fig11a_eni_vs_pta_as_share_of_total.png" width="600">
 
