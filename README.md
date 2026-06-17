@@ -14,6 +14,20 @@ city’s equity- and needs-based Fair Student Funding (FSF) formula, private PTA
 largely opaque and in some cases, incredibly unequal. These stark inequities
 create funding gaps that mirror socioeconomic and racial segregation.
 
+## Table of Contents
+
+- [Background](#background)
+    - [Landscape of school funding in NYC](#landscape-of-school-funding-in-nyc)
+    - [Analytical sample](#analytical-sample)
+- [Key Findings](#key-findings)
+- [Results](#results)
+    - [Missingness in PTA reporting](#missingness-in-pta-reporting)
+    - [Severe financial inequities](#severe-financial-inequities)
+    - [Socioeconomic & demographic stratification](#socioeconomic-and-demographic-stratification)
+    - [Increasing inequity over time](#increasing-inequity-over-time)
+- [Data anomalies](#data-anomalies)
+- [AI Use Disclaimer](#ai-use-disclaimer)
+
 ## Background
 
 ### Landscape of school funding in NYC
@@ -22,7 +36,7 @@ NYC public schools draw on several district funding streams:
 
 - The primary source of public funding is the Fair Student Funding (FSF) formula, an equity- and needs-based allocation system that provides schools with discretionary dollars for foundational and instructional costs (e.g., staffing, educational programming, supplies and technology, and general costs).
 - The other public funding source is non-FSF allocations, which fall into three categories:
-    - federal and state caegorical funds restricted to specific student populations (e.g., Title I for low-income students, Title III for English Language Learners),
+    - federal and state categorical funds restricted to specific student populations (e.g., Title I for low-income students, Title III for English Language Learners),
     - city programmatic funding for targeted grants and city-mandated initiatives like pre-K expansion, and
     - central and ancillary costs for system-wide services like transportation, custodial maintenance, and school safety.
 - Finally, schools can raise and spend private dollars through their Parent Teacher Associations (PTAs). PTA financial data — including starting balances, annual income, expenditures, and ending balances — was made available through the transparency mandates of Local Law 171 of 2018, covering school years 2018-19 through 2024-25.
@@ -89,7 +103,7 @@ Additionally, we exclude observations where the implied end balance (start balan
 - More than 5% relative difference; AND
 - An absolute dollar value exceeding $50,000.
 
-See the section on **Data anomalies** below for additional analyses on anomolous transactions.
+See the section on **Data anomalies** below for additional analyses on anomalous transactions.
 
 ### Severe financial inequities
 
@@ -111,7 +125,7 @@ Yet the 95th percentile school spent $439 per-pupil, the 99th spent $1,280, and 
 \par
 ![](output/figures/fig4_top_schools_annotated.png){width=80%} -->
 
-In the schools with the wealthiest PTAs, this expenditure acted almost as like a "shadow budget." For example, schools like P.S. 029 John M. Harrigan and P.S. 158 Bayard Taylor—which ranked 1st and 2nd in per-pupil PTA expenditures— spent private PTA funds worth 25% and 23% of their entire public FSF allocation, respectively.
+In the schools with the wealthiest PTAs, this expenditure acted almost as like a "shadow budget." For example, schools like P.S. 029 John M. Harrigan and P.S. 158 Bayard Taylor — which ranked 1st and 2nd in per-pupil PTA expenditures — spent private PTA funds worth 25% and 23% of their entire public FSF allocation, respectively.
 
 ### Socioeconomic and demographic stratification
 
@@ -164,7 +178,7 @@ The publicly available PTA fundraising data had a substantial number of accounti
 - Within-year discrepancies between the implied ending balance (`starting balance + income - expenditures`), and the reported ending balance.
 - Accounting errors like values expressed in cents rather than dollars.
 
-In particular, the cross-year balance discrepancies - where the previous year's ending balance differed from the starting balance by over both 5% of the starting balance, and a raw amount of $50,000\* - were highly concentrated in the schools with the wealthiest PTAs. This may warrant further investigation to see if these errors are happening systematically or intentionally.
+In particular, the cross-year balance discrepancies - where the previous year's ending balance differed from the starting balance by over both 5% of the starting balance, and a raw amount of $50,000\* - were highly concentrated in the schools with the wealthiest PTAs. A possible cause could be that heavily funded PTAs handle more complex balance sheets (and larger rollover amounts) than less funded PTAs, meaning they are structurally more susceptible to bookkeeping variances than a school handling a few hundred dollars. Regardless, this may warrant more investigation to further characterize the nature of these discrepancies.
 
 <img src="output/figures/fig1c_balance_flag_vs_expenditure_hist.png" width="600">
 <img src="output/figures/fig2c_transaction_flag_vs_expenditure_hist.png" width="600">
