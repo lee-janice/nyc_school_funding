@@ -21,7 +21,7 @@ create funding gaps that mirror socioeconomic and racial segregation.
 NYC public schools draw on several district funding streams:
 
 - The primary source of public funding is the Fair Student Funding (FSF) formula, an equity- and needs-based allocation system that provides schools with discretionary dollars for foundational and instructional costs (e.g., staffing, educational programming, supplies and technology, and general costs).
-- Schools also receive non-FSF allocations, which fall into three categories:
+- The other public funding source is non-FSF allocations, which fall into three categories:
     - federal and state caegorical funds restricted to specific student populations (e.g., Title I for low-income students, Title III for English Language Learners),
     - city programmatic funding for targeted grants and city-mandated initiatives like pre-K expansion, and
     - central and ancillary costs for system-wide services like transportation, custodial maintenance, and school safety.
@@ -143,15 +143,14 @@ Additionally, even including PTA expenditures, schools in the lowest economic ne
 
 <img src="output/figures/fig12_total_funding_dotplot.png" width="600">
 
-This indicates that PTA expenditures do not fully offset the redistributive design of public school funding: schools in the lowest-need quintile (Q1) still receive less in total funding than higher-need quintiles even after PTA dollars are included. In other words, the FSF formula is working as-intended. However, as alluded to above, among the schools with the highest PTA expenditures, PTA dollars can comprise a significant share of total funding amounts—which may work against the equity imperative that public dollars are intended to enforce.
+This indicates that PTA expenditures do not fully offset the redistributive design of public school funding: schools in the lowest-need quintile (Q1) still receive less in total funding than higher-need quintiles even after PTA dollars are included. However, as alluded to above, among the schools with the highest PTA expenditures, PTA dollars can comprise a significant share of total funding amounts—which may work against the equity imperative that public dollars are intended to enforce.
 
 <img src="output/figures/fig11a_eni_vs_pta_as_share_of_total.png" width="600">
 
 ### Increasing inequity over time
 
 As demonstrated below, the gap between the 20% of schools with the lowest economic need (Q1) and the remaining 80% (Q2-Q5) is stark and is widening.
-And although PTA incomes and expenditures for the top quintile of schools by ENI dipped sharply during the pandemic,
-their _ending balances_—i.e., the money that the PTA carries over year-to-year—continued to steadily increase.
+And although PTA incomes and expenditures for the top quintile of schools by ENI dipped sharply during the pandemic, their _ending balances_—i.e., the money that the PTA carries over year-to-year—continued to steadily increase, suggesting that these PTAs are _accumulating_ wealth over time.
 
 <img src="output/figures/fig7_eni_quintile_trends.png" width="900">
 
@@ -166,6 +165,7 @@ The publicly available PTA fundraising data had a substantial number of accounti
 - Accounting errors like values expressed in cents rather than dollars.
 
 In particular, the cross-year balance discrepancies - where the previous year's ending balance differed from the starting balance by over both 5% of the starting balance, and a raw amount of $50,000\* - were highly concentrated in the schools with the wealthiest PTAs. This may warrant further investigation to see if these errors are happening systematically or intentionally.
+
 <img src="output/figures/fig1c_balance_flag_vs_expenditure_hist.png" width="600">
 <img src="output/figures/fig2c_transaction_flag_vs_expenditure_hist.png" width="600">
 
