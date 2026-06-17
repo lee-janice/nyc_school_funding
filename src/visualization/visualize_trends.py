@@ -89,8 +89,6 @@ def plot_pta_quintile_trends(
 
         # -----> plot one line per quintile 
         for col in data.columns:
-            # print(col)
-            print(data)
             current_values = data[col].values
 
             ax.plot(

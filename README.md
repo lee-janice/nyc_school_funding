@@ -47,7 +47,7 @@ Since PTA fundraising has historically been an opaque funding source, this analy
 
 - The analysis is restricted to schools in Districts 1–32, the general education community school districts, and excludes District 75 (specialized schools for students with disabilities) and District 79 (alternative programs).
 - Additionally, to ensure complete covariate coverage, the sample is further limited to schools appearing in all three source datasets in a given year: the NYCPS Demographic Snapshot, the Fair Student Funding allocations file, and the PTA fundraising data.
-- Lastly, schools with missing PTA records and schools where the implied ending balance (starting balance + income − expenditures) substantially deviates from the reported ending balance are also excluded; these decisions are discussed in detail in the **Missingness in PTA reporting** and **Data anomalies** sections below.
+- Lastly, schools with missing PTA records and schools where the implied ending balance (starting balance + income − expenditures) substantially deviates from the reported ending balance are also excluded; these decisions are discussed in detail in the [Missingness in PTA reporting](#missingness-in-pta-reporting) and [Data anomalies](#data-anomalies) sections below.
 
 ## Key findings
 
@@ -96,14 +96,14 @@ Analysis of the Economic Need Index (ENI) reveals systematic differences between
 - the mean ENI for schools with inactive PTAs is 0.90, and
 - the mean ENI for schools with missing PTA data is 0.81.
 
-Because schools with missing data fall between active and inactive schools in terms of ENI, we conclude that imputing missing values as zero would introduce significant bias. Consequently, all analyses for SY 2024-25 exclude the 322 schools with missing data.
+Because schools with missing data fall between active and inactive schools in terms of ENI, we conclude that imputing missing values as zero would introduce significant bias. Consequently, all analyses for the 2024-25 school year exclude the 322 schools with missing data.
 
-Additionally, we exclude observations where the implied end balance (start balance + income – expenditures) deviates from the reported end balance by both:
+Additionally, we exclude 26 observations in SY 2024-25 where the implied end balance (start balance + income – expenditures) deviates from the reported end balance by both:
 
 - More than 5% relative difference; AND
 - An absolute dollar value exceeding $50,000.
 
-See the section on **Data anomalies** below for additional analyses on anomalous transactions.
+See the section on [Data anomalies](#data-anomalies) below for additional analyses on anomalous transactions.
 
 ### Severe financial inequities
 
