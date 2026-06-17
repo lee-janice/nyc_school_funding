@@ -12,14 +12,14 @@ across New York City Public Schools (NYCPS), which were made available by the tr
 mandates of Local Law 171 of 2018. While public schools are primarily funded through the
 city’s equity- and needs-based Fair Student Funding (FSF) formula, private PTA contributions remain
 largely opaque and in some cases, incredibly unequal. These stark inequities
-create funding gaps that mirror socioeconomic and racial segregation.
+may exacerbate funding gaps that mirror socioeconomic and racial segregation.
 
 ## Table of Contents
 
+- [Key Findings](#key-findings)
 - [Background](#background)
     - [Landscape of school funding in NYC](#landscape-of-school-funding-in-nyc)
     - [Analytical sample](#analytical-sample)
-- [Key Findings](#key-findings)
 - [Results](#results)
     - [Missingness in PTA reporting](#missingness-in-pta-reporting)
     - [Severe financial inequities](#severe-financial-inequities)
@@ -27,6 +27,20 @@ create funding gaps that mirror socioeconomic and racial segregation.
     - [Increasing inequity over time](#increasing-inequity-over-time)
 - [Data anomalies](#data-anomalies)
 - [AI Use Disclaimer](#ai-use-disclaimer)
+
+## Key findings
+
+### There is a substantial amount of missingness in the PTA fundraising data which warrants further investigation.
+
+### PTA expenditure is extremely unequal and hyper-concentrated towards the top spenders.
+
+### Higher-need schools spend less in PTA funds. (Caveat: they also receive more in public funds.)
+
+### PTA expenditure is strongly stratified by race.
+
+### Inequality is increasing over time.
+
+### There are a substantial number of anomalies in the PTA fundraising data that warrant further investigation.
 
 ## Background
 
@@ -49,37 +63,6 @@ Since PTA fundraising has historically been an opaque funding source, this analy
 - Additionally, to ensure complete covariate coverage, the sample is further limited to schools appearing in all three source datasets in a given year: the NYCPS Demographic Snapshot, the Fair Student Funding allocations file, and the PTA fundraising data.
 - Lastly, schools with missing PTA records and schools where the implied ending balance (starting balance + income − expenditures) substantially deviates from the reported ending balance are also excluded; these decisions are discussed in detail in the [Missingness in PTA reporting](#missingness-in-pta-reporting) and [Data anomalies](#data-anomalies) sections below.
 
-## Key findings
-
-### There is a substantial amount of missingness in the PTA fundraising data.
-
-This missingness affects ~20% of schools in Districts 1-32. These schools appear to systematically differ from schools with inactive PTAs with respect to economic need. Further investigation is needed to determine potential causes of missingness, and to rule out systematic non-reporting of PTA data.
-
-### PTA expenditures are hyper-concentrated.
-
-In 2024-25, the median PTA per-pupil expenditure among all schools was just $6, but the 95th percentile school spent $439 per-pupil, the 99th spent $1,280, and the highest spending school spent $2,738 for each enrolled student—translating to nearly $2 million in total expenditures.
-
-### Schools serving students with more economic need tend to have PTAs that spend less.
-
-**Caveat: schools with greater need receive more in public funding.** Schools in the lowest-need quintile still receive less in total funding than higher-need quintiles even after PTA expenditures are included. However, among the schools with the highest PTA expenditures, PTA dollars can comprise a significant share of total funding amounts—which may work against the equity imperative that public dollars are intended to enforce.
-
-### Schools with PTAs that spend more have a drastically higher share of White and Asian students compared to those that spend less.
-
-Among schools in the highest quintile (by per-pupil PTA expenditure), 60% of students were White or Asian and 33% were Black or Hispanic. However, among schools in the lowest quintile, just 15% were White or Asian, and 82% were Black or Hispanic.
-
-### The gap between the lowest- and highest-need schools is widening over time.
-
-The gap between the top 20% of schools by per-pupil PTA expenditure and the bottom 80% is steadily increasing, suggesting increasing inequalities in PTA funding.
-
-### There is a substantial number of anomalies in the PTA fundraising data.
-
-Two categories of anomalies are especially important to note:
-
-- Observations where the implied PTA end balance (start balance + income - expenditures) differs from the reported end balance, and
-- Observations where the previous year's end balance differs from the current year's start balance.
-
-More investigation is needed to determine potential causes and to further characterize the nature of anomalous observations.
-
 ## Results
 
 ### Missingness in PTA reporting
@@ -96,7 +79,7 @@ Analysis of the Economic Need Index (ENI) reveals systematic differences between
 - the mean ENI for schools with inactive PTAs is 0.90, and
 - the mean ENI for schools with missing PTA data is 0.81.
 
-Because schools with missing data fall between active and inactive schools in terms of ENI, we conclude that imputing missing values as zero would introduce significant bias. Consequently, all analyses for the 2024-25 school year exclude the 322 schools with missing data.
+Because schools with missing data fall between active and inactive schools in terms of ENI, we conclude that imputing missing values as zero would introduce significant bias. Further investigation is needed to determine potential causes of missingness, and to rule out systematic non-reporting of PTA data. For now, all analyses for the 2024-25 school year exclude the 322 schools with missing data.
 
 Additionally, we exclude 26 observations in SY 2024-25 where the implied end balance (start balance + income – expenditures) deviates from the reported end balance by both:
 
