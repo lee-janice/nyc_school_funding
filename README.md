@@ -14,7 +14,18 @@ city’s equity- and needs-based Fair Student Funding (FSF) formula, private PTA
 largely opaque and in some cases, incredibly unequal. These stark inequities
 create funding gaps that mirror socioeconomic and racial segregation.
 
-## Key results
+## Key findings
+
+- **There is a substantial amount of missingness in the PTA fundraising data.** This missingness affects ~20% of schools in Districts 1-32. These schools appear to systematically differ from schools with inactive PTAs with respect to economic need. Further investigation is needed to determine potential causes of missingness, and to rule out intentional underreporting of PTA data.
+- **PTA expenditures are hyper-concentrated.** In 2024-25, the median PTA per-pupil expenditure among all schools (with non-missing PTA data) was just $6, but the 95th percentile school spent $439 per-pupil, the 99th spent $1,280, and the highest spending school spent $2,738 for each enrolled student—translating to nearly $2 million in total expenditures.
+- **Schools serving students with more economic need tend to have PTAs that spend less.**
+    - **Caveat: schools with greater need receive more in public funding.** Schools in the lowest-need quintile still receive less in total funding than higher-need quintiles even after PTA expenditures are included. However, among the schools with the highest PTA expenditures, PTA dollars can comprise a significant share of total funding amounts—which may work against the equity logic that public dollars are designed to enforce.
+- **Schools with PTAs that spend more have a drastically higher share of White and Asian students compared to those that spend less.** Among schools in the highest quintile (by per-pupil PTA expenditure), 60% of students were White or Asian and 33% were Black or Hispanic. Among schools in the lowest quintile, just 15% were White or Asian, and 82% were Black or Hispanic.
+- **The gap between the lowest- and highest-need schools is widening over time.** The gap between the top 20% of schools by per-pupil PTA expenditure and the bottom 80% is steadily increasing, suggesting widening inequalities in PTA funding.
+
+## Background
+
+## Results
 
 ### Missingness in PTA reporting
 
@@ -61,21 +72,6 @@ Yet the 95th percentile school spent $439 per-pupil, the 99th spent $1,280, and 
 
 In the schools with the wealthiest PTAs, this expenditure acted almost as like a "shadow budget." For example, schools like P.S. 029 John M. Harrigan and P.S. 158 Bayard Taylor—which ranked 1st and 2nd in per-pupil PTA expenditures— spent private PTA funds worth 25% and 23% of their entire public FSF allocation, respectively.
 
-#### Caveat: comparison with total funding amounts
-
-An important caveat to note is that generally, schools with greater need (serving students with more economic need, in greater need of special education services, etc.) receive _more_ in public funding (both in Fair Student Funding allocations and non-FSF allocations):
-
-<img src="output/figures/fig9a_eni_vs_fsf.png" width="600"> 
-<img src="output/figures/fig9b_eni_vs_non_fsf.png" width="600">
-
-Additionally, even including PTA expenditures, schools in the lowest economic need quintile (Q1) receive less in total funding (FSF allocations + non-FSF allocations + PTA expenditures) compared to those in the higher quintiles:
-
-<img src="output/figures/fig12_total_funding_dotplot.png" width="600">
-
-This indicates that PTA expenditures do not fully offset the redistributive design of public school funding — schools in the lowest-need quintile (Q1) still receive less in total funding than higher-need quintiles even after PTA dollars are included. In other words, the FSF formula is doing its intended work. However, as alluded to above, among the schools with the highest PTA expenditures, PTA dollars can comprise a significant share of total funding amounts—which may work against the equity logic that public dollars are designed to enforce.
-
-<img src="output/figures/fig11a_eni_vs_pta_as_share_of_total.png" width="600">
-
 ### Socioeconomic and demographic stratification
 
 As expected, schools serving students with more economic need tend to have PTAs that spend less.
@@ -93,10 +89,25 @@ Schools in the highest PTA expenditure quantile have a drastically higher share 
 
 <!-- ![](output/figures/fig6_racial_comp_by_pta_active.png){width=80% fig-pos="H"} -->
 
+#### Caveat: comparison with total funding amounts
+
+An important caveat to note is that generally, schools with greater need (serving students with more economic need, in greater need of special education services, etc.) receive _more_ in public funding (both in Fair Student Funding allocations and non-FSF allocations):
+
+<img src="output/figures/fig9a_eni_vs_fsf.png" width="600"> 
+<img src="output/figures/fig9b_eni_vs_non_fsf.png" width="600">
+
+Additionally, even including PTA expenditures, schools in the lowest economic need quintile (Q1) receive less in total funding (FSF allocations + non-FSF allocations + PTA expenditures) compared to those in the higher quintiles:
+
+<img src="output/figures/fig12_total_funding_dotplot.png" width="600">
+
+This indicates that PTA expenditures do not fully offset the redistributive design of public school funding: schools in the lowest-need quintile (Q1) still receive less in total funding than higher-need quintiles even after PTA dollars are included. In other words, the FSF formula is working as-intended. However, as alluded to above, among the schools with the highest PTA expenditures, PTA dollars can comprise a significant share of total funding amounts—which may work against the equity logic that public dollars are designed to enforce.
+
+<img src="output/figures/fig11a_eni_vs_pta_as_share_of_total.png" width="600">
+
 ### Increasing inequity over time
 
-As demonstrated below, the gap between the top 20% of schools and the bottom 80% is stark and is widening.
-And although PTA incomes and expenditures for the top quintile of schools dipped sharply during the pandemic,
+As demonstrated below, the gap between the 20% of schools with the lowest economic need (Q1) and the remaining 80% (Q2-Q5) is stark and is widening.
+And although PTA incomes and expenditures for the top quintile of schools by ENI dipped sharply during the pandemic,
 their _ending balances_—i.e., the money that the PTA carries over year-to-year—continued to steadily increase.
 
 <img src="output/figures/fig7_eni_quintile_trends.png" width="900">
@@ -105,7 +116,7 @@ their _ending balances_—i.e., the money that the PTA carries over year-to-year
 
 ### Data anomalies
 
-The publicly available PTA fundraising data had a substantial number of accounting anomalies, like
+The publicly available PTA fundraising data had a substantial number of accounting anomalies, such as:
 
 - Cross-year discrepancies between ending balances in Y0 and starting balances in Y1.
 - Within-year discrepancies between the implied ending balance (`starting balance + income - expenditures`), and the reported ending balance.

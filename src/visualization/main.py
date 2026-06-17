@@ -289,7 +289,7 @@ if __name__ == "__main__":
         funding_final.query("pp_non_fsf > 0"), year=2025,
         finance_col="pp_non_fsf",
         ylabel="Log per-pupil non-Fair Student Funding allocation",
-        title="Economic need vs. non-Fair Student Funding (FSF) allocations\n",
+        title="Economic need vs. non-Fair Student Funding (non-FSF) allocations\n",
         subtitle="All schools with non-missing FSF data — NYC Public Schools, Districts 1–32",
         legend_loc="upper left",
         save_path="output/figures/fig9b_eni_vs_non_fsf.png"
