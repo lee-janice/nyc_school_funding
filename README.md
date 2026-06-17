@@ -30,14 +30,14 @@ Analysis of the Economic Need Index (ENI) reveals systematic differences between
 - the mean ENI for schools with inactive PTAs is 0.90, and
 - the mean ENI for schools with missing PTA data is 0.81.
 
-Because schools with missing data fall between active and inactive schools in terms of student demographics, we conclude that imputing missing values as zero would introduce significant bias. Consequently, all analyses for SY 2024-25 exclude the 322 schools with missing data.
+Because schools with missing data fall between active and inactive schools in terms of ENI, we conclude that imputing missing values as zero would introduce significant bias. Consequently, all analyses for SY 2024-25 exclude the 322 schools with missing data.
 
 Additionally, we exclude observations where the calculated end balance (start balance + income – expenditures) deviates from the reported end balance by both:
 
 - More than 5% relative difference; AND
 - An absolute dollar value exceeding $50,000.
 
-See the section on Data anomalies below for additional analyses.
+See the section on Data anomalies below for additional analyses on anomolous transactions.
 
 ### Severe financial inequities
 
@@ -59,9 +59,9 @@ Yet the 95th percentile school spent $439 per-pupil, the 99th spent $1,280, and 
 \par
 ![](output/figures/fig4_top_schools_annotated.png){width=80%} -->
 
-In the wealthiest schools, this expenditure acted almost as like a "shadow budget." For example, schools like P.S. 029 John M. Harrigan and P.S. 158 Bayard Taylor spent private PTA funds worth 25% and 23% of their entire public FSF allocation, respectively.
+In the schools with the wealthiest PTAs, this expenditure acted almost as like a "shadow budget." For example, schools like P.S. 029 John M. Harrigan and P.S. 158 Bayard Taylor—which ranked 1st and 2nd in per-pupil PTA expenditures— spent private PTA funds worth 25% and 23% of their entire public FSF allocation, respectively.
 
-#### Comparison with total funding amounts
+#### Caveat: comparison with total funding amounts
 
 An important caveat to note is that generally, schools with greater need (serving students with more economic need, in greater need of special education services, etc.) receive _more_ in public funding (both in Fair Student Funding allocations and non-FSF allocations):
 
@@ -72,7 +72,7 @@ Additionally, even including PTA expenditures, schools in the lowest economic ne
 
 <img src="output/figures/fig12_total_funding_dotplot.png" width="600">
 
-However, among the top schools with respect to PTA expenditures, PTA dollars can comprise a significant share of total funding amounts.
+This indicates that PTA expenditures do not fully offset the redistributive design of public school funding — schools in the lowest-need quintile (Q1) still receive less in total funding than higher-need quintiles even after PTA dollars are included. In other words, the FSF formula is doing its intended work. However, as alluded to above, among the schools with the highest PTA expenditures, PTA dollars can comprise a significant share of total funding amounts—which may work against the equity logic that public dollars are designed to enforce.
 
 <img src="output/figures/fig11a_eni_vs_pta_as_share_of_total.png" width="600">
 
@@ -111,9 +111,7 @@ The publicly available PTA fundraising data had a substantial number of accounti
 - Within-year discrepancies between the implied ending balance (`starting balance + income - expenditures`), and the reported ending balance.
 - Accounting errors like values expressed in cents rather than dollars.
 
-In particular, the cross-year balance discrepancies - where the previous year's ending balance differed from the starting balance by over $50,000* - were highly concentrated in the schools with the wealthiest PTAs. This may warrant further investigation to see if these errors are happening systematically or intentionally.
-*TODO: make this a dynamic threshold- where the flag is based on the percent discrepancy from the end or start balance
-
+In particular, the cross-year balance discrepancies - where the previous year's ending balance differed from the starting balance by over both 5% of the starting balance, and a raw amount of $50,000\* - were highly concentrated in the schools with the wealthiest PTAs. This may warrant further investigation to see if these errors are happening systematically or intentionally.
 <img src="output/figures/fig1c_balance_flag_vs_expenditure_hist.png" width="600">
 <img src="output/figures/fig2c_transaction_flag_vs_expenditure_hist.png" width="600">
 
