@@ -30,17 +30,12 @@ may exacerbate funding gaps that mirror socioeconomic and racial segregation.
 
 ## Key findings
 
-### There is a substantial amount of missingness in the PTA fundraising data which warrants further investigation.
-
-### PTA expenditure is extremely unequal and hyper-concentrated towards the top spenders.
-
-### Higher-need schools spend less in PTA funds. (Caveat: they also receive more in public funds.)
-
-### PTA expenditure is strongly stratified by race.
-
-### Inequality is increasing over time.
-
-### There are a substantial number of anomalies in the PTA fundraising data that warrant further investigation.
+- **Missingness in PTA reporting.** There is a substantial amount of missingness in the PTA fundraising data, which warrants further investigation.
+- **Severe financial inequities.** PTA expenditure is extremely unequal and hyper-concentrated towards the top spenders.
+- **Socioeconomic stratification.** Higher-need schools spend less in PTA funds. (Caveat: they also receive more in public funds.)
+- **Demographic stratification.** PTA expenditure is strongly stratified by race.
+- **Increasing inequities.** Inequality is increasing over time.
+- **Data anomalies.** There are a substantial number of anomalies in the PTA fundraising data that warrant further investigation.
 
 ## Background
 
