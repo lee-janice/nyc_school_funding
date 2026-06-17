@@ -16,7 +16,7 @@ may exacerbate funding gaps that mirror socioeconomic and racial segregation.
 
 ## Table of Contents
 
-- [Key Findings](#key-findings)
+- [Key findings](#key-findings)
 - [Background](#background)
     - [Landscape of school funding in NYC](#landscape-of-school-funding-in-nyc)
     - [Analytical sample](#analytical-sample)
