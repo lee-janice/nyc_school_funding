@@ -5,7 +5,7 @@
 
 PTA activity categories in 2025
 	pta_category
-	Active      831
+	Active      821
 	Missing     322
 	Inactive    301
 
@@ -41,32 +41,33 @@ Means of top 15
 	p_asian               0.25
 
 Top 15 schools by per-pupil PTA expenditures in 2025
-	                             school_name_x  pta_expenditure  pp_pta_expenditure  pta_expenditure_as_p_of_fsf  eni_n  p_white  p_black  p_hispanic  p_asian
-	9533             P.S. 029 John M. Harrigan       1944016.00             2738.05                        24.93   0.14     0.69     0.01        0.11     0.07
-	8890                P.S. 158 Bayard Taylor       1512642.50             2504.38                        23.10   0.16     0.67     0.02        0.09     0.14
-	9452      The Emily Warren Roebling School       1199194.00             2029.09                        18.33   0.10     0.69     0.03        0.11     0.07
-	8996                   The Anderson School       1046935.56             2005.62                        18.07   0.15     0.43     0.03        0.11     0.32
-	10099       P.S. 196 Grand Central Parkway       1493961.88             1991.95                        17.15   0.28     0.29     0.02        0.16     0.43
-	8971               P.S. 009 Sarah Anderson       1039614.19             1965.24                        16.26   0.17     0.61     0.03        0.15     0.09
-	8867              P.S. 006 Lillie D. Blake        914163.00             1393.54                        14.18   0.12     0.62     0.01        0.12     0.16
-	8893          P.S. 183 Robert L. Stevenson        720534.00             1331.86                        11.53   0.13     0.58     0.02        0.13     0.22
-	8876              P.S. 77 Lower Lab School        470981.72             1293.91                        12.34   0.13     0.34     0.01        0.07     0.45
-	9542   The Maurice Sendak Community School        248341.84             1229.42                         8.67   0.17     0.56     0.03        0.21     0.08
-	9554                 P.S. 321 William Penn       1585844.25             1211.49                        10.99   0.07     0.65     0.02        0.10     0.09
-	8901   East Side Elementary School, PS 267        417165.41             1191.90                         9.40   0.13     0.58     0.03        0.14     0.19
-	8976              P.S. 087 William Sherman        751192.00              994.96                         8.39   0.17     0.60     0.03        0.18     0.08
-	8898          P.S. 234 Independence School        450251.00              976.68                         7.96   0.07     0.66     0.02        0.11     0.10
-	8975                P.S. 084 Lillian Weber        671598.00              970.52                         9.43   0.40     0.50     0.11        0.29     0.02
+	                             school_name_x  pta_expenditure  pp_pta_expenditure  pta_expenditure_as_p_of_fsf  pta_expenditure_as_p_of_public  eni_n  p_white  p_black  p_hispanic  p_asian
+	9533             P.S. 029 John M. Harrigan       1944016.00             2738.05                        24.93                           16.56   0.14     0.69     0.01        0.11     0.07
+	8890                P.S. 158 Bayard Taylor       1512642.50             2504.38                        23.10                           13.56   0.16     0.67     0.02        0.09     0.14
+	9452      The Emily Warren Roebling School       1199194.00             2029.09                        18.33                           14.00   0.10     0.69     0.03        0.11     0.07
+	8996                   The Anderson School       1046935.56             2005.62                        18.07                           16.25   0.15     0.43     0.03        0.11     0.32
+	10099       P.S. 196 Grand Central Parkway       1493961.88             1991.95                        17.15                           11.99   0.28     0.29     0.02        0.16     0.43
+	8971               P.S. 009 Sarah Anderson       1039614.19             1965.24                        16.26                           11.28   0.17     0.61     0.03        0.15     0.09
+	8867              P.S. 006 Lillie D. Blake        914163.00             1393.54                        14.18                            8.26   0.12     0.62     0.01        0.12     0.16
+	8893          P.S. 183 Robert L. Stevenson        720534.00             1331.86                        11.53                            7.64   0.13     0.58     0.02        0.13     0.22
+	8876              P.S. 77 Lower Lab School        470981.72             1293.91                        12.34                            9.36   0.13     0.34     0.01        0.07     0.45
+	9542   The Maurice Sendak Community School        248341.84             1229.42                         8.67                            5.50   0.17     0.56     0.03        0.21     0.08
+	9554                 P.S. 321 William Penn       1585844.25             1211.49                        10.99                            7.47   0.07     0.65     0.02        0.10     0.09
+	8901   East Side Elementary School, PS 267        417165.41             1191.90                         9.40                            6.80   0.13     0.58     0.03        0.14     0.19
+	8976              P.S. 087 William Sherman        751192.00              994.96                         8.39                            5.71   0.17     0.60     0.03        0.18     0.08
+	8898          P.S. 234 Independence School        450251.00              976.68                         7.96                            4.80   0.07     0.66     0.02        0.11     0.10
+	9541              P.S. 107 John W. Kimball        508616.00              945.38                         7.70                            5.37   0.11     0.69     0.01        0.10     0.08
 
 Means of top 15
-	pta_expenditure               964429.02
-	pp_pta_expenditure              1588.57
-	pta_expenditure_as_p_of_fsf       14.05
-	eni_n                              0.16
-	p_white                            0.56
-	p_black                            0.03
-	p_hispanic                         0.14
-	p_asian                            0.17
+	pta_expenditure                  953563.56
+	pp_pta_expenditure                 1586.90
+	pta_expenditure_as_p_of_fsf          13.93
+	pta_expenditure_as_p_of_public        9.64
+	eni_n                                 0.14
+	p_white                               0.58
+	p_black                               0.02
+	p_hispanic                            0.13
+	p_asian                               0.17
 
 Top 15 schools by per-pupil PTA ending balance in 2025
 	                            school_name_x  pta_end_balance  pp_pta_end_balance  eni_n  p_white  p_black  p_hispanic  p_asian
@@ -101,10 +102,10 @@ Means of top 15
 
 Median per-pupil PTA financials by ENI quintile (2025, active PTAs only):
 	eni_quintile             Q1    Q2    Q3   Q4   Q5
-	pp_pta_income        177.49 29.35 10.18 9.67 4.48
-	pp_pta_expenditure   148.56 21.23  6.88 7.63 3.22
-	pp_pta_start_balance  21.92  0.62  0.10 0.12 0.10
-	pp_pta_end_balance    87.68 10.19  4.90 3.17 2.31
+	pp_pta_income        173.98 28.85 10.79 9.67 4.48
+	pp_pta_expenditure   148.53 21.01  6.88 7.63 3.22
+	pp_pta_start_balance  27.26  0.62  0.12 0.14 0.10
+	pp_pta_end_balance    87.75 10.60  5.04 3.17 2.31
 
 -------------------------------------------------------------------------------
   Racial Composition by PTA Financials                                         
@@ -114,16 +115,16 @@ Racial composition by per-pupil PTA income quintiles (2025, active PTAs only):
 	pp_pta_income_quintile    Q1    Q2    Q3    Q4    Q5
 	year                                                
 	2025 p_white            5.00  8.00 10.00 20.00 38.00
-	     p_black           30.00 25.00 20.00 14.00  9.00
-	     p_hispanic        51.00 49.00 47.00 36.00 26.00
-	     p_asian           10.00 15.00 19.00 26.00 21.00
+	     p_black           31.00 25.00 20.00 14.00  9.00
+	     p_hispanic        51.00 49.00 47.00 36.00 25.00
+	     p_asian           10.00 15.00 19.00 27.00 21.00
 
 Racial composition by per-pupil PTA expenditure quintiles (2025, active PTAs only):
 	pp_pta_expenditure_quintile    Q1    Q2    Q3    Q4    Q5
 	year                                                     
 	2025 p_white                 6.00  8.00 11.00 19.00 38.00
 	     p_black                31.00 25.00 19.00 15.00  9.00
-	     p_hispanic             51.00 49.00 46.00 36.00 24.00
+	     p_hispanic             51.00 49.00 47.00 37.00 24.00
 	     p_asian                 9.00 15.00 21.00 25.00 22.00
 
 Racial composition by per-pupil PTA end balance quintiles (2025, active PTAs only):

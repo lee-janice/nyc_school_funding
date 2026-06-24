@@ -1,9 +1,21 @@
-from src.analysis.anomalies import investigate_anomalies
+from src.analysis.anomalies import execute_queries
 from src.analysis.modeling import model_anomalies
 from src.analysis.trends import pta_trends_analysis
 from src.analysis.cross_sectional import pta_cross_sectional_analysis
 import pandas as pd
 import sys
+
+def run_anomaly_analysis(funding_data): 
+    try: 
+        print("\nExecuting SQL queries...")
+        execute_queries()
+
+        print("\n")
+
+    except Exception as e:
+        print(f"Running anomaly analysis failed: {str(e)}")
+        sys.exit(1)
+
 
 def run_descriptives(funding_data):
 
@@ -58,7 +70,6 @@ def run_descriptives(funding_data):
         pta_cross_sectional_analysis(funding_sensitivity, 2025, "./output/cross_sectional_2025_SA3.txt")
         
 
-
     except Exception as e:
         print(f"Running descriptives failed: {str(e)}")
         sys.exit(1)
@@ -79,7 +90,7 @@ if __name__ == "__main__":
     print("\nLoading in data...") 
     funding_2019_2025 = pd.read_csv("data/processed/funding_2019_2025.csv")
 
-    investigate_anomalies()
+    run_anomaly_analysis(funding_2019_2025)
     run_descriptives(funding_2019_2025)
     run_models(funding_2019_2025)
 

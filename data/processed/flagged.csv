@@ -2,36 +2,35 @@
 6,P.S. 110 Florence Nightingale,2019,4457595.0,6669346.0,61617.51,39600.0,True,,False,False,False,False,False,False,False,False,False,False,False,False,True
 24,"New Explorations into Science, Technology and Math",2019,1479000.0,1302000.0,542257.0,719257.0,False,,False,True,False,False,False,False,False,False,False,True,False,True,True
 30,P.S. 003 Charrette School,2019,524672.67,646506.77,411932.72,290098.62,False,,False,True,False,False,False,False,False,False,False,True,False,True,True
-31,P.S. 006 Lillie D. Blake,2019,936143.84,1068005.26,1220153.0,1033236.92,False,,False,True,False,False,True,False,False,False,False,True,False,True,True
+31,P.S. 006 Lillie D. Blake,2019,936143.84,1068005.26,1220153.0,1033236.92,True,,False,True,False,False,True,False,False,False,False,True,False,True,True
 34,P.S. 040 Augustus Saint-Gaudens,2019,498759.0,561676.0,666144.0,603226.0,False,,False,True,False,False,False,False,False,False,False,True,False,True,True
 35,P.S. 041 Greenwich Village,2019,1023319.0,975740.0,627391.0,673784.68,False,,False,True,False,False,False,False,False,False,False,True,False,True,True
 39,P.S. 059 Beekman Hill International,2019,851102.86,864103.82,580951.59,567950.18,False,,False,True,False,False,False,False,False,False,False,True,False,True,True
 40,P.S. 77 Lower Lab School,2019,589848.0,531821.0,491073.0,549099.0,False,,False,True,False,False,False,False,False,False,False,True,False,True,True
-52,P.S. 150,2019,204576.0,255827.0,377010.0,325759.0,False,,False,True,False,False,False,False,False,False,False,True,False,True,True
-53,Yorkville Community School,2019,228259.0,247731.0,410040.0,390568.0,False,,False,True,False,False,False,False,False,False,False,True,False,True,True
 55,J.H.S. 167 Robert F. Wagner,2019,374570.21,347850.4,437771.69,464497.5,False,,False,True,False,False,False,False,False,False,False,True,False,True,True
+57,P.S. 183 Robert L. Stevenson,2019,558046.28,551132.32,227436.0,6906.96,True,,False,False,False,False,False,False,False,False,False,False,False,False,True
 59,P.S. 212 Midtown West,2019,214533.0,216240.0,297788.14,341884.0,True,,False,False,False,False,False,False,False,False,False,False,False,False,True
-62,P.S. 234 Independence School,2019,660795.01,647614.29,375489.73,388670.45,False,,False,True,False,False,False,False,False,False,False,True,False,True,True
-65,"East Side Elementary School, PS 267",2019,392719.0,342406.0,362424.0,412737.0,False,,False,True,False,False,False,False,False,False,False,True,False,True,True
+63,M.S. 255 Salk School of Science,2019,218177.0,159786.0,429418.0,58391.0,True,,False,True,False,False,False,False,False,False,False,True,False,True,True
 66,Battery Park City School,2019,646377.93,623983.47,845829.32,868223.78,False,,False,True,False,False,False,False,False,False,False,True,False,True,True
+71,I.S. 289,2019,174937.51,143031.8,160804.93,31905.71,True,,False,False,False,False,False,False,False,False,False,False,False,False,True
 72,P.S. 290 Manhattan New School,2019,683811.55,778843.8,930581.76,835549.51,False,,False,True,False,False,False,False,False,False,False,True,False,True,True
-75,M.S. 297,2019,375060.02,210444.35,29003.54,163015.67,True,,False,False,False,False,False,False,False,False,False,False,False,False,True
-92,Spruce Street School,2019,465.6658,438361.17,451912.85,27303.41,False,,False,True,False,False,False,False,False,False,False,True,False,True,True
+92,Spruce Street School,2019,46566.58,438361.17,451912.85,27303.41,True,,False,True,False,False,False,False,False,False,False,True,False,True,True
 105,Quest to Learn,2019,27630.02,27088.21,26640.0,10541.81,True,,False,False,False,False,False,False,False,False,False,False,False,False,True
+144,Lower Manhattan Community Middle School,2019,248963.74,218216.3,248963.74,30747.44,True,,False,False,False,False,False,False,False,False,False,False,False,False,True
 146,P.S. 009 Sarah Anderson,2019,783805.0,821096.0,0.0,37291.0,True,,False,False,False,False,False,False,False,False,False,False,False,False,True
-148,P.S. 075 Emily Dickinson,2019,126269.27,151129.03,331647.3,306787.54,False,,False,True,False,False,False,False,False,False,False,True,False,True,True
 151,P.S. 087 William Sherman,2019,2086338.0,839122.0,12233.41,1247216.0,False,,False,False,False,False,True,False,False,False,False,True,False,True,True
 160,P.S. 199 Jessie Isador Straus,2019,705415.81,791450.08,712248.93,626214.66,False,,False,True,False,False,False,False,False,False,False,True,False,True,True
 173,The Anderson School,2019,1030522.95,727172.71,1825898.2,2129248.44,False,,False,True,False,False,True,False,False,False,False,True,False,True,True
 180,P.S. 452,2019,427044.0,486809.0,438791.0,364542.0,False,,False,True,False,False,False,False,False,False,False,True,False,True,True
+182,Fiorello H. LaGuardia High School of Music & Art a,2019,746725.89,741105.29,746725.89,5620.6,True,,False,True,False,False,False,False,False,False,False,True,False,True,True
 222,P.S. 092 Mary McLeod Bethune,2019,6408.92,6455.2,362.83,46.08,False,,False,False,False,False,False,False,False,True,False,False,True,True,True
-255,P.S. 115 Alexander Humboldt,2019,1566.0,646.0,0.2,920.0,False,,False,False,False,False,False,False,False,False,True,False,True,True,True
+255,P.S. 115 Alexander Humboldt,2019,1566.0,646.0,20.0,920.0,False,,False,False,False,False,False,False,False,False,True,False,True,True,True
 285,High School for Media and Communications,2019,23600.0,22575.33,0.0,1024.67,False,,False,False,False,False,False,False,False,True,False,False,True,True,True
 298,P.S./M.S. 031 The William Lloyd Garrison,2019,464423.0,3320.06,3058.0,15862.0,True,,False,False,False,False,False,False,False,False,False,False,False,False,True
 361,The Longwood Academy of Discovery,2019,3573071.0,3570.0,2171071.0,0.71,True,,False,True,False,False,False,False,False,False,False,True,False,True,True
 454,Milton Fein School,2019,2479770.0,1491944.0,14595.45,987826.0,False,,False,False,False,False,True,False,False,False,False,True,False,True,True
 476,P.S. 094 Kings College School,2019,0.0,105.0,3132.03,33027.03,True,,False,False,False,False,False,False,False,False,False,False,False,False,True
-478,J.H.S. 118 William W. Niles,2019,2088.82,2086.3,7.953200000000001,2.52,False,,False,False,False,False,False,False,True,False,False,False,True,True,True
+478,J.H.S. 118 William W. Niles,2019,2088.82,2086.3,795.32,2.52,False,,False,False,False,False,False,False,True,False,False,False,True,True,True
 487,P.S. 226,2019,6476.42,6982.87,527.74,21.29,False,,False,False,False,False,False,False,True,True,False,False,True,True,True
 530,Creston Academy,2019,5696.83,4528.71,3.6658,1168.12,False,,False,False,False,False,False,False,True,False,False,False,True,True,True
 542,P.S. 076 The Bennington School,2019,17354.46,1447757.0,815.46,2876.89,True,,False,False,False,False,False,False,False,False,False,False,False,False,True
@@ -40,11 +39,13 @@
 585,The Matilda Avenue School,2019,7734.0,9352.4,1879.1,260.7,False,,False,False,False,False,False,False,False,True,False,False,True,True,True
 613,P.S. 211,2019,2176.0,1950.0,4.92,226.0,False,,False,False,False,False,False,False,False,True,False,False,True,True,True
 640,P.S. 536,2019,11331.75,1650.0,200.0,2269.0,False,,False,False,False,False,False,False,False,False,True,False,True,True,True
+649,P.S. 011 Purvis J. Behan,2019,1046661.4,865775.97,17196623.0,180885.43,True,,False,True,False,False,False,False,False,False,False,True,False,True,True
 658,P.S. 133 William A. Butler,2019,76021352.0,74615499.0,27027421.0,28433274.0,False,,False,True,False,False,True,False,False,False,False,True,False,True,True
 696,P.S. 084 Jose De Diego,2019,115971.35,109480.12,84987.46,78496.23,True,,False,False,False,False,False,False,False,False,False,False,False,False,True
-701,P.S. 147 Isaac Remsen,2019,5862949.0,40979.38,1024499.0,17650.11,True,,False,True,False,False,False,False,False,False,False,True,False,True,True
+701,P.S. 147 Isaac Remsen,2019,5862949.0,40979.38,1024499.0,17650.11,True,,False,True,False,False,False,True,False,False,False,True,True,True,True
 726,"Magnet School of Math, Science and Design Technolo",2019,943960.31,962541.67,568903.65,550322.29,False,,False,True,False,False,False,False,False,False,False,True,False,True,True
 729,P.S. 029 John M. Harrigan,2019,1733654.0,1657418.0,604229.0,680465.0,False,,False,True,False,False,False,False,False,False,False,True,False,True,True
+741,P.S. 131 Brooklyn,2019,25962.45,24059.89,10670.2,1902.56,True,,False,False,False,False,False,False,False,False,False,False,False,False,True
 743,"The Brooklyn New School, P.S. 146",2019,274238.41,273479.34,46553.29,196404.98,True,,False,False,False,False,False,False,False,False,False,False,False,False,True
 744,The Windsor Terrace School,2019,299754.79,346975.31,462931.46,401643.67,False,,False,True,False,False,False,False,False,False,False,True,False,True,True
 745,P.S. 169 Sunset Park,2019,1931034.0,16487.08,8315.93,2820.26,True,,False,False,False,False,False,False,False,False,False,False,False,False,True
@@ -52,19 +53,20 @@
 838,Medgar Evers College Preparatory School,2019,39736.0,29261.0,10394.93,1039493.0,True,,False,False,False,False,True,False,False,False,False,True,False,True,True
 859,P.S. 276 Louis Marshall,2019,16574.1,0.0,2149.48,5170.58,True,,False,False,False,False,False,False,False,False,False,False,False,False,True
 879,P.S. 007 Abraham Lincoln,2019,5476.7,6272.06,2990.07,2194.71,False,,False,False,False,False,False,False,False,True,False,False,True,True,True
-886,P.S. 159 Isaac Pitkin,2019,2.0,3405.32,3407.32,2.0,False,,False,False,False,False,False,True,False,False,False,False,True,True,True
-889,P.S. 202 Ernest S. Jenkyns,2019,3349.95,3148.03,10.443499999999998,201.92,False,,False,False,False,False,False,True,False,False,False,False,True,True,True
 924,School for Classics High School,2019,0.0,0.0,285.0,285.0,False,,False,False,False,False,False,True,False,False,False,False,True,True,True
 969,P.S. 748 Brooklyn School for Global Scholars,2019,4994493.0,48618.0,33468.5,3479539.0,True,,False,False,False,False,True,False,False,False,False,True,False,True,True
 998,P.S. 329 Surfside,2019,202.0,165.0,244.26,281.26,False,,False,False,False,False,False,True,False,False,False,False,True,True,True
 1009,Brooklyn Studio Secondary School,2019,11739.87,8734.67,51.7909,3005.2,False,,False,False,False,False,False,False,True,False,False,False,True,True,True
+1049,P.S. 889,2019,15532.12,15876.9,12883.0,0.0,True,,False,False,False,False,False,False,False,False,False,False,False,False,True
 1051,P.S. 041 Francis White,2019,3968.2,25838.2,850.0,1430.2,True,,False,False,False,False,False,False,False,False,False,False,False,False,True
+1115,A.C.E. Academy for Scholars at the Geraldine Ferra,2019,35608.13,33082.07,586173.0,2526.06,True,,False,True,False,False,False,False,False,False,False,True,False,True,True
 1163,Queens High School for Language Studies,2019,7361.21,4183095.0,2592.59,3177.26,True,,False,False,False,False,False,False,False,False,False,False,False,False,True
 1209,Francis Lewis High School,2019,2200659.0,14455.57,8113.83,7551.02,True,,False,False,False,False,False,False,False,False,False,False,False,False,True
 1248,P.S. 253,2019,3339.77,3124.95,2.0185,214.82,False,,False,False,False,False,False,False,True,False,False,False,True,True,True
 1252,Channel View School for Research,2019,10181.44,4280.11,58.4099,5901.33,False,,False,False,False,False,False,False,True,True,False,False,True,True,True
 1256,"Queens High School for Information, Research, and",2019,0.0,43.12,103.0,59.88,False,,False,False,False,False,False,True,False,False,False,False,True,True,True
 1257,New York City Academy for Discovery,2019,11730.24,9092.03,1199.74,263821.0,True,,False,False,False,False,False,False,False,False,False,False,False,False,True
+1262,Waterside Children's Studio School,2019,47364.86,46412.34,12380.29,952.52,True,,False,False,False,False,False,False,False,False,False,False,False,False,True
 1265,Scholars' Academy,2019,185357.64,108072.38,43546.32,64914.12,True,,False,False,False,False,False,False,False,False,False,False,False,False,True
 1285,P.S. Q086,2019,13512.13,11818.95,13.798599999999999,1693.18,False,,False,False,False,False,False,False,True,True,False,False,True,True,True
 1308,Queens Collegiate: A College Board School,2019,44729.22,4221.98,1008.52,257.27,True,,False,False,False,False,False,False,False,False,False,False,False,False,True
@@ -72,19 +74,18 @@
 1319,Hillcrest High School,2019,20267.53,1716.46,339.64,351.07,True,,False,False,False,False,False,False,True,False,False,False,True,True,True
 1323,Queens High School for the Sciences at York Colleg,2019,0.0,1083.1,6557.72,5474062.0,True,,False,False,False,False,True,False,False,False,False,True,False,True,True
 1375,P.S. 017 Henry David Thoreau,2019,4638707.0,29117.17,11702.07,17269.9,True,,False,False,False,False,False,False,False,False,False,False,False,False,True
-1389,I.S. 145 Joseph Pulitzer,2019,15888.81,12589.88,3550.91,2929.3,False,,False,False,False,False,False,True,False,False,False,False,True,True,True
 1392,P.S. 150 Queens,2019,6050.0,3420.0,26195.0,46194.19,True,,False,False,False,False,False,False,False,False,False,False,False,False,True
 1408,Hunters Point Community Middle School,2019,9931.0,10566.0,16149.05,151514.05,True,,False,False,False,False,False,False,False,False,False,False,False,False,True
 1426,P.S. 6 Corporal Allan F. Kivlehan School,2019,135510.29,90274.2,77632.67,84922.66,True,,False,False,False,False,False,False,False,False,False,False,False,False,True
 1461,P.S. 050 Frank Hankinson,2019,54407.39,72661.29,13370.85,18253.9,True,,False,False,False,False,False,False,False,False,False,False,False,False,True
 1525,P.S. 064 Robert Simon,2020,265821.0,304.1000061035156,2741.800048828125,2437.659912109375,True,1538.29,False,False,False,False,False,False,False,False,False,False,False,False,True
 1526,P.S. 110 Florence Nightingale,2020,50476.19921875,32750.630859375,38081.3203125,555806.875,True,39600.0,False,False,False,False,False,False,False,False,False,False,False,False,True
-1530,P.S. 184m Shuang Wen,2020,71590.0,48316.0,1794.09,23274.0,False,137796.35,True,False,False,False,False,False,False,False,False,False,False,False,True
+1530,P.S. 184m Shuang Wen,2020,71590.0,48316.0,179409.0,23274.0,True,137796.35,False,False,False,False,False,False,False,False,False,False,False,False,True
 1537,Earth School,2020,0.0,0.0,0.0,0.0,False,131088.0,True,False,False,False,False,False,False,False,False,False,False,False,True
 1542,"New Explorations into Science, Technology and Math",2020,1246963.0,1246185.0,942035.0,942813.0,False,719257.0,True,True,False,False,False,False,False,False,False,True,False,True,True
 1546,P.S. 002 Meyer London,2020,252115.0,14324.2802734375,10633.490234375,21520.7109375,True,10633.49,False,False,False,False,False,False,False,False,False,False,False,False,True
 1548,P.S. 006 Lillie D. Blake,2020,947286.0,1036385.0,1033266.0,959260.0,False,1033236.92,False,True,False,False,False,False,False,False,False,True,False,True,True
-1550,P.S. 033 Chelsea Prep,2020,278476.0,170895.0,424496.0,532077.0,False,117462.0,True,True,False,False,False,False,False,False,False,True,False,True,True
+1550,P.S. 033 Chelsea Prep,2020,278476.0,170895.0,424496.0,532077.0,False,117462.0,True,False,False,False,False,False,False,False,False,False,False,False,True
 1551,P.S. 040 Augustus Saint-Gaudens,2020,187291.0,349180.0,602519.0,440631.0,False,603226.0,False,True,False,False,False,False,False,False,False,True,False,True,True
 1552,P.S. 041 Greenwich Village,2020,259860.0,283227.0,518696.0,542063.0,True,673784.68,True,True,False,False,False,False,False,False,False,True,False,True,True
 1556,P.S. 059 Beekman Hill International,2020,600079.0,484543.78125,567950.625,683485.875,False,567950.18,False,True,False,False,False,False,False,False,False,True,False,True,True
@@ -98,16 +99,17 @@
 1575,P.S. 198 Isador E. Ida Straus,2020,501922.0,161277.0,3165.18,340645.0,False,320200.0,True,False,False,False,False,False,False,False,False,False,False,False,True
 1576,P.S. 212 Midtown West,2020,90029.0,94103.0,4304731.5,300657.5625,True,341884.0,True,True,False,False,False,False,False,False,False,True,False,True,True
 1580,M.S. 255 Salk School of Science,2020,629323.0,186177.0,5103.07,443146.0,False,58391.0,True,False,False,False,False,False,False,False,False,False,False,False,True
-1582,"East Side Elementary School, PS 267",2020,161560.0,194333.0,411081.0,378308.0,False,412737.0,False,True,False,False,False,False,False,False,False,True,False,True,True
 1583,Battery Park City School,2020,461247.375,561600.0,842837.5,742484.875,False,868223.78,False,True,False,False,False,False,False,False,False,True,False,True,True
+1588,I.S. 289,2020,54920.01171875,25277.73046875,165297.0,29642.279296875,True,31905.71,True,False,False,False,False,False,False,False,False,False,False,False,True
 1589,P.S. 290 Manhattan New School,2020,1308072.0,674773.1875,8807.64625,633298.875,False,835549.51,True,False,False,False,False,False,False,False,False,False,False,False,True
 1598,New York City Lab Middle School for Collaborative,2020,29182732.0,11580096.0,156196.1,17602636.0,False,156196.1,False,False,False,False,True,False,False,False,False,True,False,True,True
 1600,Sixth Avenue Elementary School,2020,45000.0,45000.0,31337.0,31337.0,False,150876.0,True,False,False,False,False,False,False,False,False,False,False,False,True
 1607,Spruce Street School,2020,211849.0,280120.0,488533.0,416803.0,False,27303.41,True,True,False,False,False,False,False,False,False,True,False,True,True
-1617,Millennium High School,2020,70378.0,60420.0,703.78,9958.0,False,93474.39,True,False,False,False,False,False,False,False,False,False,False,False,True
+1617,Millennium High School,2020,70378.0,60420.0,70378.0,9958.0,True,93474.39,False,False,False,False,False,False,False,False,False,False,False,False,True
 1629,Stuyvesant High School,2020,1026617.0,343698.0,5301.02,682919.0,False,532024.0,True,False,False,False,False,False,False,False,False,False,False,False,True
 1630,High School of Economics and Finance,2020,0.0,0.0,322.0,322.0,False,430.52,False,False,False,False,False,True,False,False,False,False,True,True,True
 1650,Lower Manhattan Community Middle School,2020,92319.140625,157453.890625,155012.484375,89877.7265625,False,30747.44,True,False,False,False,False,False,False,False,False,False,False,False,True
+1652,P.S. 009 Sarah Anderson,2020,801875.0,787100.0,883799.0,14775.0,True,37291.0,True,True,False,False,False,False,False,False,False,True,False,True,True
 1653,J.H.S. 054 Booker T. Washington,2020,330638.34375,469939.71875,868748.6875,729447.3125,False,898416.74,False,True,False,False,False,False,False,False,False,True,False,True,True
 1654,P.S. 075 Emily Dickinson,2020,437243.25,172688.4375,3090.3003125,264536.84375,False,306787.54,True,False,False,False,False,False,False,False,False,False,False,False,True
 1656,P.S. 084 Lillian Weber,2020,620940.25,367758.90625,1781.5565625,253181.3125,False,171521.43,True,False,False,False,False,False,False,False,False,False,False,False,True
@@ -120,8 +122,8 @@
 1685,P.S. 452,2020,121750.0,112900.0,157158.0,166008.0,False,364542.0,True,False,False,False,False,False,False,False,False,False,False,False,True
 1691,Special Music School,2020,158176.0,112817.0,94198.0,161249.0,True,115932.0,False,False,False,False,False,False,False,False,False,False,False,False,True
 1747,"High School for Mathematics, Science and Engineeri",2020,118173.8984375,122272.2890625,182811.796875,178713.40625,False,52421.74,True,False,False,False,False,False,False,False,False,False,False,False,True
-1753,P.S. 048 P.O. Michael J. Buczek,2020,5500.72021484375,11482.169921875,314.1600036621094,5981.4501953125,True,541.28,False,False,False,False,False,False,False,False,False,False,False,False,True
 1757,P.S. 115 Alexander Humboldt,2020,5532.0,5337.0,1.0,195.0,False,920.0,False,False,False,False,False,False,True,True,False,False,True,True,True
+1769,P.S./I.S. 210 - Twenty-first Century Academy for C,2020,15885.9501953125,12743.419921875,7126.16015625,3412.530029296875,False,4356.51,False,False,False,False,False,True,False,False,False,False,True,True,True
 1781,Washington Heights Expeditionary Learning School,2020,20788.560546875,6612.5,14430.23046875,16251.4501953125,True,14430.23,False,False,False,False,False,False,False,False,False,False,False,False,True
 1847,P.S. X140 The Eagle School,2020,1500.0,3753.219970703125,2251.43994140625,1.7799999713897705,False,2315.84,False,False,False,False,False,True,False,False,False,False,True,True,True
 1950,Milton Fein School,2020,24351.91015625,9958.6904296875,110.226201171875,14393.2197265625,False,987826.0,True,False,False,False,False,False,False,False,False,False,False,False,True
@@ -135,7 +137,7 @@
 2155,P.S. 282 Park Slope,2020,159744.40625,95382.25,712.576171875,64362.1484375,False,75215.26,True,False,False,False,False,False,False,False,False,False,False,False,True
 2168,Academy of Arts and Letters,2020,462933.0,297720.0,1497.31,165213.0,False,133548.0,True,False,False,False,False,False,False,False,False,False,False,False,True
 2199,P.S. 319,2020,0.0,1535.0,4678.0,31423.0,True,3188.0,False,False,False,False,False,False,False,False,False,False,False,False,True
-2217,"Magnet School of Math, Science and Design Technolo",2020,532325.125,502671.0625,5518.234375,29654.080078125,False,550322.29,True,False,False,False,False,False,False,False,False,False,False,False,True
+2217,"Magnet School of Math, Science and Design Technolo",2020,532325.125,502671.0625,551823.4375,29654.080078125,True,550322.29,False,True,False,False,False,False,False,False,False,True,False,True,True
 2220,P.S. 029 John M. Harrigan,2020,1024481.0,1212496.0,705169.0,517154.0,False,680465.0,False,True,False,False,False,False,False,False,False,True,False,True,True
 2222,P.S. 038 The Pacific,2020,459130.875,233536.09375,466.78828125,225594.765625,False,60010.29,True,False,False,False,False,False,False,False,False,False,False,False,True
 2225,P.S. 058 The Carroll,2020,1731739.0,1969154.0,530047.0,292632.0,False,163638.0,True,True,False,False,False,False,False,False,False,True,False,True,True
@@ -149,9 +151,8 @@
 2371,P.S. 202 Ernest S. Jenkyns,2020,4161.0,2166.840087890625,2.0194000244140624,1994.1600341796875,False,201.92,False,False,False,False,False,False,False,False,True,False,True,True,True
 2428,The Christa McAuliffe School\I.S. 187,2020,128275.3984375,67195.859375,584.2087109375,61079.5390625,False,53553.65,True,False,False,False,False,False,False,False,False,False,False,False,True
 2431,J.H.S. 201 The Dyker Heights,2020,361023.125,129127.8515625,1563.12375,231895.265625,False,156312.37,True,False,False,False,False,False,False,False,False,False,False,False,True
-2434,J.H.S. 220 John J. Pershing,2020,2243.0,4696.81982421875,3766.360107421875,1312.5400390625,False,419.94,False,False,False,False,False,True,False,False,False,False,True,True,True
+2432,P.S. 204 Vince Lombardi,2020,71746.296875,36964.421875,41181.0,4216.580078125,True,41181.18,False,False,False,False,False,False,False,False,False,False,False,False,True
 2451,P.S. 748 Brooklyn School for Global Scholars,2020,18171.25,34781.109375,44867.6015625,28257.740234375,False,3479539.0,True,False,False,False,False,False,False,False,False,False,False,False,True
-2468,P.S. 212 Lady Deborah Moody,2020,70233.3984375,23123.560546875,28872.150390625,45630.33984375,True,28872.15,False,False,False,False,False,False,False,False,False,False,False,False,True
 2509,P.S. 222 Katherine R. Snyder,2020,60819.51171875,58157.94921875,28763.8203125,31425.380859375,False,29753.47,False,False,False,False,False,True,False,False,False,False,True,True,True
 2519,P.S. 312 Bergen Beach,2020,70160.2734375,34348.30859375,21722.5703125,3581196.0,True,33495.41,False,False,False,False,True,False,False,False,False,True,False,True,True
 2562,P.S. Q016 The Nancy DeBenedittis School,2020,58482.171875,18805.16015625,370.4344921875,39677.01171875,False,56923.75,True,False,False,False,False,False,False,False,False,False,False,False,True
@@ -166,15 +167,15 @@
 2739,Scholars' Academy,2020,133840.484375,108799.796875,649.1412109375,25040.689453125,False,64914.12,True,False,False,False,False,False,False,False,False,False,False,False,True
 2760,P.S. 099 Kew Gardens,2020,222517.0,125608.0,981.12,96909.0,False,97533.0,True,False,False,False,False,False,False,False,False,False,False,False,True
 2761,P.S. 101 School in the Gardens,2020,587694.0625,463444.84375,1969.8859375,124249.25,False,201606.95,True,False,False,False,False,False,False,False,False,False,False,False,True
+2772,P.S. 175 The Lynn Gross Discovery School,2020,21293.44921875,19642.599609375,23299.740234375,1650.8499755859375,True,11701.38,False,False,False,False,False,False,False,False,False,False,False,False,True
 2775,P.S. 196 Grand Central Parkway,2020,1713582.0,1144905.875,3508.186875,568676.1875,False,677174.86,True,False,False,False,False,False,False,False,False,False,False,False,True
 2796,Queens High School for the Sciences at York Colleg,2020,120.0,243.0,5358.0,5115.0,False,5474062.0,True,False,False,False,False,False,False,False,False,False,False,False,True
 2843,"Mathematics, Science Research and Technology Magne",2020,31.950000762939453,0.0,82.0999984741211,114.05000305175781,False,0.0,False,False,False,False,False,True,False,False,False,False,True,True,True
 2852,P.S./I.S. 78Q,2020,130147.0,41795.0,1026.13,88352.0,False,132263.0,True,False,False,False,False,False,False,False,False,False,False,False,True
-2864,P.S. 149 Christa McAuliffe,2020,25779.16015625,28678.75,3298.89990234375,399.30999755859375,False,3298.9,False,False,False,False,False,True,False,False,False,False,True,True,True
 2868,P.S. 166 Henry Gradstein,2020,168658.625,89929.3671875,997.87390625,78729.25,False,100583.93,True,False,False,False,False,False,False,False,False,False,False,False,True
 2881,Hunters Point Community Middle School,2020,3600.0,5000.0,11417.5595703125,3812.56005859375,False,151514.05,True,False,False,False,False,False,False,False,False,False,False,False,True
 2900,P.S. 6 Corporal Allan F. Kivlehan School,2020,153866.015625,78412.421875,849.220078125,75453.859375,False,84922.66,True,False,False,False,False,False,False,False,False,False,False,False,True
-2926,P.S. 39 Francis J. Murphy Jr.,2020,930.0,3352.110107421875,11184.0,8762.8095703125,False,100.98,False,False,False,False,False,True,False,False,False,False,True,True,True
+2924,P.S. 036 J. C. Drumgoole,2020,150298.40625,144166.21875,31603.41015625,6132.18994140625,True,37691.82,False,False,False,False,False,False,False,False,False,False,False,False,True
 2928,P.S. 042 Eltingville,2020,342.7478125,59546.5390625,96778.5078125,37231.96875,False,34511.32,True,False,False,False,False,False,False,False,False,False,False,False,True
 2939,P.S. 054 Charles W. Leng,2020,38052.51953125,25578.5703125,42.580498046875,12473.9501953125,False,611257.0,True,False,False,False,False,False,False,False,False,False,False,False,True
 2951,Port Richmond School for Visionary Learning,2020,18612.5,10990.2900390625,12408.240234375,6309.2099609375,True,13715.0,False,False,False,False,False,False,False,False,False,False,False,False,True
@@ -211,19 +212,21 @@
 3154,Fiorello H. LaGuardia High School of Music & Art a,2021,683346.0,640963.32,984.7202000000001,42382.68,False,98472.0234375,True,False,False,False,False,False,False,False,False,False,False,False,True
 3158,Special Music School,2021,211307.0,105596.0,1620.09,105711.0,False,161249.0,True,False,False,False,False,False,False,False,False,False,False,False,True
 3167,P.S. 083 Luis Munoz Rivera,2021,174193.0,818.2,1697.33,923.73,True,1697.3800048828125,False,False,False,False,False,False,False,False,False,False,False,False,True
-3314,P.S. 146 Edward Collins,2021,0.0,0.0,1928.26,1928.26,False,1763.0,False,False,False,False,False,True,False,False,False,False,True,True,True
 3322,P.S. 304 Early Childhood School,2021,15851.1,4500.0,9876.33,6961.43,True,8588.5703125,False,False,False,False,False,False,False,False,False,False,False,False,True
-3354,P.S. 063 Author's Academy,2021,0.0,0.0,1312.11,1312.11,False,1097.3699951171875,False,False,False,False,False,True,False,False,False,False,True,True,True
+3339,Mott Hall Community School,2021,0.0,1532.89,1532.89,0.0,False,639.4099731445312,False,False,False,False,False,True,False,False,False,False,True,True,True
+3428,P.S. 059 The Community School of Technology,2021,1718.1,1587.8,1612.9,130.3,False,0.0,False,False,False,False,False,True,False,False,False,False,True,True,True
 3431,P.S. 081 Robert J. Christen,2021,9205.29,9400.0,36413.27,3621817.0,True,41959.73828125,False,False,False,False,True,False,False,False,False,True,False,True,True
 3484,The Bronx High School of Science,2021,717737.05,187783.18,3687.1324,529953.87,False,367010.15625,True,False,False,False,False,False,False,False,False,False,False,False,True
 3562,P.S. 150 Charles James Fox,2021,0.0,90.0,3012.64,2622.64,False,4714.64013671875,False,False,False,False,False,True,False,False,False,False,True,True,True
 3597,The Emily Warren Roebling School,2021,437574.39,382787.9,357780.1,412566.59,False,424124.15625,True,False,False,False,False,False,False,False,False,False,False,False,True
+3604,P.S. 056 Lewis H. Latimer,2021,37404.0,27009.98,60000.0,10394.02,True,12281.330078125,False,False,False,False,False,False,False,False,False,False,False,False,True
 3613,P.S. 282 Park Slope,2021,145072.16,16165.42,751.3842999999999,128906.74,False,64362.1484375,True,False,False,False,False,False,False,False,False,False,False,False,True
 3638,P.S. 031 Samuel F. Dupont,2021,107193.55,26232.19,521.9702,80961.36,False,52197.01953125,True,False,False,False,False,False,False,False,False,False,False,False,True
 3673,"Magnet School of Math, Science and Design Technolo",2021,289280.66,272501.87,236830.67,253651.59,False,29654.080078125,True,False,False,False,False,False,False,False,False,False,False,False,True
 3674,P.S. 015 Patrick F. Daly,2021,600.0,45000.6,43337.37,33630.37,True,15090.0703125,False,False,False,False,False,False,False,False,False,False,False,False,True
 3677,P.S. 032 Samuel Mills Sprole,2021,186751.2,83637.85,905.4925999999999,103113.35,False,89363.1796875,True,False,False,False,False,False,False,False,False,False,False,False,True
 3678,P.S. 038 The Pacific,2021,64472.3,68148.46,76792.31,73116.15,False,225594.765625,True,False,False,False,False,False,False,False,False,False,False,False,True
+3683,P.S. 094 The Henry Longfellow,2021,11023.05,10221.36,11023.05,801.69,True,3967.030029296875,False,False,False,False,False,False,False,False,False,False,False,False,True
 3685,The Maurice Sendak Community School,2021,62317.0,33011.0,398223.0,427529.0,False,317170.0,True,False,False,False,False,False,False,False,False,False,False,False,True
 3687,P.S. 130 The Parkside,2021,236729.93,127659.16,1307.8633,109070.77,False,135366.6875,True,False,False,False,False,False,False,False,False,False,False,False,True
 3690,"The Brooklyn New School, P.S. 146",2021,226994.56,191186.53,127783.1,143502.91,True,61887.0,True,False,False,False,False,False,False,False,False,False,False,False,True
@@ -231,17 +234,24 @@
 3697,P.S. 321 William Penn,2021,639890.41,1015119.91,693886.71,318657.21,False,463710.6875,True,False,False,False,False,False,False,False,False,False,False,False,True
 3700,New Voices School of Academic & Creative Arts,2021,7849.05,10013.08,70234.52,68070.49,False,0.0,True,False,False,False,False,False,False,False,False,False,False,False,True
 3713,Millennium Brooklyn HS,2021,180395.86,61687.64,1070.6089,118708.22,False,121238.203125,True,False,False,False,False,False,False,False,False,False,False,False,True
+3794,P.S. 235 Janice Marie Knight School,2021,39308.02,34069.53,32814.97,5238.49,True,12405.0498046875,False,False,False,False,False,False,False,False,False,False,False,False,True
 3880,P.S. 185 Walter Kassenbrock,2021,117811.0,46990.0,641.23,70821.0,False,75929.0,True,False,False,False,False,False,False,False,False,False,False,False,True
 3882,The Christa McAuliffe School\I.S. 187,2021,76645.91,14705.81,610.7954,61940.1,False,61079.5390625,True,False,False,False,False,False,False,False,False,False,False,False,True
+3913,I.S. 98 Bay Academy,2021,25831.05,22143.87,20372.0,3687.18,True,25360.91015625,False,False,False,False,False,False,False,False,False,False,False,False,True
+3925,P.S. 215 Morris H. Weiss,2021,13127.45,11936.63,6877.0,1190.83,False,6887.47998046875,False,False,False,False,False,True,False,False,False,False,True,True,True
+3926,P.S. 216 Arturo Toscanini,2021,980.22,4692.18,322675.0,3226.75,True,12876.3798828125,True,False,False,False,False,True,False,False,False,False,True,True,True
 3931,Mark Twain I.S. 239 for the Gifted & Talented,2021,198049.11,68332.43,1086.0629,129715.68,False,107703.609375,True,False,False,False,False,False,False,False,False,False,False,False,True
 3933,I.S. 281 Joseph B Cavallaro,2021,0.0,4458.4,5799.59,1341.19,False,5799.58984375,False,False,False,False,False,True,False,False,False,False,True,True,True
 3973,P.S. 277 Gerritsen Beach,2021,18818.8,8012.19,10629.07,9830.99,True,,False,False,False,False,False,False,False,False,False,False,False,False,True
 3975,P.S. 312 Bergen Beach,2021,52047.12,27634.27,409.3492,24412.85,False,3581196.0,True,False,False,False,False,False,False,False,False,False,False,False,True
 4007,Brooklyn Landmark Elementary School,2021,0.0,0.0,9242.41,9242.41,False,9242.41015625,False,False,False,False,False,True,False,False,False,False,True,True,True
+4019,P.S. 019 Marino Jeantet,2021,7931.4,32790.02,35290.03,10431.41,False,35290.03125,False,False,False,False,False,True,False,False,False,False,True,True,True
+4025,P.S. 071 Forest,2021,4558.88,4155.33,4464.58,403.55,False,27538.08984375,False,False,False,False,False,True,False,False,False,False,True,True,True
 4044,P.S. 229 Emanuel Kaplan,2021,11787.23,22992.3,21933.55,10728.48,False,21933.55078125,False,False,False,False,False,True,False,False,False,False,True,True,True
 4077,P.S. 129 Patricia Larkin,2021,5917.35,2958.61,76.26050000000001,2958.61,False,1491665.0,True,False,False,False,False,False,False,False,False,False,False,False,True
 4151,P.S. 056 Harry Eichler,2021,6616.62,3976.55,26.9245,2640.07,False,380931.0,True,False,False,False,False,False,False,False,False,False,False,False,True
 4158,P.S. 090 Horace Mann,2021,16319.1,3426.68,163.191,12892.42,False,1384101.0,True,False,False,False,False,False,False,False,False,False,False,False,True
+4175,P.S. 207 Rockwood Park,2021,38315.92,35700.88,21085.49,2615.04,True,34673.0390625,False,False,False,False,False,False,False,False,False,False,False,False,True
 4216,P.S. Q086,2021,0.0,0.0,5015.35,501535.0,True,5060.35009765625,False,False,False,False,False,False,False,False,False,False,False,False,True
 4217,P.S. 099 Kew Gardens,2021,87380.74,30327.18,379.1707,58221.84,False,96909.0,True,False,False,False,False,False,False,False,False,False,False,False,True
 4218,P.S. 101 School in the Gardens,2021,587694.09,463444.84,1969.886,124249.25,False,124249.25,True,False,False,False,False,False,False,False,False,False,False,False,True
@@ -250,15 +260,20 @@
 4330,I.S. 227 Louis Armstrong,2021,44442.63,44449.06,71608.18,7546486.0,True,,False,False,False,False,True,False,False,False,False,True,False,True,True
 4351,Baccalaureate School for Global Education,2021,109405.02,14538.3,694.2348,94866.72,False,74470.5,True,False,False,False,False,False,False,False,False,False,False,False,True
 4376,P.S. 030 Westerleigh,2021,104991.53,47878.2,765.8713,57113.33,False,76587.1328125,True,False,False,False,False,False,False,False,False,False,False,False,True
+4378,P.S. 032 The Gifford School,2021,41890.78,40406.66,18716.64,1484.12,True,18716.640625,False,False,False,False,False,True,False,False,False,False,True,True,True
+4381,P.S. 036 J. C. Drumgoole,2021,53209.5,51804.28,24132.19,1405.22,True,6132.18994140625,False,False,False,False,False,False,False,False,False,False,False,False,True
+4383,P.S. 39 Francis J. Murphy Jr.,2021,13317.72,12435.92,11184.92,881.8,True,8762.8095703125,False,False,False,False,False,False,False,False,False,False,False,False,True
+4409,P.S. 069 Daniel D. Tompkins,2021,29285.14,27017.56,16901.73,2267.58,True,23606.240234375,False,False,False,False,False,True,False,False,False,False,True,True,True
+4412,I.S. 075 Frank D. Paulo,2021,49607.96,44590.46,48038.12,5017.5,True,35333.5,False,False,False,False,False,False,False,False,False,False,False,False,True
+4418,Tottenville High School,2021,35318.24,31584.23,33493.63,3734.01,True,39088.73828125,False,False,False,False,False,False,False,False,False,False,False,False,True
 4454,P.S. 110 Florence Nightingale,2022,60953.48,4188775.0,37943.53,5700926.0,True,37044.82,False,False,False,False,True,False,False,False,False,True,False,True,True
 4464,Neighborhood School,2022,140560.75,76723.1,900.5928,63837.65,False,73305.08,True,False,False,False,False,False,False,False,False,False,False,False,True
-4469,"New Explorations into Science, Technology and Math",2022,982023.0,1104665.0,653688.0,531046.0,False,767939.0,True,True,False,False,False,False,False,False,False,True,False,True,True
-4470,Bard High School Early College,2022,230096.6,197628.79,2300.968,32468.01,False,281513.97,True,False,False,False,False,False,False,False,False,False,False,False,True
+4469,"New Explorations into Science, Technology and Math",2022,982023.0,1104665.0,653688.0,531046.0,False,767939.0,True,False,False,False,False,False,False,False,False,False,False,False,True
+4470,Bard High School Early College,2022,230096.6,197628.79,230096.8,32468.01,True,281513.97,True,False,False,False,False,False,False,False,False,False,False,False,True
 4474,P.S. 003 Charrette School,2022,219129.59,238316.2,559672.27,540485.66,False,468723.75,True,False,False,False,False,False,False,False,False,False,False,False,True
 4475,P.S. 006 Lillie D. Blake,2022,275251.0,2086.92,768613.62,1009417.11,False,1097562.33,True,True,False,False,False,False,False,False,False,True,False,True,True
-4476,P.S. 011: The Sarah J. Garnet Elementary School,2022,237003.0,129997.0,607963.0,714969.0,False,598102.0,False,True,False,False,False,False,False,False,False,True,False,True,True
 4479,P.S. 041 Greenwich Village,2022,278310.75,114996.18,524548.87,544719.43,True,,False,False,False,False,False,False,False,False,False,False,False,False,True
-4483,P.S. 059 Beekman Hill International,2022,683920.0,722135.0,621793.0,583578.0,False,,False,True,False,False,False,False,False,False,False,True,False,True,True
+4482,P.S. 051 Elias Howe,2022,26504.06,21848.35,46095.65,4655.71,True,45206.99,False,False,False,False,False,False,False,False,False,False,False,False,True
 4485,P.S. 89,2022,751682.45,277063.0,5691.030699999999,474620.0,False,615499.0,True,False,False,False,False,False,False,False,False,False,False,False,True
 4492,P.S. 130 Hernando De Soto,2022,313067.0,212806.0,874030.0,974291.0,False,873508.0,False,True,False,False,False,False,False,False,False,True,False,True,True
 4497,Yorkville Community School,2022,252976.52,88606.61,1109.1163999999999,164370.11,False,67344.87,True,False,False,False,False,False,False,False,False,False,False,False,True
@@ -289,21 +304,24 @@
 4611,Fiorello H. LaGuardia High School of Music & Art a,2022,427494.0,504404.0,839136.0,762226.0,False,42382.68,True,True,False,False,False,False,False,False,False,True,False,True,True
 4615,Special Music School,2022,199804.0,55151.0,1057.11,144653.0,False,105711.0,True,False,False,False,False,False,False,False,False,False,False,False,True
 4664,Columbia Secondary School,2022,167086.77,101170.44,800.8983999999999,65916.33,False,80089.84,True,False,False,False,False,False,False,False,False,False,False,False,True
-4696,Paula Hedbavny School,2022,12767.23,1294.2,580.8235,11473.03,False,56788.15,True,False,False,False,False,False,False,False,False,False,False,False,True
+4696,Paula Hedbavny School,2022,12767.23,1294.2,58082.35,11473.03,True,56788.15,False,False,False,False,False,False,False,False,False,False,False,False,True
 4792,Bronx Academy for Multi-Media,2022,236.0,0.0,0.0,236.0,False,0.0,False,False,False,False,False,False,True,False,True,False,True,True,True
 4888,P.S. 081 Robert J. Christen,2022,38989.48,39125.1,40625.15,40485.53,False,3621817.0,True,False,False,False,False,False,False,False,False,False,False,False,True
 4909,I.S. 254,2022,300.0,2509.89,2263.99,54.1,False,0.0,False,False,False,False,False,True,False,False,False,False,True,True,True
 4950,P.S. 019 Judith K. Weiss,2022,32326.89,17071.98,32320.64,22254.88,True,21274.41,False,False,False,False,False,False,False,False,False,False,False,False,True
 4963,P.S. 106 Parkchester,2022,162154.0,1505.97,159154.0,1505.97,True,1651.54,True,False,False,False,False,False,False,False,False,False,False,False,True
 4973,P.S. 175 City Island,2022,33705.1,28609.33,9255.28,7142022.0,True,,False,False,False,False,True,False,False,False,False,True,False,True,True
+4978,P.S./M.S. 194,2022,5602.41,7660.33,2090.0,32.08,False,912.82,False,False,False,False,False,True,False,False,False,False,True,True,True
 5018,P.S. 134 George F. Bristow,2022,3259.5,5575.55,2299.94,-16.11,False,2299.94,False,False,False,False,False,True,False,False,False,False,True,True,True
 5054,The Emily Warren Roebling School,2022,1207702.1,657787.3,4125.7337,549914.8,False,412566.59,True,False,False,False,False,False,False,False,False,False,False,False,True
 5073,P.S. 307 Daniel Hale Williams,2022,23151.34,10222.88,14543.45,11837.66,True,6437.35,False,False,False,False,False,False,False,False,False,False,False,False,True
 5079,Brooklyn Technical High School,2022,347987.04,168174.03,232559.9,474174.88,True,,False,False,False,False,False,False,False,False,False,False,False,False,True
 5096,P.S. 034 Oliver H. Perry,2022,219838.98,76364.91,1329.1161,143474.07,False,132911.61,True,False,False,False,False,False,False,False,False,False,False,False,True
+5105,P.S. 147 Isaac Remsen,2022,18251.41,17627.38,17320.41,624.3,True,17320.41,False,False,False,False,False,False,False,False,False,False,False,False,True
 5114,Brooklyn Arbor Elementary School,2022,68555.0,86765.32,157329.16,139118.84,False,90900.16,True,False,False,False,False,False,False,False,False,False,False,False,True
-5130,"Magnet School of Math, Science and Design Technolo",2022,349067.45,330433.01,2374.6216,18643.44,False,253651.59,True,False,False,False,False,False,False,False,False,False,False,False,True
+5130,"Magnet School of Math, Science and Design Technolo",2022,349067.45,330433.01,237462.16,18643.44,True,253651.59,False,False,False,False,False,False,False,False,False,False,False,False,True
 5138,P.S. 058 The Carroll,2022,2027890.64,1761283.55,7588.3457,266607.09,False,365356.0,True,False,False,False,False,False,False,False,False,False,False,False,True
+5140,P.S. 094 The Henry Longfellow,2022,52690.16,40463.81,2847039.0,15073.74,True,801.69,True,True,False,False,False,False,False,False,False,True,False,True,True
 5147,"The Brooklyn New School, P.S. 146",2022,256018.48,244929.3,666.0,145419.53,True,143502.91,True,False,False,False,False,False,False,False,False,False,False,False,True
 5148,The Windsor Terrace School,2022,352744.88,202237.91,187739.56,300631.68,True,187739.56,False,False,False,False,False,False,False,False,False,False,False,False,True
 5152,P.S. 261 Zipporiah Mills,2022,0.0,0.0,0.0,18926.23,True,,False,False,False,False,False,False,False,False,False,False,False,False,True
@@ -316,7 +334,6 @@
 5343,The Madeleine Brennan School,2022,268194.08,84087.52,2030.1532,184106.56,False,203015.32,True,False,False,False,False,False,False,False,False,False,False,False,True
 5345,P.S. 205 Clarion,2022,10534.68,81572.82,26427.07,19961.86,True,27921.27,False,False,False,False,False,False,False,False,False,False,False,False,True
 5349,P.S. 229 Dyker,2022,195310.82,59088.51,1649.8524,136822.31,False,123381.7,True,False,False,False,False,False,False,False,False,False,False,False,True
-5358,Franklin Delano Roosevelt High School,2022,1525.0,984.84,1924.84,2508.0,False,1924.84,False,False,False,False,False,True,False,False,False,False,True,True,True
 5362,Brooklyn School of Inquiry,2022,864019.18,499581.44,5439.1005000000005,364437.74,False,682344.87,True,False,False,False,False,False,False,False,False,False,False,False,True
 5389,Mark Twain I.S. 239 for the Gifted & Talented,2022,231289.96,122298.2,389.1096,108991.76,False,129715.68,True,False,False,False,False,False,False,False,False,False,False,False,True
 5449,P.S. 156 Waverly,2022,5859.13,9154.68,12890.52,7478.71,False,11122.52,False,False,False,False,False,True,False,False,False,False,True,True,True
@@ -327,6 +344,7 @@
 5674,P.S. Q086,2022,0.0,0.0,5015.35,5015.35,False,501535.0,True,False,False,False,False,False,False,False,False,False,False,False,True
 5675,P.S. 099 Kew Gardens,2022,359070.0,318672.5,582.2184,40397.5,False,58221.84,True,False,False,False,False,False,False,False,False,False,False,False,True
 5676,P.S. 101 School in the Gardens,2022,228991.19,124613.03,1417.3175,104378.16,False,124249.25,True,False,False,False,False,False,False,False,False,False,False,False,True
+5678,P.S. 121 Queens,2022,19465.19,19182.92,14601.65,282.27,True,14192.98,False,False,False,False,False,False,False,False,False,False,False,False,True
 5695,The Emerson School,2022,2600.0,16350.0,0.68,1336.5,True,,False,False,False,False,False,False,False,False,False,False,False,False,True
 5739,P.S./I.S. 208,2022,0.0,6.0,15187.25,15187.25,False,99520.0,True,False,False,False,False,False,False,False,False,False,False,False,True
 5768,P.S. 084 Steinway,2022,25072.33,10142.62,10101.21,1492971.0,True,2346.49,False,False,False,False,True,False,False,False,False,True,False,True,True
@@ -338,7 +356,7 @@
 5860,P.S. 060 Alice Austen,2022,9104.73,58160.41,34476.17,32882.32,True,34476.17,False,False,False,False,False,False,False,False,False,False,False,False,True
 5879,Staten Island Technical High School,2022,143537.27,53246.77,988.3286,90290.5,False,96899.25,True,False,False,False,False,False,False,False,False,False,False,False,True
 5913,P.S. 134 Henrietta Szold,2023,156400.0,972.79,13732.61,591.21,True,8393.57,False,False,False,False,False,False,False,False,False,False,False,False,True
-5916,P.S. 184m Shuang Wen,2023,66362.0,64090.0,1639.2167000000002,2272.0,False,163991.0,True,False,False,False,False,False,False,False,False,False,False,False,True
+5916,P.S. 184m Shuang Wen,2023,66362.0,64090.0,163921.67,2272.0,True,163991.0,False,False,False,False,False,False,False,False,False,False,False,False,True
 5919,The East Village Community School,2023,138164.67,96825.49,486.0647,41339.18,False,90570.46,True,False,False,False,False,False,False,False,False,False,False,False,True
 5923,Earth School,2023,9350.19,,66511.63,65151.12,False,154729.25,True,False,False,False,False,False,False,False,False,False,False,False,True
 5927,"New Explorations into Science, Technology and Math",2023,1007612.0,925104.0,692884.0,775392.0,False,531046.0,True,True,False,False,False,False,False,False,False,True,False,True,True
@@ -360,6 +378,7 @@
 6053,M.S. 243 Center School,2023,46167.73,171452.54,383951.47,258666.66,False,294656.27,True,False,False,False,False,False,False,False,False,False,False,False,True
 6058,West End Secondary School,2023,430031.0,211966.0,2357.75,218065.0,False,191636.0,True,False,False,False,False,False,False,False,False,False,False,False,True
 6061,The Anderson School,2023,854827.05,1226496.57,2181588.15,1809918.63,False,2181220.04,False,True,False,False,True,False,False,False,False,True,False,True,True
+6068,Beacon High School,2023,287694.0,459507.0,390915.07,207086.65,True,371971.85,False,False,False,False,False,False,False,False,False,False,False,False,True
 6069,Fiorello H. LaGuardia High School of Music & Art a,2023,233029.0,224180.0,762226.0,771075.0,False,762226.0,False,True,False,False,False,False,False,False,False,True,False,True,True
 6077,Tag Young Scholars,2023,686681.0,193601.0,4362.09,493080.0,False,434919.0,True,False,False,False,False,False,False,False,False,False,False,False,True
 6122,Columbia Secondary School,2023,132874.5,100071.65,412.8999,32802.55,False,65916.33,True,False,False,False,False,False,False,False,False,False,False,False,True
@@ -388,6 +407,7 @@
 6670,P.S. 249 The Caton,2023,0.0,0.0,400.0,400.0,False,0.0,False,False,False,False,False,True,False,False,False,False,True,True,True
 6743,P.S. 214 Michael Friedsam,2023,23740.3,18108.76,17.995,5631.54,False,1874.0,False,False,False,False,False,False,False,False,True,False,True,True,True
 6790,P.S. 160 William T. Sampson,2023,79544.35,21538.99,589.5577,58005.36,False,58955.77,True,False,False,False,False,False,False,False,False,False,False,False,True
+6796,The SEEALL Academy,2023,89120.32,85658.6,23588.54,3461.72,True,13942.67,False,False,False,False,False,False,False,False,False,False,False,False,True
 6797,P.S. 185 Walter Kassenbrock,2023,267124.0,166535.0,960.65,100589.0,False,95065.0,True,False,False,False,False,False,False,False,False,False,False,False,True
 6802,The Madeleine Brennan School,2023,268194.08,84087.52,2030.1532,184106.56,False,184106.56,True,False,False,False,False,False,False,False,False,False,False,False,True
 6808,P.S. 229 Dyker,2023,195310.82,59088.51,1649.8524,136822.31,False,136822.31,True,False,False,False,False,False,False,False,False,False,False,False,True
@@ -396,11 +416,12 @@
 6848,Mark Twain I.S. 239 for the Gifted & Talented,2023,195467.17,172689.46,1122.9463,22777.71,False,108991.76,True,False,False,False,False,False,False,False,False,False,False,False,True
 6881,P.S. 217 Colonel David Marcus School,2023,48820.81,22523.6,31558.31,22297.51,True,31558.31,False,False,False,False,False,False,False,False,False,False,False,False,True
 6896,I. S. 381,2023,13284.9,1251.2,1373.78,770.0,True,1373.73,False,False,False,False,False,False,False,False,False,False,False,False,True
+6946,P.S./I.S. 087 Middle Village,2023,52534.94,29155.78,4430494.0,23379.16,True,44443.94,True,True,False,False,False,True,False,False,False,True,True,True,True
 6949,P.S. 091 Richard Arkwright,2023,86481.58,6434385.0,26636.32,22137.73,True,26171.38,False,False,False,False,False,False,False,False,False,False,False,False,True
 6991,P.S. 032 State Street,2023,109181.38,71698.88,45696.28,35482.5,True,45476.28,False,False,False,False,False,False,False,False,False,False,False,False,True
 6992,P.S. 079 Francis Lewis,2023,159221.23,87738.28,673.4569,71483.05,False,85165.07,True,False,False,False,False,False,False,False,False,False,False,False,True
 7002,P.S. 184 Flushing Manor,2023,72374.55,50611.88,20567.81,20567.81,True,20567.81,False,False,False,False,False,False,False,False,False,False,False,False,True
-7009,P.S. 209 Clearview Gardens,2023,799.1604,96082.55,103621.07,7538.52,False,8194.97,True,False,False,False,False,False,False,False,False,False,False,False,True
+7009,P.S. 209 Clearview Gardens,2023,79916.04,96082.55,103621.07,7538.52,True,8194.97,True,False,False,False,False,False,False,False,False,False,False,False,True
 7027,Townsend Harris High School,2023,125197.26,68214.11,553.203,56983.15,False,56983.15,True,False,False,False,False,False,False,False,False,False,False,False,True
 7037,P.S. 098 The Douglaston School,2023,91023.15,78098.76,88087.44,114438.63,True,87932.14,False,False,False,False,False,False,False,False,False,False,False,False,True
 7070,P.S. 060 Woodhaven,2023,28.32,26660.07,95.25,1659.84,True,95.25,False,False,False,False,False,False,False,False,False,False,False,False,True
@@ -415,6 +436,7 @@
 7273,P.S. 003 The Margaret Gioiosa School,2023,261101.95,196464.8,174.0409,64637.15,False,64637.15,True,False,False,False,False,False,False,False,False,False,False,False,True
 7297,P.S. 032 The Gifford School,2023,6430.91,64123.99,1663.07,15922.99,True,6430.91,False,False,False,False,False,False,False,False,False,False,False,False,True
 7304,P.S. 042 Eltingville,2023,272529.61,212017.26,699.9616000000001,60512.35,False,69992.34,True,False,False,False,False,False,False,False,False,False,False,False,True
+7376,P.S. 134 Henrietta Szold,2024,1484.0,874.5,10582.38,609.5,True,591.21,False,False,False,False,False,False,False,False,False,False,False,False,True
 7379,P.S. 184m Shuang Wen,2024,66689.62,51054.74,169457.8,185092.68,False,2272.0,True,False,False,False,False,False,False,False,False,False,False,False,True
 7390,"New Explorations into Science, Technology and Math",2024,1352080.0,1310242.0,978002.0,1019846.0,False,775392.0,True,True,False,False,False,False,False,False,False,True,False,True,True
 7391,Bard High School Early College,2024,138211.8,216933.4,496442.09,422203.59,False,345929.01,True,False,False,False,False,False,False,False,False,False,False,False,True
@@ -450,12 +472,13 @@
 7533,Fiorello H. LaGuardia High School of Music & Art a,2024,369717.0,253818.0,707801.0,823700.0,False,771075.0,True,True,False,False,False,False,False,False,False,True,False,True,True
 7538,Special Music School,2024,236852.55,73644.26,1482.3980999999999,163208.29,False,149643.0,True,False,False,False,False,False,False,False,False,False,False,False,True
 7594,"High School for Mathematics, Science and Engineeri",2024,505811.2,191246.57,2679.8395,314564.63,False,196536.43,True,False,False,False,False,False,False,False,False,False,False,False,True
-7603,Dos Puentes Elementary School,2024,0.0,0.0,450.0,0.0,False,77165.26,True,False,False,False,False,False,False,False,False,False,False,False,True
+7603,Dos Puentes Elementary School,2024,0.0,0.0,45000.0,0.0,True,77165.26,False,False,False,False,False,False,False,False,False,False,False,False,True
 7619,Paula Hedbavny School,2024,60959.38,22950.29,467.7868,38009.09,False,51950.11,True,False,False,False,False,False,False,False,False,False,False,False,True
 7630,The William Lynch School,2024,14700.0,25252.0,19317.0,27300.0,True,,False,False,False,False,False,False,False,False,False,False,False,False,True
 7796,P.S. 008 Isaac Varian,2024,11212.29,7486.83,4296.61,8022.07,False,4296.43,False,False,False,False,False,True,False,False,False,False,True,True,True
 7866,The Bronx High School of Science,2024,1330238.25,359368.41,857277.75,70869.84,True,818601.51,False,True,False,False,False,False,False,False,False,True,False,True,True
 7873,High School of American Studies at Lehman College,2024,556592.28,147712.49,4368.7386,408883.79,False,432820.8,True,False,False,False,False,False,False,False,False,False,False,False,True
+7878,P.S. 068 Bronx,2024,22471.79,19071.84,17901.64,3399.95,True,801.72,False,False,False,False,False,False,False,False,False,False,False,False,True
 7980,The Emily Warren Roebling School,2024,1569234.0,751694.0,7859.87,817540.0,False,516034.87,True,False,False,False,False,False,False,False,False,False,False,False,True
 7981,Public School 9 The Sarah Smith Garnet School,2024,451763.0,195256.0,1719.42,256507.0,False,170864.0,True,False,False,False,False,False,False,False,False,False,False,False,True
 7982,P.S. 011 Purvis J. Behan,2024,753346.24,822001.92,826046.52,757390.84,False,,False,True,False,False,False,False,False,False,False,True,False,True,True
@@ -474,12 +497,16 @@
 8075,The Windsor Terrace School,2024,117289.7,85444.32,28603.12,313448.5,True,296767.9,True,False,False,False,False,False,False,False,False,False,False,False,True
 8081,P.S. 321 William Penn,2024,409196.12,195555.2,254461.52,468101.44,False,452105.14,True,False,False,False,False,False,False,False,False,False,False,False,True
 8097,Millennium Brooklyn HS,2024,182530.85,71594.05,1179.6081,110936.8,False,147750.18,True,False,False,False,False,False,False,False,False,False,False,False,True
-8099,M.S. 839,2024,85790.65,82478.22,617.4653,3312.43,False,61746.53,True,False,False,False,False,False,False,False,False,False,False,False,True
+8099,M.S. 839,2024,85790.65,82478.22,61746.53,3312.43,True,61746.53,False,False,False,False,False,False,False,False,False,False,False,False,True
+8106,M.S. 035 Stephen Decatur,2024,807.0,2364.16,2597.26,1040.1,False,2000.0,False,False,False,False,False,True,False,False,False,False,True,True,True
 8183,P.S. 276 Louis Marshall,2024,11448.52,60736.48,10486.77,5372.04,True,6496.17,False,False,False,False,False,False,False,False,False,False,False,False,True
-8218,J.H.S. 292 Margaret S. Douglas,2024,1540.0,1540.0,380.0,40.0,False,-79.72,False,False,False,False,False,True,False,False,False,False,True,True,True
 8260,P.S. 160 William T. Sampson,2024,101384.58,51446.29,529.2230999999999,49938.29,False,58005.36,True,False,False,False,False,False,False,False,False,False,False,False,True
 8272,The Madeleine Brennan School,2024,257669.03,162606.64,1575.729,95062.39,False,184106.56,True,False,False,False,False,False,False,False,False,False,False,False,True
 8278,P.S. 229 Dyker,2024,228455.68,59879.64,1461.1168,168576.04,False,136822.31,True,False,False,False,False,False,False,False,False,False,False,False,True
+8287,Franklin Delano Roosevelt High School,2024,19347.0,17518.0,13004.92,1829.0,True,1610.0,False,False,False,False,False,False,False,False,False,False,False,False,True
+8295,"School of Math, Science, and Healthy Living",2024,2662.4,2294.58,2557.6,367.82,False,3186.81,False,False,False,False,False,True,False,False,False,False,True,True,True
+8297,P.S. 095 The Gravesend,2024,95059.76,80751.27,16694.22,15308.49,True,16693.44,False,False,False,False,False,False,False,False,False,False,False,False,True
+8299,P.S. 97 The Highlawn,2024,89385.16,85814.47,24306.17,3570.69,True,24306.58,False,False,False,False,False,False,False,False,False,False,False,False,True
 8310,P.S. 209 Margaret Mead,2024,5576014.0,2867526.0,22580.27,2713448.0,False,22580.27,False,False,False,False,True,False,False,False,False,True,False,True,True
 8316,I.S. 228 David A. Boody,2024,41261.02,38188.75,4976.6,307227.0,True,5002.67,False,False,False,False,False,False,False,False,False,False,False,False,True
 8318,Mark Twain I.S. 239 for the Gifted & Talented,2024,286569.15,217532.54,22779.47,60036.61,True,22777.71,False,False,False,False,False,False,False,False,False,False,False,False,True
@@ -487,8 +514,8 @@
 8349,P.S. 206 Joseph F Lamb,2024,131126.49,62853.09,745.3527,68273.4,False,74535.27,True,False,False,False,False,False,False,False,False,False,False,False,True
 8350,P.S. 207 Elizabeth G. Leary,2024,142944.25,82117.71,713.1802,60826.51,False,72494.19,True,False,False,False,False,False,False,False,False,False,False,False,True
 8357,P.S. 251 Paerdegat,2024,14283.96,3442.32,4514.35,4237.66,True,4514.35,False,False,False,False,False,False,False,False,False,False,False,False,True
-8406,P.S. 019 Marino Jeantet,2024,83032.31,10130.5,32230.18,75934.13,True,0.0,False,False,False,False,False,False,False,False,False,False,False,False,True
-8412,P.S. 071 Forest,2024,28581.27,279976.21,190.68,584.06,True,6517.76,False,False,False,False,False,True,False,True,False,False,True,True,True
+8412,P.S. 071 Forest,2024,28581.27,279976.21,190.68,584.06,True,6517.76,False,False,False,False,False,False,False,True,False,False,True,True,True
+8423,P.S./I.S. 113 Anthony J. Pranzo,2024,53911.16,51620.45,19746.16,2290.71,True,19746.16,False,False,False,False,False,False,False,False,False,False,False,False,True
 8426,"P.S. 128 The Lorraine Tuzzo, Juniper Valley Elemen",2024,77685.71,73163.0,39863.59,44386.3,False,30133.36,False,False,False,False,False,True,False,False,False,False,True,True,True
 8462,P.S. 079 Francis Lewis,2024,127697.62,54432.65,639.6972000000001,73264.97,False,71483.05,True,False,False,False,False,False,False,False,False,False,False,False,True
 8497,Townsend Harris High School,2024,140666.91,67318.07,641.9996,73348.84,False,56983.15,True,False,False,False,False,False,False,False,False,False,False,False,True
@@ -497,6 +524,7 @@
 8540,P.S. 060 Woodhaven,2024,28998.84,2771814.0,1659.84,1280.7,True,1659.84,False,False,False,False,False,False,False,False,False,False,False,False,True
 8554,P.S./M.S. 114 Belle Harbor,2024,234776.61,74564.2,1131.1136,160212.41,False,91065.19,True,False,False,False,False,False,False,False,False,False,False,False,True
 8556,P.S. 124 Osmond A Church,2024,14564.97,25814.57,1000.0,12417.02,True,,False,False,False,False,False,False,False,False,False,False,False,False,True
+8557,M.S. 137 America's School of Heroes,2024,47941.9,46440.33,10815.83,1501.57,True,17284.8,False,False,False,False,False,False,False,False,False,False,False,False,True
 8563,P.S. 207 Rockwood Park,2024,201270.67,105779.09,58335.66,85491.58,True,58476.91,False,False,False,False,False,False,False,False,False,False,False,False,True
 8571,Channel View School for Research,2024,1422.0,632.0,0.0,11472.58,True,10502.27,False,False,False,False,False,False,False,False,False,False,False,False,True
 8584,Scholars' Academy,2024,179320.8,142876.77,520.2605,36444.03,False,52026.05,True,False,False,False,False,False,False,False,False,False,False,False,True
@@ -507,6 +535,7 @@
 8741,Baccalaureate School for Global Education,2024,132796.2,52703.66,809.3023,80092.54,False,80030.23,True,False,False,False,False,False,False,False,False,False,False,False,True
 8744,P.S. 003 The Margaret Gioiosa School,2024,308419.9,237260.04,1000.3127000000001,71159.86,False,64637.15,True,False,False,False,False,False,False,False,False,False,False,False,True
 8746,P.S. 005 Huguenot,2024,167380.35,173547.01,43106.59,67041.51,True,102142.58,True,False,False,False,False,False,False,False,False,False,False,False,True
+8748,I.S. 007 Elias Bernstein,2024,19327.0,15842.75,67750.29,3484.25,True,39835.4,False,False,False,False,False,False,False,False,False,False,False,False,True
 8760,P.S. 023 Richmondtown,2024,276153.0,223670.05,465.16,52482.95,False,53964.11,True,False,False,False,False,False,False,False,False,False,False,False,True
 8775,P.S. 042 Eltingville,2024,271287.0,185834.64,605.1322,85452.36,False,60512.35,True,False,False,False,False,False,False,False,False,False,False,False,True
 8861,"New Explorations into Science, Technology and Math",2025,2457330.75,1423293.75,10198.46875,1034037.0625,False,1019846.0,True,False,False,False,False,False,False,False,False,False,False,False,True
@@ -521,7 +550,7 @@
 8901,"East Side Elementary School, PS 267",2025,558935.0625,417165.40625,1468.56,141769.65625,False,180171.94,True,False,False,False,False,False,False,False,False,False,False,False,True
 8902,Battery Park City School,2025,1049917.75,431629.84375,6038.8925,618287.875,False,599969.94,True,False,False,False,False,False,False,False,False,False,False,False,True
 8908,P.S. 290 Manhattan New School,2025,411851.71875,405845.59375,801932.375,807938.5,False,807539.53,False,True,False,False,False,False,False,False,False,True,False,True,True
-8911,M.S. 297,2025,132500.0,132500.0,1355.0,3000.0,False,272306.0,True,False,False,False,False,False,False,False,False,False,False,False,True
+8911,M.S. 297,2025,132500.0,132500.0,135500.0,3000.0,True,272306.0,True,False,False,False,False,False,False,False,False,False,False,False,True
 8927,Spruce Street School,2025,849058.0,390175.0,4461.775,458883.0,False,446177.5,True,False,False,False,False,False,False,False,False,False,False,False,True
 8932,Baruch College Campus High School,2025,127173.9609375,39097.5390625,928.921484375,88076.421875,False,100801.0,True,False,False,False,False,False,False,False,False,False,False,False,True
 8933,N.Y.C. Lab School for Collaborative Studies,2025,140605.0,35762.0,1182.54,104843.0,False,118227.39,True,False,False,False,False,False,False,False,False,False,False,False,True
@@ -532,34 +561,35 @@
 8970,Lower Manhattan Community Middle School,2025,157196.40625,98093.171875,148517.0,150257.65625,True,,False,False,False,False,False,False,False,False,False,False,False,False,True
 8971,P.S. 009 Sarah Anderson,2025,1965208.25,1039614.1875,10121.510625,928594.0625,False,1012151.09,True,False,False,False,False,False,False,False,False,False,False,False,True
 8973,P.S. 075 Emily Dickinson,2025,10090.0,117919.59375,134910.0,374695.90625,True,20173.75,True,False,False,False,False,False,False,False,False,False,False,False,True
-8975,P.S. 084 Lillian Weber,2025,709172.0,671598.0,7720.84,37574.0,False,769890.44,True,False,False,False,False,False,False,False,False,False,False,False,True
+8975,P.S. 084 Lillian Weber,2025,709172.0,671598.0,772084.0,37574.0,True,769890.44,False,True,False,False,False,False,False,False,False,True,False,True,True
 8976,P.S. 087 William Sherman,2025,713875.0,751192.0,748264.0,710947.0,False,901576.29,True,True,False,False,False,False,False,False,False,True,False,True,True
 8977,"P.S. 145, The Bloomingdale School",2025,302809.0,196378.71875,1092.463203125,106430.2890625,False,106430.29,True,False,False,False,False,False,False,False,False,False,False,False,True
 8983,The Locke School of Arts and Engineering,2025,37323.21875,,24597.109375,28700.740234375,False,21887.0,False,False,False,False,False,True,False,False,False,False,True,True,True
 8984,The Riverside School for Makers and Artists,2025,6854.56005859375,6936.0,24388.51953125,6936.58984375,True,24487.58,False,False,False,False,False,False,False,False,False,False,False,False,True
-8989,M.S. M245 The Computer School,2025,78040.5234375,98218.34375,599215.5625,582037.75,False,561158.0,False,True,False,False,False,False,False,False,False,True,False,True,True
 8993,West End Secondary School,2025,377878.0,138503.0,2129.38,239375.0,False,239375.0,True,False,False,False,False,False,False,False,False,False,False,False,True
 8996,The Anderson School,2025,1110070.875,1046935.5625,1883971.125,1947091.375,False,1888202.0,False,True,False,False,True,False,False,False,False,True,False,True,True
 9004,Fiorello H. LaGuardia High School of Music & Art a,2025,195224.0,431400.0,431400.0,1062989.0,True,823700.0,True,False,False,False,False,False,False,False,False,False,False,False,True
 9009,Special Music School,2025,246437.875,79302.359375,1647.6165625,167135.515625,False,163208.29,True,False,False,False,False,False,False,False,False,False,False,False,True
 9013,Tag Young Scholars,2025,258607.0,329002.0,182795.0,112400.0,False,434948.72,True,False,False,False,False,False,False,False,False,False,False,False,True
+9074,Dos Puentes Elementary School,2025,0.0,0.0,45000.0,0.0,True,0.0,False,False,False,False,False,False,False,False,False,False,False,False,True
 9151,P.S. 062 Inocensio Casanova,2025,6418.47998046875,4749.06982421875,1115.1800537109375,166941.0,True,1126.17,False,False,False,False,False,False,False,False,True,False,True,True,True
 9271,"PS/MS 20 P.O.George J. Werdann, III",2025,8231.099609375,9224.4404296875,3189.6201171875,2196.280029296875,False,0.0,False,False,False,False,False,True,True,True,False,False,True,True,True
 9273,P.S. 024 Spuyten Duyvil,2025,185071.546875,118511.109375,479.3323046875,66560.4375,False,51329.48,True,False,False,False,False,False,False,False,False,False,False,False,True
 9338,The Bronx High School of Science,2025,425616.65625,345181.84375,988851.3125,1069286.875,False,70869.84,True,True,False,False,False,False,False,False,False,True,False,True,True
 9345,High School of American Studies at Lehman College,2025,514060.375,146719.8125,4088.8378125,367340.5625,False,408883.79,True,False,False,False,False,False,False,False,False,False,False,False,True
 9407,P.S. 006 West Farms,2025,281919.0,1327.0799560546875,1160.97998046875,1492.8299560546875,True,1013.98,False,False,False,False,False,False,False,False,False,False,False,False,True
+9437,Samara Community School,2025,10683.8095703125,8385.990234375,3025.0,5322.81982421875,False,3028.19,False,False,False,False,False,True,False,False,False,False,True,True,True
 9452,The Emily Warren Roebling School,2025,2043377.0,1199194.0,7859.87,844183.0,False,817540.0,True,False,False,False,False,False,False,False,False,False,False,False,True
 9453,Public School 9 The Sarah Smith Garnet School,2025,580132.0,280306.0,2326.2,299826.0,False,256507.0,True,False,False,False,False,False,False,False,False,False,False,False,True
 9455,P.S. 020 Clinton Hill,2025,1164314.0,605617.0,5265.35,558697.0,False,767054.0,True,False,False,False,False,False,False,False,False,False,False,False,True
 9463,P.S. 133 William A. Butler,2025,412912.96875,128048.8515625,308365.75,104547.21875,True,275688.34,False,False,False,False,False,False,False,False,False,False,False,False,True
 9468,P.S. 282 Park Slope,2025,218206.75,125945.59375,81601.3125,88261.15625,True,90773.27,False,False,False,False,False,False,False,False,False,False,False,False,True
-9492,P.S. 017 Henry D. Woodworth,2025,52.828798828125,7407.9501953125,7865.509765625,457.1499938964844,False,1523.88,False,False,False,False,False,True,False,False,False,False,True,True,True
+9492,P.S. 017 Henry D. Woodworth,2025,5282.8798828125,7407.9501953125,7865.509765625,457.1499938964844,False,1523.88,False,False,False,False,False,True,False,False,False,False,True,True,True
 9495,P.S. 031 Samuel F. Dupont,2025,359017.90625,183291.5,1715.1790625,175726.40625,False,171517.9,True,False,False,False,False,False,False,False,False,False,False,False,True
 9501,P.S. 110 The Monitor,2025,219979.40625,233094.1875,186551.234375,173436.234375,False,89318.42,True,False,False,False,False,False,False,False,False,False,False,False,True
 9530,"Magnet School of Math, Science and Design Technolo",2025,475369.40625,543420.0625,1460.0,0.0,True,491946.78,True,False,False,False,False,False,False,False,False,False,False,False,True
 9533,P.S. 029 John M. Harrigan,2025,3062634.0,1944016.0,10137.55,1118618.0,False,850440.0,True,False,False,False,False,False,False,False,False,False,False,False,True
-9534,P.S. 032 Samuel Mills Sprole,2025,140700.15625,92992.8984375,2522.06078125,47707.26171875,False,251086.2,True,False,False,False,False,False,False,False,False,False,False,False,True
+9534,P.S. 032 Samuel Mills Sprole,2025,140700.15625,92992.8984375,252206.078125,47707.26171875,True,251086.2,False,False,False,False,False,False,False,False,False,False,False,False,True
 9536,P.S. 039 Henry Bristow,2025,167500.0,181671.0,202820.0,209000.0,True,305264.33,True,False,False,False,False,False,False,False,False,False,False,False,True
 9537,M.S. 51 William Alexander,2025,283050.03125,121724.0703125,1579.680625,161325.953125,False,199494.5,True,False,False,False,False,False,False,False,False,False,False,False,True
 9538,P.S. 058 The Carroll,2025,0.0,0.0,0.0,0.0,False,272075.9,True,False,False,False,False,False,False,False,False,False,False,False,True
@@ -568,14 +598,16 @@
 9554,P.S. 321 William Penn,2025,1045922.0,1585844.25,881696.9375,341774.65625,False,468101.44,True,True,False,False,False,False,False,False,False,True,False,True,True
 9559,The Exploratory School,2025,346432.625,157664.34375,2030.71796875,188768.296875,False,173850.0,True,False,False,False,False,False,False,False,False,False,False,False,True
 9572,Millennium Brooklyn HS,2025,182530.84375,71594.046875,1179.608125,110936.796875,False,110936.8,True,False,False,False,False,False,False,False,False,False,False,False,True
+9574,M.S. 839,2025,98790.1875,66268.328125,69356.40625,30521.859375,True,3312.43,True,False,False,False,False,False,False,False,False,False,False,False,True
 9641,New Heights Middle School,2025,0.0,1747.050048828125,8437.83984375,6690.2900390625,False,759.0,False,False,False,False,False,True,False,False,True,False,True,True,True
+9654,P.S. 235 Janice Marie Knight School,2025,33230.0,33189.51171875,11388.4599609375,40.4900016784668,True,522.87,False,False,False,False,False,False,False,False,False,False,False,False,True
 9658,P.S. 276 Louis Marshall,2025,11448.51953125,60736.48046875,10486.76953125,5372.0400390625,True,5372.04,False,False,False,False,False,False,False,False,False,False,False,False,True
 9694,P.S. 306 Ethan Allen,2025,8625.6201171875,6529.7900390625,33.9956005859375,2095.830078125,False,2598.0,False,False,False,False,False,True,False,False,False,False,True,True,True
 9740,P.S. 176 Ovington,2025,149553.765625,69238.0078125,703.75640625,80270.75,False,72814.84,True,False,False,False,False,False,False,False,False,False,False,False,True
 9748,The Madeleine Brennan School,2025,138181.515625,66532.6484375,950.663203125,71648.8671875,False,95062.39,True,False,False,False,False,False,False,False,False,False,False,False,True
 9756,J.H.S. 259 William McKinley,2025,111391.5,80373.8828125,11355.7998046875,31.020000457763672,True,12953.16,False,False,False,False,False,False,False,False,False,False,False,False,True
+9766,Franklin Delano Roosevelt High School,2025,19347.0,17518.0,13004.919921875,1829.0,True,1829.0,False,False,False,False,False,False,False,False,False,False,False,False,True
 9770,Brooklyn School of Inquiry,2025,317232.625,247160.0625,313982.0,284753.71875,True,216918.79,True,False,False,False,False,False,False,False,False,False,False,False,True
-9774,"School of Math, Science, and Healthy Living",2025,1374.550048828125,843.239990234375,307.82000732421875,320.0,False,367.82,False,False,False,False,False,True,False,False,False,False,True,True,True
 9785,P.S. 153 Homecrest,2025,23056.060546875,1939506.0,6591.0,3661.0,True,6591.0,False,False,False,False,False,True,False,False,False,False,True,True,True
 9789,P.S. 209 Margaret Mead,2025,56898.078125,23449.51953125,271.34380859375,33448.55859375,False,2713448.0,True,False,False,False,False,False,False,False,False,False,False,False,True
 9795,I.S. 228 David A. Boody,2025,26289.25,17164.900390625,30.7227001953125,9125.75,False,307227.0,True,False,False,False,False,False,False,False,False,False,False,False,True
@@ -587,6 +619,7 @@
 9851,P.S. 889,2025,113132.0,125722.0,66474.28125,53884.0,False,10357.25,True,False,False,False,False,False,False,False,False,False,False,False,True
 9885,P.S. 019 Marino Jeantet,2025,116706.6875,113125.5,69.262998046875,3581.18994140625,False,75934.13,True,False,False,False,False,False,False,False,False,False,False,False,True
 9889,I.S. 061 Leonardo Da Vinci,2025,32532.44921875,2381376.0,5342.25,8718.6904296875,True,5342.25,False,False,False,False,False,False,False,False,False,False,False,False,True
+9915,A.C.E. Academy for Scholars at the Geraldine Ferra,2025,39120.55078125,34465.01171875,24426.310546875,4655.5400390625,True,,False,False,False,False,False,False,False,False,False,False,False,False,True
 9926,Grover Cleveland High School,2025,11040.7802734375,7038.25,36.1985009765625,4002.530029296875,False,1619.39,False,False,False,False,False,True,False,False,False,False,True,True,True
 9940,P.S. 032 State Street,2025,125020.2265625,91770.9609375,413.7573046875,33249.26953125,False,62779.05,True,False,False,False,False,False,False,False,False,False,False,False,True
 9941,P.S. 079 Francis Lewis,2025,98128.9765625,39852.9609375,428.10078125,58276.01953125,False,73264.97,True,False,False,False,False,False,False,False,False,False,False,False,True
@@ -599,6 +632,7 @@
 10042,P.S. 207 Rockwood Park,2025,210697.921875,145345.25,854.91578125,65352.640625,False,85491.58,True,False,False,False,False,False,False,False,False,False,False,False,True
 10047,The Randolph Holder School for Social Justice,2025,0.0,0.0,18.25,18.25,False,0.0,False,False,False,False,False,True,False,False,False,False,True,True,True
 10050,Channel View School for Research,2025,1422.0,632.0,0.0,11472.580078125,True,11472.58,False,False,False,False,False,False,False,False,False,False,False,False,True
+10076,David N. Dinkins School,2025,12188.8203125,12201.990234375,12188.8203125,-13.170000076293945,True,,False,False,False,False,False,False,False,False,False,False,False,False,True
 10085,P.S. 101 School in the Gardens,2025,333631.25,195310.859375,1501.2790625,138320.375,False,179583.27,True,False,False,False,False,False,False,False,False,False,False,False,True
 10099,P.S. 196 Grand Central Parkway,2025,1490035.375,1493961.875,794974.875,791048.25,False,794974.86,False,True,False,False,False,False,False,False,False,True,False,True,True
 10105,The Academy for Excellence through the Arts,2025,567796.9375,531514.75,79973.6171875,116255.7734375,False,165893.76,True,False,False,False,False,False,False,True,False,False,True,True,True
@@ -612,4 +646,5 @@
 10245,P.S. 029 Bardwell,2025,52525.859375,53073.8515625,16846.869140625,20398.869140625,False,16850.87,False,False,False,False,False,True,False,False,False,False,True,True,True
 10255,P.S. 042 Eltingville,2025,289085.5,201434.65625,605.1321875,87650.84375,False,85452.36,True,False,False,False,False,False,False,False,False,False,False,False,True
 10265,The Barbara Esselborn School,2025,120941.2734375,74685.3125,764.473125,46255.9609375,False,52395.34,True,False,False,False,False,False,False,False,False,False,False,False,True
+10291,Susan E. Wagner High School,2025,6828.169921875,7101.89990234375,13670.26953125,213.5500030517578,True,2815.45,False,False,False,False,False,False,False,False,False,False,False,False,True
 10293,Staten Island Technical High School,2025,261996.8125,191870.125,1101.2828125,70126.6875,False,109576.18,True,False,False,False,False,False,False,False,False,False,False,False,True

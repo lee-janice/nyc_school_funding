@@ -1,3 +1,4 @@
+from src.processing.validate import flag_ets_balances
 from load import write_to_csv
 from load import write_to_db
 from extract import read_pta
@@ -10,7 +11,6 @@ from transform import merge_data
 from transform import clean_column_names
 from transform import add_quintiles
 from transform import add_pta_derivatives
-from validate import flag_balances_xy
 from validate import flag_transactions_wy
 from validate import flag_and_correct_balances_wy
 import textwrap
@@ -88,11 +88,11 @@ def validate_wy_balances(funding_2019_2025):
         f"{(funding_2019_2025['correction_applied'] == 'unresolvable').mean():.1%}")
 
     print(f"\n\tAverage post-discrepancy for no correction applied: "
-        f"{funding_2019_2025.query("correction_applied == 'none'")["balance_wy_diff_post"].mean().round(1)}")
+        f"{funding_2019_2025.query("correction_applied == 'none'")["pta_end_balance_diff"].mean().round(1)}")
     print(f"\tAverage post-discrepancy for one correction applied: "
-        f"{funding_2019_2025.query("correction_applied != 'none' and correction_applied != 'unresolvable'")["balance_wy_diff_post"].mean().round(1)}")
+        f"{funding_2019_2025.query("correction_applied != 'none' and correction_applied != 'unresolvable'")["pta_end_balance_diff"].mean().round(1)}")
     print(f"\tAverage post-discrepancy for unresolvable obs: "
-        f"{funding_2019_2025.query("correction_applied == 'unresolvable'")["balance_wy_diff_post"].mean().round(1)}")
+        f"{funding_2019_2025.query("correction_applied == 'unresolvable'")["pta_end_balance_diff"].mean().round(1)}")
 
     print("\nPercent flagged:")
     print(textwrap.indent(funding_2019_2025["balance_wy_diff_flag"].value_counts(normalize=True).mul(100).round(1).to_string(), prefix="\t"))
@@ -104,7 +104,7 @@ def validate_ets_balances(funding_2019_2025):
     # flag cross-year discrepancies in end-> start balances
     # creates a flag: ets_balance_diff_flag if discrepancy > 5% of starting balance and is more than $(abs_threshold)
     abs_threshold = 50_000
-    funding_2019_2025 = flag_balances_xy(funding_2019_2025, pct_threshold=0.05, abs_threshold=abs_threshold)
+    funding_2019_2025 = flag_ets_balances(funding_2019_2025, pct_threshold=0.05, abs_threshold=abs_threshold)
 
     print("\nCross-year end->start balance discrepancies:")
     print(textwrap.indent(funding_2019_2025["ets_balance_diff_cat"].value_counts().to_string(), prefix="\t"))

@@ -7,7 +7,7 @@ import duckdb
 # =============================================================================
 #  Define functions for anomaly analysis
 # =============================================================================
-def investigate_anomalies(): 
+def execute_queries(): 
 
     output_path = "./output/anomalies.txt"
     with open(output_path, "w") as f:
@@ -26,3 +26,6 @@ def investigate_anomalies():
             
         print(f"\tAnomaly analysis output written to {output_path}!")
 
+
+def investigate_end_balance_discrepancies(funding_data): 
+    return

@@ -1,3 +1,4 @@
+from src.visualization.visualize_anomalies import plot_balance_diff_dotplot
 from src.visualization.visualize_cross_sectional import plot_total_funding_dotplot
 from src.visualization.visualize_cross_sectional import plot_funding_stacked
 from src.visualization.visualize_cross_sectional import plot_eni_vs_finance_scatter
@@ -158,7 +159,7 @@ def create_fig6(active_df):
             active_df, 
             years=[2025],
             quantile_col="pp_pta_expenditure_quintile",
-            title="Mean school racial composition by per=pupil PTA expenditure quantile\n",
+            title="Mean school racial composition by per-pupil PTA expenditure quantile\n",
             subtitle="Active PTAs only — NYC Public Schools, Districts 1-32 ",
             save_path="output/figures/fig6_racial_comp_by_pta_active.png"
         )
@@ -192,16 +193,34 @@ def create_fig8(funding_df, active_df):
     try: 
         plot_pta_quintile_trends(
             funding_df,
+            ylog=False,
             title="Per-pupil PTA financial quintiles over time",
             subtitle="All schools with non-missing PTA data — NYC Public Schools, Districts 1–32",
-            save_path="output/figures/fig8_pta_quintile_trends.png"
+            save_path="output/figures/fig8a_pta_quintile_trends.png"
         )
         plot_pta_quintile_trends(
             active_df,
+            ylog=False,
             title="Per-pupil PTA financial quintiles over time",
             subtitle="Active PTAs only — NYC Public Schools, Districts 1–32",
-            save_path="output/figures/fig8_pta_quintile_trends_active.png"
+            save_path="output/figures/fig8a_pta_quintile_trends_active.png"
         )
+
+        plot_pta_quintile_trends(
+            funding_df,
+            ylog=True,
+            title="Per-pupil PTA financial quintiles over time",
+            subtitle="All schools with non-missing PTA data — NYC Public Schools, Districts 1–32",
+            save_path="output/figures/fig8b_pta_quintile_trends.png"
+        )
+        plot_pta_quintile_trends(
+            active_df,
+            ylog=True,
+            title="Per-pupil PTA financial quintiles over time",
+            subtitle="Active PTAs only — NYC Public Schools, Districts 1–32",
+            save_path="output/figures/fig8b_pta_quintile_trends_active.png"
+        )
+
 
     except Exception as e:
         print(f"Create figure 8 failed: {str(e)}")
@@ -302,6 +321,22 @@ def create_fig12(funding_df):
         sys.exit(1)
 
 
+def create_fig13(funding_df): 
+    try: 
+        plot_balance_diff_dotplot(
+            funding_df.query("correction_applied == 'unresolvable'"),
+            title="PTA ending balance discrepancies",
+            subtitle="All unresolvable schools — NYC Public Schools, Districts 1–32",
+            save_path="output/figures/fig13_ending_balance_discrepancies_dotplot"
+        )
+
+    except Exception as e:
+        print(f"Create figure 13 failed: {str(e)}")
+        sys.exit(1)
+
+
+
+
 if __name__ == "__main__":
 
     # globally set plotting parameters
@@ -378,6 +413,9 @@ if __name__ == "__main__":
 
     # -----> Total funding dotplot
     create_fig12(funding_df=funding_final)
+
+    # -----> Ending balance discrepancies
+    create_fig13(funding_df=funding_2019_2025)
 
 
 

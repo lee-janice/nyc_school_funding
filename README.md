@@ -41,7 +41,7 @@ may exacerbate funding gaps that mirror socioeconomic and racial segregation.
 
 ### Landscape of school funding in NYC
 
-NYC public schools draw on several district funding streams:
+NYC public schools draw on several distinct funding streams:
 
 - The primary source of public funding is the Fair Student Funding (FSF) formula, an equity- and needs-based allocation system that provides schools with discretionary dollars for foundational and instructional costs (e.g., staffing, educational programming, supplies and technology, and general costs).
 - The other public funding source is non-FSF allocations, which fall into three categories:

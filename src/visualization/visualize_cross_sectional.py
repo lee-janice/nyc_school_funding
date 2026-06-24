@@ -302,21 +302,6 @@ def plot_eni_vs_finance_scatter(
     ax.set_xlabel("Economic Need Index")
     ax.set_ylabel(ylabel)
 
-    if ylog:
-        # secondary y-axis labels showing raw dollar values
-        # at round log values for interpretability
-        log_ticks = ax.get_yticks()
-        ax2 = ax.twinx()
-        ax2.set_ylim(ax.get_ylim())
-        ax2.set_yticks(log_ticks)
-        ax2.set_yticklabels([
-            f"${np.exp(t):,.0f}" if np.isfinite(t) else ""
-            for t in log_ticks
-        ], fontsize=8, color="#555555")
-        ax2.set_ylabel("Raw dollar values", fontsize=9, color="#555555")
-
-        ax2.spines["top"].set_visible(False)
-
     ax.set_title(
         f"{title}"
         f"{subtitle} "
@@ -326,6 +311,23 @@ def plot_eni_vs_finance_scatter(
     ax.legend(frameon=False, fontsize=9, loc=legend_loc)
 
     plt.tight_layout()
+
+    if ylog:
+        ax2 = ax.twinx()
+        ax2.set_ylim(ax.get_ylim())
+
+        log_ticks = sorted(set(ax.get_yticks().tolist()))
+
+        ax2.set_yticks(log_ticks)
+        ax2.set_yticklabels([
+            f"${np.exp(t):,.0f}" if np.isfinite(t) else ""
+            for t in log_ticks
+        ], fontsize=8, color="#555555")
+        ax2.set_ylabel("Raw dollar values", fontsize=9, color="#555555")
+        ax2.spines["top"].set_visible(False)
+
+        # set this LAST, after any layout calls, right before save/show
+        ax2.set_ylim(ax.get_ylim())
 
     if save_path:
         fig.savefig(save_path, dpi=150, bbox_inches="tight")
@@ -578,7 +580,7 @@ def plot_total_funding_dotplot(
     # -----> jitter x positions within each quintile
     quintile_order = ["Q1", "Q2", "Q3", "Q4", "Q5"]
     x_center = {q: i for i, q in enumerate(quintile_order)}
-    rng = np.random.default_rng(seed=42)
+    rng = np.random.default_rng(seed=47)
     x_jitter = df[quantile_col].map(x_center) + rng.uniform(-0.3, 0.3, size=len(df))
 
     # -----> build figure

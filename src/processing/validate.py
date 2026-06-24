@@ -10,26 +10,27 @@ def flag_and_correct_balances_wy(funding_data, pct_threshold = 0.01, abs_thresho
 
     # initialize audit columns 
     funding_data["correction_applied"] = "none"
-    funding_data["tolerance"] = (funding_data["pta_start_balance"].abs() * pct_threshold).clip(lower=0.01)
+    funding_data["tolerance"] = (funding_data["pta_end_balance"].abs() * pct_threshold).clip(lower=0.01)
 
     def calculate_implied(df): 
-        df["implied_end_balance"] = (
+        df["pta_end_balance_implied"] = (
             df["pta_start_balance"] 
             + df["pta_income"]
             - df["pta_expenditure"]
         )
-        df["diff_end_balance"] = abs(df["pta_end_balance"] - df["implied_end_balance"])
+        df["pta_end_balance_diff"] = abs(df["pta_end_balance"] - df["pta_end_balance_implied"])
+        df["pta_end_balance_pct_diff"] = df["pta_end_balance_diff"] / funding_data["pta_end_balance"]
         return df
 
     funding_data = calculate_implied(funding_data)
 
     # case 1: try scaling start_balance by 1/100 
-    is_anomaly = (funding_data["diff_end_balance"] > funding_data["tolerance"]) & (funding_data["pta_category"] == "Active")
+    is_anomaly = (funding_data["pta_end_balance_diff"] > funding_data["tolerance"]) & (funding_data["pta_category"] == "Active")
     candidate = funding_data[is_anomaly].copy()
     candidate["pta_start_balance"] = candidate["pta_start_balance"] / 100
 
     candidate = calculate_implied(candidate)
-    fixed_by_start = ~(abs(candidate["diff_end_balance"]) > candidate["tolerance"]) | (candidate["pta_category"] != "Active")
+    fixed_by_start = ~(abs(candidate["pta_end_balance_diff"]) > candidate["tolerance"]) | (candidate["pta_category"] != "Active")
     
     fixed_start_idx = fixed_by_start[fixed_by_start].index
     funding_data.loc[fixed_start_idx, "pta_start_balance"] /= 100
@@ -38,13 +39,13 @@ def flag_and_correct_balances_wy(funding_data, pct_threshold = 0.01, abs_thresho
     
     # case 2: try scaling expenditure by 1/100 
     # only on records still inconsistent after pass 2
-    still_inconsistent = (funding_data["diff_end_balance"] > funding_data["tolerance"]) & (funding_data["pta_category"] == "Active")
+    still_inconsistent = (funding_data["pta_end_balance_diff"] > funding_data["tolerance"]) & (funding_data["pta_category"] == "Active")
 
     candidate2 = funding_data[still_inconsistent].copy()
     candidate2["pta_expenditure"] = candidate2["pta_expenditure"] / 100
 
     candidate2 = calculate_implied(candidate2)
-    fixed_by_exp = ~(abs(candidate2["diff_end_balance"]) > candidate2["tolerance"]) | (candidate2["pta_category"] != "Active")
+    fixed_by_exp = ~(abs(candidate2["pta_end_balance_diff"]) > candidate2["tolerance"]) | (candidate2["pta_category"] != "Active")
 
     fixed_exp_idx = fixed_by_exp[fixed_by_exp].index
     funding_data.loc[fixed_exp_idx, "pta_expenditure"] /= 100
@@ -52,13 +53,13 @@ def flag_and_correct_balances_wy(funding_data, pct_threshold = 0.01, abs_thresho
     funding_data = calculate_implied(funding_data)
 
     # case 3: try scaling income by 1/100 
-    still_inconsistent = (funding_data["diff_end_balance"] > funding_data["tolerance"]) & (funding_data["pta_category"] == "Active")
+    still_inconsistent = (funding_data["pta_end_balance_diff"] > funding_data["tolerance"]) & (funding_data["pta_category"] == "Active")
 
     candidate3 = funding_data[still_inconsistent].copy()
     candidate3["pta_income"] = candidate3["pta_income"] / 100
 
     candidate3 = calculate_implied(candidate3)
-    fixed_by_income =  ~(abs(candidate3["diff_end_balance"]) > candidate3["tolerance"]) | (candidate3["pta_category"] != "Active")
+    fixed_by_income =  ~(abs(candidate3["pta_end_balance_diff"]) > candidate3["tolerance"]) | (candidate3["pta_category"] != "Active")
 
     fixed_inc_idx = fixed_by_income[fixed_by_income].index
     funding_data.loc[fixed_inc_idx, "pta_income"] /= 100
@@ -66,31 +67,22 @@ def flag_and_correct_balances_wy(funding_data, pct_threshold = 0.01, abs_thresho
     funding_data = calculate_implied(funding_data)
 
     # case 4: flag remaining as unresolvable
-    still_inconsistent = (funding_data["diff_end_balance"] > funding_data["tolerance"]) & (funding_data["pta_category"] == "Active")
+    still_inconsistent = (funding_data["pta_end_balance_diff"] > funding_data["tolerance"]) & (funding_data["pta_category"] == "Active")
     funding_data.loc[still_inconsistent, "correction_applied"] = "unresolvable"
-
-    # recompute discrepancy after corrections 
-    funding_data["balance_wy_diff_post"] = (
-        funding_data["pta_end_balance"] - (
-            funding_data["pta_start_balance"]
-            + funding_data["pta_income"]
-            - funding_data["pta_expenditure"]
-        )
-    ).abs()
 
     # flag unresolved cases
     funding_data["balance_wy_diff_flag"] = (
         (funding_data["correction_applied"] == "unresolvable") & 
-        (funding_data["balance_wy_diff_post"] > abs_threshold)
+        (funding_data["pta_end_balance_diff"] > abs_threshold)
     )
 
-    funding_data = funding_data.drop(columns=["tolerance", "implied_end_balance", "diff_end_balance"])
+    funding_data = funding_data.drop(columns=["tolerance"])
 
     return funding_data
 
 
 # -----> Flag cross-year discrepancies in Y0 end balance -> Y1 start balance
-def flag_balances_xy(funding_data, pct_threshold = 0.01, abs_threshold = 10_000): 
+def flag_ets_balances(funding_data, pct_threshold = 0.01, abs_threshold = 10_000): 
 
     funding_data = funding_data.assign(
 

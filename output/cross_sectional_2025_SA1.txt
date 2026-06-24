@@ -5,7 +5,7 @@
 
 PTA activity categories in 2025
 	pta_category
-	Active      758
+	Active      751
 	Missing     322
 	Inactive    300
 
@@ -41,32 +41,33 @@ Means of top 15
 	p_asian              0.17
 
 Top 15 schools by per-pupil PTA expenditures in 2025
-	                                         school_name_x  pta_expenditure  pp_pta_expenditure  pta_expenditure_as_p_of_fsf  eni_n  p_white  p_black  p_hispanic  p_asian
-	8890                            P.S. 158 Bayard Taylor       1512642.50             2504.38                        23.10   0.16     0.67     0.02        0.09     0.14
-	8996                               The Anderson School       1046935.56             2005.62                        18.07   0.15     0.43     0.03        0.11     0.32
-	10099                   P.S. 196 Grand Central Parkway       1493961.88             1991.95                        17.15   0.28     0.29     0.02        0.16     0.43
-	8893                      P.S. 183 Robert L. Stevenson        720534.00             1331.86                        11.53   0.13     0.58     0.02        0.13     0.22
-	9542               The Maurice Sendak Community School        248341.84             1229.42                         8.67   0.17     0.56     0.03        0.21     0.08
-	9541                          P.S. 107 John W. Kimball        508616.00              945.38                         7.70   0.11     0.69     0.01        0.10     0.08
-	8908                     P.S. 290 Manhattan New School        405845.59              912.01                         8.91   0.13     0.62     0.01        0.09     0.17
-	9481                       Academy of Arts and Letters        566144.00              742.00                         6.24   0.46     0.37     0.36        0.13     0.06
-	9467                            P.S. 270 Johann DeKalb         99786.93              733.73                         6.85   0.64     0.28     0.30        0.32     0.09
-	8870                   P.S. 040 Augustus Saint-Gaudens        385561.69              716.66                         5.99   0.22     0.56     0.04        0.16     0.11
-	10206            The 30th Avenue School (G&T Citywide)        361688.69              688.93                         6.42   0.31     0.24     0.03        0.13     0.51
-	8888                                          P.S. 150        196235.80              681.37                         6.97   0.19     0.39     0.05        0.15     0.31
-	9459                         P.S. 056 Lewis H. Latimer        170443.55              673.69                         5.94   0.48     0.42     0.32        0.16     0.02
-	8868   P.S. 011: The Sarah J. Garnet Elementary School        418224.00              617.76                         5.44   0.41     0.42     0.07        0.27     0.18
-	8919                    Sixth Avenue Elementary School        182686.00              610.99                         5.33   0.28     0.49     0.03        0.23     0.09
+	                                         school_name_x  pta_expenditure  pp_pta_expenditure  pta_expenditure_as_p_of_fsf  pta_expenditure_as_p_of_public  eni_n  p_white  p_black  p_hispanic  p_asian
+	8890                            P.S. 158 Bayard Taylor       1512642.50             2504.38                        23.10                           13.56   0.16     0.67     0.02        0.09     0.14
+	8996                               The Anderson School       1046935.56             2005.62                        18.07                           16.25   0.15     0.43     0.03        0.11     0.32
+	10099                   P.S. 196 Grand Central Parkway       1493961.88             1991.95                        17.15                           11.99   0.28     0.29     0.02        0.16     0.43
+	8893                      P.S. 183 Robert L. Stevenson        720534.00             1331.86                        11.53                            7.64   0.13     0.58     0.02        0.13     0.22
+	9542               The Maurice Sendak Community School        248341.84             1229.42                         8.67                            5.50   0.17     0.56     0.03        0.21     0.08
+	9541                          P.S. 107 John W. Kimball        508616.00              945.38                         7.70                            5.37   0.11     0.69     0.01        0.10     0.08
+	8908                     P.S. 290 Manhattan New School        405845.59              912.01                         8.91                            4.90   0.13     0.62     0.01        0.09     0.17
+	9481                       Academy of Arts and Letters        566144.00              742.00                         6.24                            4.32   0.46     0.37     0.36        0.13     0.06
+	9467                            P.S. 270 Johann DeKalb         99786.93              733.73                         6.85                            2.46   0.64     0.28     0.30        0.32     0.09
+	8870                   P.S. 040 Augustus Saint-Gaudens        385561.69              716.66                         5.99                            4.00   0.22     0.56     0.04        0.16     0.11
+	10206            The 30th Avenue School (G&T Citywide)        361688.69              688.93                         6.42                            5.33   0.31     0.24     0.03        0.13     0.51
+	8888                                          P.S. 150        196235.80              681.37                         6.97                            4.43   0.19     0.39     0.05        0.15     0.31
+	9459                         P.S. 056 Lewis H. Latimer        170443.55              673.69                         5.94                            2.80   0.48     0.42     0.32        0.16     0.02
+	8868   P.S. 011: The Sarah J. Garnet Elementary School        418224.00              617.76                         5.44                            3.70   0.41     0.42     0.07        0.27     0.18
+	8919                    Sixth Avenue Elementary School        182686.00              610.99                         5.33                            2.92   0.28     0.49     0.03        0.23     0.09
 
 Means of top 15
-	pta_expenditure               554509.87
-	pp_pta_expenditure              1092.38
-	pta_expenditure_as_p_of_fsf        9.62
-	eni_n                              0.27
-	p_white                            0.47
-	p_black                            0.09
-	p_hispanic                         0.16
-	p_asian                            0.19
+	pta_expenditure                  554509.87
+	pp_pta_expenditure                 1092.38
+	pta_expenditure_as_p_of_fsf           9.62
+	pta_expenditure_as_p_of_public        6.35
+	eni_n                                 0.27
+	p_white                               0.47
+	p_black                               0.09
+	p_hispanic                            0.16
+	p_asian                               0.19
 
 Top 15 schools by per-pupil PTA ending balance in 2025
 	                                            school_name_x  pta_end_balance  pp_pta_end_balance  eni_n  p_white  p_black  p_hispanic  p_asian
@@ -101,10 +102,10 @@ Means of top 15
 
 Median per-pupil PTA financials by ENI quintile (2025, active PTAs only):
 	eni_quintile             Q1    Q2    Q3   Q4   Q5
-	pp_pta_income        143.58 27.77 11.22 9.67 4.18
-	pp_pta_expenditure   124.12 20.63  6.88 7.63 3.05
-	pp_pta_start_balance  40.25  0.62  0.09 0.12 0.10
-	pp_pta_end_balance    58.19  9.67  5.04 3.41 2.28
+	pp_pta_income        144.02 27.77 10.79 9.67 4.18
+	pp_pta_expenditure   125.05 20.63  6.67 7.63 3.05
+	pp_pta_start_balance  41.10  0.62  0.11 0.14 0.10
+	pp_pta_end_balance    58.29 10.07  5.04 3.41 2.28
 
 -------------------------------------------------------------------------------
   Racial Composition by PTA Financials                                         
@@ -114,25 +115,25 @@ Racial composition by per-pupil PTA income quintiles (2025, active PTAs only):
 	pp_pta_income_quintile    Q1    Q2    Q3    Q4    Q5
 	year                                                
 	2025 p_white            5.00  8.00 10.00 20.00 37.00
-	     p_black           30.00 26.00 20.00 14.00 10.00
+	     p_black           31.00 26.00 20.00 14.00 10.00
 	     p_hispanic        51.00 49.00 47.00 36.00 28.00
-	     p_asian           10.00 15.00 19.00 26.00 18.00
+	     p_asian           10.00 15.00 19.00 27.00 18.00
 
 Racial composition by per-pupil PTA expenditure quintiles (2025, active PTAs only):
 	pp_pta_expenditure_quintile    Q1    Q2    Q3    Q4    Q5
 	year                                                     
-	2025 p_white                 6.00  8.00 10.00 19.00 36.00
-	     p_black                31.00 25.00 19.00 16.00 10.00
+	2025 p_white                 6.00  8.00 11.00 19.00 36.00
+	     p_black                31.00 25.00 19.00 16.00 11.00
 	     p_hispanic             51.00 49.00 47.00 37.00 26.00
-	     p_asian                 9.00 15.00 21.00 24.00 21.00
+	     p_asian                 9.00 15.00 21.00 25.00 21.00
 
 Racial composition by per-pupil PTA end balance quintiles (2025, active PTAs only):
 	pp_pta_end_balance_quintile    Q1    Q2    Q3    Q4    Q5
 	year                                                     
-	2025 p_white                 5.00  9.00 10.00 22.00 33.00
+	2025 p_white                 5.00  9.00 10.00 22.00 32.00
 	     p_black                30.00 26.00 21.00 13.00 11.00
 	     p_hispanic             52.00 48.00 47.00 35.00 30.00
-	     p_asian                10.00 14.00 19.00 26.00 20.00
+	     p_asian                10.00 14.00 19.00 27.00 20.00
 
 -------------------------------------------------------------------------------
   Median PTA Expenditure as Percent of FSF and Total Budget by ENI Q.          
@@ -141,6 +142,6 @@ Racial composition by per-pupil PTA end balance quintiles (2025, active PTAs onl
 Median PTA expenditure as a percent of FSF allocations, total public allocations, and total funding by ENI quintile (active PTAs only):
 	eni_quintile                          Q1   Q2   Q3   Q4   Q5
 	year                                                        
-	2025 pta_expenditure_as_p_of_fsf    0.90 0.10 0.00 0.00 0.00
+	2025 pta_expenditure_as_p_of_fsf    1.00 0.10 0.00 0.00 0.00
 	     pta_expenditure_as_p_of_public 0.60 0.10 0.00 0.00 0.00
 	     pta_expenditure_as_p_of_total  0.60 0.10 0.00 0.00 0.00

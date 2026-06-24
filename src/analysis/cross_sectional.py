@@ -45,7 +45,7 @@ def pta_cross_sectional_analysis(funding_data, year, output_path):
                 top_n_by_col(
                     funding_xsect, 
                     value_col="pp_pta_expenditure", n=15, 
-                    keep_cols = ["school_name_x", "pta_expenditure", "pp_pta_expenditure", "pta_expenditure_as_p_of_fsf", "eni_n", "p_white", "p_black", "p_hispanic", "p_asian"]
+                    keep_cols = ["school_name_x", "pta_expenditure", "pp_pta_expenditure", "pta_expenditure_as_p_of_fsf", "pta_expenditure_as_p_of_public", "eni_n", "p_white", "p_black", "p_hispanic", "p_asian"]
                 )
             )
             print(textwrap.indent(top_15_expenditure.to_string(), prefix="\t"))

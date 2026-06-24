@@ -184,3 +184,125 @@ def plot_flag_vs_funding_hist(
         print(f"Saved to {save_path}")
 
     return fig
+
+
+
+
+# =============================================================================
+#  Dot plot of balance diff
+# =============================================================================
+def plot_balance_diff_dotplot(
+    df,
+    year_col="year",
+    diff_col="pta_end_balance_diff", 
+    pct_diff_col="pta_end_balance_pct_diff",
+    abs_threshold=10_000,
+    ylog=True,
+    title="",
+    subtitle="",
+    save_path=None,
+):
+    if ylog: 
+        df[diff_col] = np.log(df[diff_col])
+
+    # -----> color and size mappings
+    YEAR_COLORS = {
+        2019: "#1f6bb0",
+        2020: "#6aaed6",
+        2021: "#999999",
+        2022: "#f4a582",
+        2023: "#d6604d",
+        2024: "#d6604d",
+        2025: "#d6604d",
+    }
+
+    # scale dot size by % diff
+    size_scale = 0.5   # tweak to taste
+    min_size   = 10
+    max_size   = 100
+    sizes = (df[pct_diff_col].clip(lower=0) * size_scale + min_size).clip(upper=max_size)
+
+    colors = df[year_col].map(YEAR_COLORS)
+
+    # -----> jitter x positions within each quintile
+    year_order = [2019, 2020, 2021, 2022, 2023, 2024, 2025]
+    x_center = {q: i for i, q in enumerate(year_order)}
+    rng = np.random.default_rng(seed=47)
+    x_jitter = df[year_col].map(x_center) + rng.uniform(-0.3, 0.3, size=len(df))
+
+    # -----> build figure
+    fig, ax = plt.subplots(figsize=(10, 6))
+
+    sc = ax.scatter(
+        x_jitter,
+        df[diff_col],
+        c=colors,
+        s=sizes,
+        alpha=0.5,
+        linewidths=0.3,
+        edgecolors="white",
+    )
+
+    # -----> absolute threshold line
+    ax.axhline(
+        np.log(abs_threshold) if ylog else abs_threshold,
+        color="black",
+        linestyle="--",
+        linewidth=1.2,
+        label=f"Exclusion threshold (${abs_threshold:,.0f})",
+    )
+
+    # -----> axes
+    ax.set_xticks(range(len(year_order)))
+    ax.set_xticklabels(year_order)
+    ax.set_xlabel("Year", fontsize=11)
+    ax.set_ylabel("Log of end balance difference ($)" if ylog else "End balance difference ($)", fontsize=11)
+    ax.yaxis.set_major_formatter(mtick.FuncFormatter(lambda x, _: f"${x:,.0f}"))
+
+
+    # -----> size legend (manual)
+    for pct, label in [(1, "Dot size corresponds to % difference")]:
+        ax.scatter([], [], s=pct * size_scale + min_size,
+                   color="gray", alpha=0.6, label=label)
+
+    ax.legend(
+        loc="upper center",
+        ncol=4,
+        frameon=False,
+        fontsize=9,
+        bbox_to_anchor=(0.5, -0.12),
+    )
+
+
+    n = len(df)
+    fig.suptitle(
+        f"{title}\n{subtitle} (2019-2025, N={n:,})",
+        fontsize=13, fontweight="bold",
+    )
+
+    plt.tight_layout()
+
+    if ylog:
+        ax2 = ax.twinx()
+        ax2.set_ylim(ax.get_ylim())
+
+        # explicitly include the threshold value as a tick
+        threshold_log = np.log(10000)
+        log_ticks = sorted(set(ax.get_yticks().tolist() + [threshold_log]))
+
+        ax2.set_yticks(log_ticks)
+        ax2.set_yticklabels([
+            f"${np.exp(t):,.0f}" if np.isfinite(t) else ""
+            for t in log_ticks
+        ], fontsize=8, color="#555555")
+        ax2.set_ylabel("Raw dollar values", fontsize=9, color="#555555")
+        ax2.spines["top"].set_visible(False)
+
+        # set this LAST, after any layout calls, right before save/show
+        ax2.set_ylim(ax.get_ylim())
+
+    if save_path:
+        fig.savefig(save_path, dpi=150, bbox_inches="tight")
+        print(f"Saved to {save_path}")
+
+    return fig

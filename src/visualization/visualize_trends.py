@@ -40,29 +40,35 @@ def plot_pta_quintile_trends(
     df,
     title="",
     subtitle="",
+    ylog=True, 
     save_path=None,
 ):
 
-    income = np.log(
+    income = (
         df
         .groupby("year")["pp_pta_income"].quantile([0.2, 0.4, 0.6, 0.8, 1.0]).unstack(level=1)
         .rename(columns={0.2: "Q1", 0.4: "Q2", 0.6: "Q3", 0.8: "Q4", 1.0: "Q5"})
     )
-    expenditure = np.log(
+    expenditure = (
         df
         .groupby("year")["pp_pta_expenditure"].quantile([0.2, 0.4, 0.6, 0.8, 1.0]).unstack(level=1)
         .rename(columns={0.2: "Q1", 0.4: "Q2", 0.6: "Q3", 0.8: "Q4", 1.0: "Q5"})
     )
-    balance = np.log(
+    balance = (
         df
         .groupby("year")["pp_pta_end_balance"].quantile([0.2, 0.4, 0.6, 0.8, 1.0]).unstack(level=1)
         .rename(columns={0.2: "Q1", 0.4: "Q2", 0.6: "Q3", 0.8: "Q4", 1.0: "Q5"})
     )
 
-    # -----> replace inf with 0
-    income       = income.replace([-np.inf], 0)
-    expenditure  = expenditure.replace([-np.inf], 0)
-    balance      = balance.replace([-np.inf], 0)
+    if ylog: 
+        income = np.log(income)
+        expenditure = np.log(expenditure)
+        balance = np.log(balance)
+
+        # -----> replace inf with 0
+        income       = income.replace([-np.inf], 0)
+        expenditure  = expenditure.replace([-np.inf], 0)
+        balance      = balance.replace([-np.inf], 0)
 
     # -----> build x axis 
     x_labels = [YEAR_LABELS.get(y, str(y)) for y in income.index]
@@ -78,9 +84,9 @@ def plot_pta_quintile_trends(
     )
 
     panels = [
-        (axes[0], income,      "Log per-pupil income ($)",         "(a) Annual income"),
-        (axes[1], expenditure, "Log per-pupil expenditure ($)",    "(b) Annual expenditure"),
-        (axes[2], balance,     "Log per-pupil ending balance ($)", "(c) Ending balance"),
+        (axes[0], income,      "Log per-pupil income ($)" if ylog else "Per-pupil income ($)",                  "(a) Annual income"),
+        (axes[1], expenditure, "Log per-pupil expenditure ($)"  if ylog else "Per-pupil expenditure ($)",       "(b) Annual expenditure"),
+        (axes[2], balance,     "Log per-pupil ending balance ($)"  if ylog else "Per-pupil ending balance ($)", "(c) Ending balance"),
     ]
 
 
