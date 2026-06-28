@@ -30,12 +30,11 @@ may exacerbate funding gaps that mirror socioeconomic and racial segregation.
 
 ## Key findings
 
-- **Missingness in PTA reporting.** There is a substantial amount of missingness in the PTA fundraising data, and the missingness is not random. This underreporting of PTA data warrants further investigation.
-- **Severe financial inequities.** PTA expenditure is extremely unequal and hyper-concentrated. While median per-pupil spending is low, the top schools spend orders of magnitude more.
-- **Socioeconomic stratification.** Schools serving higher-need students receive and spend substantially less in PTA funds, reinforcing disparities in discretionary resources. (Caveat: higher-need schools receive more public funding.)
+- **Data quality.** There is a substantial amount of missingness and a number of discrepancies in reporting that should be further investigated. 
+- **Severe financial inequities.** PTA expenditure is extremely unequal and hyper-concentrated. While median per-pupil spending is minimal, the top schools spend orders of magnitude more.
+- **Socioeconomic stratification.** Schools serving more students with economic need receive and spend substantially less in PTA funds, reinforcing disparities in discretionary resources. (Caveat: higher-need schools receive more public funding.)
 - **Demographic stratification.** PTA expenditure is strongly stratified by race, with higher-spending schools serving disproportionately more White and Asian students.
-- **Increasing inequities.** The PTA expenditure gap between high- and low-economic need has widened over time, indicating growing inequality in private fundraising capacity.
-- **Data anomalies.** PTA financial records contain notable inconsistencies (e.g., balance mismatches), particularly among higher-spending schools, raising concerns about data quality.
+- **Increasing inequities.** Inequities are increasing over time, with the top 20% seemingly accumulating wealth year-over-year. 
 
 ## Background
 
@@ -43,32 +42,35 @@ may exacerbate funding gaps that mirror socioeconomic and racial segregation.
 
 NYC public schools draw on several distinct funding streams:
 
-- The primary source of public funding is the Fair Student Funding (FSF) formula, an equity- and needs-based allocation system that provides schools with discretionary dollars for foundational and instructional costs (e.g., staffing, educational programming, supplies and technology, and general costs).
-- The other public funding source is non-FSF allocations, which fall into three categories:
+- The primary source of public funding is the **Fair Student Funding (FSF) formula**, an equity- and needs-based allocation system that provides schools with discretionary dollars for foundational and instructional costs (e.g., staffing, educational programming, supplies and technology, and general costs).
+- The other public funding source is **non-FSF allocations**, which fall into three categories:
     - federal and state categorical funds restricted to specific student populations (e.g., Title I for low-income students, Title III for English Language Learners),
     - city programmatic funding for targeted grants and city-mandated initiatives like pre-K expansion, and
     - central and ancillary costs for system-wide services like transportation, custodial maintenance, and school safety.
-- Finally, schools can raise and spend private dollars through their Parent Teacher Associations (PTAs). PTA financial data — including starting balances, annual income, expenditures, and ending balances — was made available through the transparency mandates of Local Law 171 of 2018, covering school years 2018-19 through 2024-25.
+- Finally, schools can raise and spend private dollars through their **Parent Teacher Associations** (PTAs). PTA financial data — including starting balances, annual income, expenditures, and ending balances — was made available through the transparency mandates of Local Law 171 of 2018, seven years of data (2018-19 through 2024-25).
 
 Since PTA fundraising has historically been an opaque funding source, this analysis uses this publicly available data to examine whether private contributions compound the inequities that public funding is designed to address.
 
-### Analytical sample
+### Goals of this analysis 
 
-- The analysis is restricted to schools in Districts 1–32, the general education community school districts, and excludes District 75 (specialized schools for students with disabilities) and District 79 (alternative programs).
-- Additionally, to ensure complete covariate coverage, the sample is further limited to schools appearing in all three source datasets in a given year: the NYCPS Demographic Snapshot, the Fair Student Funding allocations file, and the PTA fundraising data.
-- Lastly, schools with missing PTA records and schools where the implied ending balance (starting balance + income − expenditures) substantially deviates from the reported ending balance are also excluded; these decisions are discussed in detail in the [Missingness in PTA reporting](#missingness-in-pta-reporting) and [Data anomalies](#data-anomalies) sections below.
+Inequities in NYC PTA fundraising and expenditures are widely recognized (see: [this Chalkbeat article](https://www.chalkbeat.org/newyork/2026/05/15/disparities-in-nyc-pta-parent-school-fundraising/)), but a deep and systematic characterization of the data has yet to be published. This analysis aims to investigate the following questions: 
 
-## Results
+- **Data quality**: Can we trust the publicly reported PTA data?
+- **Extent of inequities**: How inequitable is PTA spending? Is it stratified by student characteristics? (e.g., economic need, race/ethnicity)
+- **Context relative to public dollars**: Is PTA fundraising offsetting the progressive intent of FSF and non-FSF allocations?
+- **Trends over time**: Are inequities increasing over time?
 
-### Missingness in PTA reporting
+### Data quality 
 
-In the reported NYCPS PTA financial data, we identify three distinct categories of schools for the 2024-25 school year (N=1,454):
+#### Missingness in PTA reporting 
+
+In the reported NYCPS PTA financial data, I identified three distinct categories of schools for the 2024-25 school year (N=1,454):
 
 - Active PTAs (n=831): Schools reporting non-zero values for start balance, income, expenditure, or end balance.
 - Inactive PTAs (n=301): Schools reporting consistent zero values across all financial fields.
 - Missing Data (n=322): Schools with null entries across all financial fields.
 
-Analysis of the Economic Need Index (ENI) reveals systematic differences between these groups, suggesting that "missing" data is not equivalent to "zero" funding. Specifically:
+Analysis of the Economic Need Index (ENI) reveals systematic differences between these groups, suggesting that "missing" PTAs is not equivalent to "inactive" PTAs. Specifically:
 
 - the mean ENI for schools with active PTAs is 0.74,
 - the mean ENI for schools with inactive PTAs is 0.90, and
@@ -76,12 +78,54 @@ Analysis of the Economic Need Index (ENI) reveals systematic differences between
 
 Because schools with missing data fall between active and inactive schools in terms of ENI, we conclude that imputing missing values as zero would introduce significant bias. Further investigation is needed to determine potential causes of missingness, and to rule out systematic non-reporting of PTA data. For now, all analyses for the 2024-25 school year exclude the 322 schools with missing data.
 
-Additionally, we exclude 26 observations in SY 2024-25 where the implied end balance (start balance + income – expenditures) deviates from the reported end balance by both:
+#### Ending balance discrepancies
 
-- More than 5% relative difference; AND
-- An absolute dollar value exceeding $50,000.
+There were also a large number of observations where the _implied_ ending balance (starting balance + income - expenditures) differed substantially from the _reported_ ending balance. For example, for P.S. 133 Wiliam A Butler: 
 
-See the section on [Data anomalies](#data-anomalies) below for additional analyses on anomalous transactions.
+| Starting Balance | Income         | Expenditures     | Implied Ending Balance | Reported Ending Balance |
+| :--------------: | :------------: | :--------------: | :--------------------: | :---------------------: |
+| $308,365.75      | $412,912.97    | $128,048.85      | $593,229.87            | $104,547.22             |
+
+This constitutes a difference of $488,682.65! This was an especially egregious, cherry-picked example, but it is indicative of a larger pattern in the data. Out of the 10,321 observations in the seven years of reporting, 
+
+- 67% had implied end balances that were within 5% of the reported end balance, and
+- 33% exceeded 5% of the end balance.
+
+On manual inspection, I found that there were many observations where the amount for one column was expressed in _cents_ rather than _dollars_. I was able to bring 79% of the anomalous observations within 5% of the reported end balance by dividing one of the starting baalnce, income, or expenditure by 100—but 7% (n=723) of the total observations were unresolvable. 
+
+However, although all 7% of the discrepancies exceeded 5% of the reported value, a majority of them represented relatively _small_ dollar amounts: 
+
+<img src="output/figures/fig13_ending_balance_discrepancies_dotplot.png" width="600"> 
+
+Therefore, in the final analytical sample, I removed only those observations (36 schools in 2024-25, 214 schools overall) where the discrepancy exceeded both: 
+
+- 5% of the reported end balance, AND
+- an absolute value of $10,000.
+
+#### Other data quality issues 
+
+Other data quality issues include year-over-year discrepancies in end-to-start balances. For example, in 2023-24, Stuyvesant High School had an _ending balance_ of $1,319,236.00; in 2024-25, they had a _starting balance_ of just $12,001.77. Where did the rest of the $1,307,234.23 go? 
+
+Finally, there were very high values in the first year of reporting that mysteriously disappeared...
+
+<img src="output/figures/fig8b_pta_quintile_trends.png" width="600"> 
+
+Without taking the log of the y-axis...
+
+<img src="output/figures/fig8a_pta_quintile_trends.png" width="600"> 
+
+Further investigation is needed to identify the cause of these discrepancies. 
+
+### Final analytic sample
+
+- The analysis is restricted to schools in Districts 1–32, the general education community school districts, and excludes District 75 (specialized schools for students with disabilities) and District 79 (alternative programs).
+- Additionally, to ensure complete covariate coverage, the sample is further limited to schools appearing in all three source datasets in a given year: the NYCPS Demographic Snapshot, the Fair Student Funding allocations file, and the PTA fundraising data.
+- I also removed the 1,965 observations with missing PTA data (322 schools in the 2024 SY).
+- Lastly, I removed 214 observations with substantial ending balance discrepancies (36 schools in 2024-25).
+
+The final sample was comprised of 8,142 total observations, with 1,122 schools in the 2024-25 SY. 
+
+## Analytical results
 
 ### Severe financial inequities
 
@@ -89,7 +133,7 @@ As expected, PTA funding is hyper-concentrated.
 
 In 2024-25, the median PTA per-pupil expenditure among all schools (with non-missing PTA data) was just $6.
 (Among only schools with active PTAs, the median expenditure was $18 per student.)
-Yet the 95th percentile school spent $439 per-pupil, the 99th spent $1,280, and the highest spending school spent $2,738 for each enrolled student—translating to nearly $2 million in total expenditures.
+Yet the 95th percentile school spent $350 per-pupil, the 99th spent $1,188, and the highest spending school spent $2,738 for each enrolled student—translating to nearly $2 million in total expenditures.
 
 <!-- for GitHub README -->
 
@@ -103,7 +147,10 @@ Yet the 95th percentile school spent $439 per-pupil, the 99th spent $1,280, and 
 \par
 ![](output/figures/fig4_top_schools_annotated.png){width=80%} -->
 
-In the schools with the wealthiest PTAs, this expenditure acted almost as like a "shadow budget." For example, schools like P.S. 029 John M. Harrigan and P.S. 158 Bayard Taylor — which ranked 1st and 2nd in per-pupil PTA expenditures — spent private PTA funds worth 25% and 23% of their entire public FSF allocation, respectively.
+In the schools with the wealthiest PTAs, this expenditure acted almost as like a "shadow budget." For example:
+
+- The top school, P.S. 029 John M. Harrigan, spent $1,944,016 (25% of its FSF allocations, and 17% of its total public dollars).
+- The second-to-top school, P.S. 158 Bayard Taylor, spent $1,512,642 (23% of its FSF allocations, and 14% of its public dollars).
 
 ### Socioeconomic and demographic stratification
 
@@ -131,7 +178,7 @@ An important caveat to note is that generally, schools with greater need (servin
 <img src="output/figures/fig9a_eni_vs_fsf.png" width="600"> 
 <img src="output/figures/fig9b_eni_vs_non_fsf.png" width="600">
 
-Additionally, even including PTA expenditures, schools in the lowest economic need quintile (Q1) receive less in total funding (FSF allocations + non-FSF allocations + PTA expenditures) compared to those in the higher quintiles:
+Additionally, _even including PTA expenditures_, schools in the lowest economic need quintile (Q1) receive less in total funding (FSF allocations + non-FSF allocations + PTA expenditures) compared to those in the higher quintiles:
 
 <img src="output/figures/fig12_total_funding_dotplot.png" width="600">
 
@@ -147,24 +194,6 @@ And although PTA incomes and expenditures for the top quintile of schools by ENI
 <img src="output/figures/fig7_eni_quintile_trends.png" width="900">
 
 <!-- ![](output/figures/fig7_eni_quintile_trends.png){fig-pos="H"} -->
-
-### Data anomalies
-
-The publicly available PTA fundraising data had a substantial number of accounting anomalies, such as:
-
-- Cross-year discrepancies between ending balances in Y0 and starting balances in Y1.
-- Within-year discrepancies between the implied ending balance (`starting balance + income - expenditures`), and the reported ending balance.
-- Accounting errors like values expressed in cents rather than dollars.
-
-In particular, the cross-year balance discrepancies - where the previous year's ending balance differed from the starting balance by over 5% of the starting balance, AND the difference exceeds $10,000 - were highly concentrated in the schools with the wealthiest PTAs. A possible cause could be that heavily funded PTAs handle more complex balance sheets (and larger rollover amounts) than less funded PTAs, meaning they are structurally more susceptible to bookkeeping variances than a school handling a few hundred dollars. Regardless, this may warrant more investigation to further characterize the nature of these discrepancies.
-
-<img src="output/figures/fig1c_balance_flag_vs_expenditure_hist.png" width="600">
-<img src="output/figures/fig2c_transaction_flag_vs_expenditure_hist.png" width="600">
-
-<!-- ![](output/figures/fig1c_balance_flag_vs_expenditure_hist.png){width=80% fig-pos="H"}
-\newline
-\par
-![](output/figures/fig2c_transaction_flag_vs_expenditure_hist.png){width=80% fig-pos="H"} -->
 
 ## AI Use Disclaimer
 
